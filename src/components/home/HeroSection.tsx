@@ -66,13 +66,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <main className="relative w-[calc(min(90rem,90%))] mx-auto min-h-screen gap-12 py-[min(20vh,3rem)]">
+    <main className="relative w-[calc(min(90rem,90%))] mx-auto min-h-screen flex flex-col md:flex-row items-center gap-12 py-[min(20vh,3rem)]">
       <div className="md:w-1/2">
         <span className="uppercase tracking-wider text-base text-[#717171]">SOFTWARE SOLUTIONS</span>
-        <h1 className="capitalize tracking-wide font-newsreader font-black text-[clamp(3.4375rem,3.25rem+0.75vw,4rem)] bg-gradient-to-br from-befoundOrange to-befoundPurple bg-clip-text text-transparent">
+        <h1 className="capitalize tracking-wide font-newsreader font-black text-[clamp(3.4375rem,3.25rem+0.75vw,4rem)]">
           <span className="text-befoundOrange">be</span>
-          <span className="font-newsreader font-bold">Found</span>
+          <span className="text-befoundPurple font-newsreader font-bold">Found</span>
         </h1>
+        <h2 className="text-lg text-gray-600 mt-2">Be Seen - Be Heard - Be Found</h2>
         <hr className="block bg-befoundOrange h-1 w-25 border-none my-7" />
         <p className="leading-relaxed">
           Innovative software solutions that empower businesses to reach their full potential in the digital landscape. Our expertise transforms your vision into reality with modern, scalable technology.
@@ -155,18 +156,17 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Add Pagination */}
         <div className="swiper-pagination"></div>
       </div>
       
       <img 
-        src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" 
-        alt="" 
+        src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1000" 
+        alt="Technology background" 
         className="fixed top-[-4rem] left-[-12rem] z-[-1] opacity-0 md:opacity-10"
       />
       <img 
-        src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" 
-        alt="" 
+        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" 
+        alt="Circuit board" 
         className="fixed bottom-[-2rem] right-[-3rem] z-[-1] w-[9.375rem] opacity-0 md:opacity-10"
       />
     </main>
