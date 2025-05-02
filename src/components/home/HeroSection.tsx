@@ -170,7 +170,7 @@ const HeroSection = () => {
         className="fixed top-[-4rem] left-[-8rem] z-[-1] opacity-0 md:opacity-10"
       />
       <img 
-        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" 
+        src="https://images.unsplash.com/photo-1654618977232-a6c6dea9d1e8?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&q=80&w=800" 
         alt="Circuit board" 
         className="fixed bottom-[-2rem] right-[-2rem] z-[-1] w-[9.84375rem] opacity-0 md:opacity-10"
       />
