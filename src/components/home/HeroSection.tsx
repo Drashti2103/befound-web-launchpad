@@ -1,110 +1,175 @@
 
 import React, { useEffect, useRef } from 'react';
+import { register } from 'swiper/element/bundle';
+import Swiper from 'swiper';
+import { EffectCoverflow, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+// Register Swiper custom elements
+register();
 
 const HeroSection = () => {
-  const bgRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
+  const swiperElRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (bgRef.current) {
-        // Parallax effect
-        bgRef.current.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-      }
-      if (textRef.current) {
-        // Scale and opacity effect
-        const scale = Math.max(1 - scrollPosition / 1000, 0.95);
-        const opacity = Math.max(1 - scrollPosition / 500, 0);
-        textRef.current.style.transform = `scale(${scale})`;
-        textRef.current.style.opacity = opacity.toString();
+    // Initialize Swiper
+    const swiperParams = {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      modules: [EffectCoverflow, Pagination, Keyboard, Mousewheel],
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true
+      },
+      keyboard: {
+        enabled: true
+      },
+      mousewheel: {
+        thresholdDelta: 70
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2
+        },
+        768: {
+          slidesPerView: 1
+        },
+        1024: {
+          slidesPerView: 2
+        },
+        1560: {
+          slidesPerView: 3
+        }
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
+    
+    // Initialize Swiper after component mount
+    const swiperInstance = new Swiper('.swiper', swiperParams);
     
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      // Cleanup on unmount
+      if (swiperInstance) {
+        swiperInstance.destroy();
+      }
     };
   }, []);
 
   return (
-    <div className="relative h-screen overflow-hidden">
-      {/* Background */}
-      <div 
-        ref={bgRef}
-        className="absolute inset-0 z-0"
-        style={{
-          background: 'linear-gradient(135deg, #0c0c0c 0%, #1f1f1f 100%)',
-        }}
-      >
-        {/* Abstract grid pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="h-full w-full" style={{ 
-            backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px), radial-gradient(#ffffff 1px, transparent 1px)',
-            backgroundSize: '50px 50px',
-            backgroundPosition: '0 0, 25px 25px',
-          }}></div>
-        </div>
+    <main className="relative w-[calc(min(90rem,90%))] mx-auto min-h-screen gap-12 py-[min(20vh,3rem)]">
+      <div className="md:w-1/2">
+        <span className="uppercase tracking-wider text-base text-[#717171]">SOFTWARE SOLUTIONS</span>
+        <h1 className="capitalize tracking-wide font-newsreader font-black text-[clamp(3.4375rem,3.25rem+0.75vw,4rem)] bg-gradient-to-br from-befoundOrange to-befoundPurple bg-clip-text text-transparent">
+          <span className="text-befoundOrange">be</span>
+          <span className="font-newsreader font-bold">Found</span>
+        </h1>
+        <hr className="block bg-befoundOrange h-1 w-25 border-none my-7" />
+        <p className="leading-relaxed">
+          Innovative software solutions that empower businesses to reach their full potential in the digital landscape. Our expertise transforms your vision into reality with modern, scalable technology.
+        </p>
+        <a href="#contact" className="inline-block uppercase text-[#717171] font-medium bg-white rounded-full transition-all duration-300 border-2 border-[#c2c2c2] mt-9 py-2.5 px-7.5 hover:border-befoundOrange hover:text-befoundOrange">
+          GET STARTED
+        </a>
       </div>
-
-      {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div 
-          ref={textRef}
-          className="text-center px-4"
-        >
-          <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
-              <span className="text-befoundOrange">be</span>
-              <span className="text-white font-newsreader font-bold">Found</span>
-            </h1>
-            
-            <div className="tag-lines flex flex-col md:flex-row items-center justify-center text-white mb-8 space-y-1 md:space-y-0 md:space-x-4">
-              <span>Be Seen</span>
-              <span className="hidden md:block">-</span>
-              <span>Be Heard</span>
-              <span className="hidden md:block">-</span>
-              <span>Be Found</span>
-            </div>
-            
-            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8">
-              Innovative software solutions that empower businesses to reach their full potential in the digital landscape.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <a 
-                href="#contact" 
-                className="px-8 py-3 bg-befoundOrange text-white text-lg font-medium rounded-md hover:bg-orange-500 transition-colors"
-              >
-                Get Started
+      
+      <div className="swiper w-full pt-12 md:w-1/2">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide swiper-slide--one">
+            <div>
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
+                Web Development
+              </h2>
+              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
+                Custom web applications designed to elevate your business. Our development team creates responsive, user-friendly websites that drive results and provide exceptional user experiences.
+              </p>
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+                explore
               </a>
-              <a 
-                href="#about" 
-                className="px-8 py-3 border-2 border-white text-white text-lg font-medium rounded-md hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
+            </div>
+          </div>
+          
+          <div className="swiper-slide swiper-slide--two">
+            <div>
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
+                Mobile Apps
+              </h2>
+              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
+                Reach your customers wherever they are with powerful, intuitive mobile applications. We develop cross-platform solutions that work seamlessly across iOS and Android devices.
+              </p>
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+                explore
+              </a>
+            </div>
+          </div>
+
+          <div className="swiper-slide swiper-slide--three">
+            <div>
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
+                AI Solutions
+              </h2>
+              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
+                Harness the power of artificial intelligence to transform your business processes. Our AI solutions help you automate tasks, gain insights from data, and create more personalized user experiences.
+              </p>
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+                explore
+              </a>
+            </div>
+          </div>
+
+          <div className="swiper-slide swiper-slide--four">
+            <div>
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
+                Cloud Services
+              </h2>
+              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
+                Scale your business with secure, reliable cloud infrastructure. Our team designs and implements cloud solutions that optimize performance, enhance security, and reduce operational costs.
+              </p>
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+                explore
+              </a>
+            </div>
+          </div>
+
+          <div className="swiper-slide swiper-slide--five">
+            <div>
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
+                Digital Marketing
+              </h2>
+              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
+                Increase your online visibility and reach your target audience. Our digital marketing strategies help you connect with customers, build brand awareness, and drive measurable business growth.
+              </p>
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+                explore
               </a>
             </div>
           </div>
         </div>
+        
+        {/* Add Pagination */}
+        <div className="swiper-pagination"></div>
       </div>
-
-      {/* Bottom wave shape */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className="w-full h-auto min-w-full"
-        >
-          <path
-            fill="#ffffff"
-            fillOpacity="1"
-            d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,117.3C960,149,1056,203,1152,192C1248,181,1344,107,1392,69.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
-    </div>
+      
+      <img 
+        src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" 
+        alt="" 
+        className="fixed top-[-4rem] left-[-12rem] z-[-1] opacity-0 md:opacity-10"
+      />
+      <img 
+        src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" 
+        alt="" 
+        className="fixed bottom-[-2rem] right-[-3rem] z-[-1] w-[9.375rem] opacity-0 md:opacity-10"
+      />
+    </main>
   );
 };
 
