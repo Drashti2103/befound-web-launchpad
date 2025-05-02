@@ -8,7 +8,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import Expertise from '../components/home/expertise';
-
+import BusinessSection from '../components/home/BusinessSolutions';
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -16,6 +16,7 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <WhyChooseUsSection />
+      <BusinessSection />
       <Expertise />
       <FocusSectorsSection />
       <ContactSection />
