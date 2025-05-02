@@ -2,10 +2,11 @@
 import React, { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper';
-import { EffectCoverflow, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Keyboard, Mousewheel, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // Register Swiper custom elements
 register();
@@ -20,7 +21,7 @@ const HeroSection = () => {
       grabCursor: true,
       centeredSlides: true,
       loop: true,
-      modules: [EffectCoverflow, Pagination, Keyboard, Mousewheel],
+      modules: [EffectCoverflow, Pagination, Keyboard, Mousewheel, Autoplay, Navigation],
       coverflowEffect: {
         rotate: 0,
         stretch: 0,
@@ -37,6 +38,14 @@ const HeroSection = () => {
       pagination: {
         el: ".swiper-pagination",
         clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
       },
       breakpoints: {
         640: {
@@ -93,7 +102,7 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Custom web applications designed to elevate your business. Our development team creates responsive, user-friendly websites that drive results and provide exceptional user experiences.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="inline-block mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
@@ -107,7 +116,7 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Reach your customers wherever they are with powerful, intuitive mobile applications. We develop cross-platform solutions that work seamlessly across iOS and Android devices.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="inline-block mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
@@ -121,7 +130,7 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Harness the power of artificial intelligence to transform your business processes. Our AI solutions help you automate tasks, gain insights from data, and create more personalized user experiences.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="inline-block mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
@@ -135,7 +144,7 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Scale your business with secure, reliable cloud infrastructure. Our team designs and implements cloud solutions that optimize performance, enhance security, and reduce operational costs.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="inline-block mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
@@ -149,7 +158,7 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Increase your online visibility and reach your target audience. Our digital marketing strategies help you connect with customers, build brand awareness, and drive measurable business growth.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="inline-block mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
@@ -157,6 +166,9 @@ const HeroSection = () => {
         </div>
         
         <div className="swiper-pagination"></div>
+        
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
       </div>
       
       <img 

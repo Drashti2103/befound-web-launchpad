@@ -1,21 +1,30 @@
 
 import React from 'react';
+import { Card, CardContent } from "@/components/ui/card";
 
 type ExpertiseItemProps = {
   title: string;
   description: string;
   icon: React.ReactNode;
+  readMoreLink?: string;
 }
 
-const ExpertiseItem = ({ title, description, icon }: ExpertiseItemProps) => {
+const ExpertiseItem = ({ title, description, icon, readMoreLink = "#" }: ExpertiseItemProps) => {
   return (
-    <div className="flex flex-col md:flex-row items-start gap-4 group">
-      <div className="w-16 h-16 rounded-lg bg-befoundOrange text-white flex items-center justify-center flex-shrink-0 group-hover:bg-befoundPurple transition-colors">
+    <div className="expertise-item">
+      <div className="expertise-icon">
         {icon}
       </div>
-      <div>
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600">{description}</p>
+      <div className="expertise-content">
+        <h3 className="text-xl font-bold mb-3">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <a href={readMoreLink} className="read-more">
+          Read More
+          <svg className="inline-block ml-2 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
       </div>
     </div>
   );
@@ -33,67 +42,53 @@ const ExpertiseSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-y-12 gap-x-8 md:gap-x-16 lg:gap-x-24">
-          <div className="space-y-12 md:mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 lg:gap-x-24">
+          <div className="space-y-8">
             <ExpertiseItem
-              title="Web Development"
-              description="Custom websites and web applications that are responsive, fast, and user-friendly, built with modern technologies."
+              title="Web App Development"
+              description="With expertise in cutting-edge technologies, we deliver robust web development solutions that cater to diverse business needs."
               icon={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+                <img 
+                  src="public/lovable-uploads/4c6fcf7a-e533-4469-b415-b4f982bb4640.png" 
+                  alt="Web Development" 
+                  className="w-16 h-16 object-contain"
+                />
               }
             />
             
             <ExpertiseItem
-              title="Mobile App Development"
-              description="Native and cross-platform mobile applications for iOS and Android that help you reach your customers wherever they are."
+              title="Mobile Development"
+              description="Tap into our comprehensive mobile application development services, crafting innovative and user-friendly apps for iOS and Android platforms."
               icon={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#4f3dff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              }
-            />
-            
-            <ExpertiseItem
-              title="UX/UI Design"
-              description="User-centered design that enhances user experience and creates intuitive, beautiful interfaces that users love."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               }
             />
           </div>
           
-          <div className="space-y-12">
+          <div className="space-y-8 mt-8 md:mt-0">
             <ExpertiseItem
-              title="Custom Software Development"
-              description="Tailored software solutions designed to address your specific business challenges and optimize your operations."
+              title="UI/UX Design"
+              description="Our skilled designers create visually appealing and intuitive user interfaces, focusing on enhancing user experiences and maximizing engagement."
               icon={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
+                <img 
+                  src="public/lovable-uploads/ad4054ae-f577-442b-be7f-6c570e379606.png" 
+                  alt="UI/UX Design" 
+                  className="w-16 h-16 object-contain"
+                />
               }
             />
             
             <ExpertiseItem
-              title="E-Commerce Solutions"
-              description="Comprehensive e-commerce platforms that make selling products and services online seamless and profitable."
+              title="Salesforce Development"
+              description="Our dedicated quality assurance team delivers excellent software solutions, guaranteeing superior performance and reliability."
               icon={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-              }
-            />
-            
-            <ExpertiseItem
-              title="Maintenance & Support"
-              description="Ongoing technical support, updates, and maintenance to ensure your software remains secure and performs optimally."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                </svg>
+                <img 
+                  src="public/lovable-uploads/f7b1fb25-5b2e-424e-9240-8537479ca9eb.png" 
+                  alt="Salesforce Development" 
+                  className="w-16 h-16 object-contain"
+                />
               }
             />
           </div>
@@ -108,6 +103,60 @@ const ExpertiseSection = () => {
           </a>
         </div>
       </div>
+      
+      <style jsx>{`
+        .expertise-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.5rem;
+          background-color: #f9f9f9;
+          padding: 2rem;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          border: 1px solid transparent;
+        }
+        
+        .expertise-item:hover {
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          border-color: #e0e0e0;
+          transform: translateY(-5px);
+        }
+        
+        .expertise-icon {
+          padding: 1rem;
+          background-color: #f0f0f0;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .expertise-content {
+          flex: 1;
+        }
+        
+        .read-more {
+          display: inline-flex;
+          align-items: center;
+          color: #4f3dff;
+          font-weight: 600;
+          font-size: 0.875rem;
+          transition: all 0.3s ease;
+          text-decoration: none;
+        }
+        
+        .read-more:hover {
+          color: #7114ef;
+        }
+        
+        .read-more svg {
+          transition: transform 0.3s ease;
+        }
+        
+        .read-more:hover svg {
+          transform: translateX(4px);
+        }
+      `}</style>
     </section>
   );
 };
