@@ -94,7 +94,7 @@ export default function Expertise() {
               <div className="h-1 w-8 bg-befoundOrange mr-2 mt-3"></div>
               <span className="text-befoundOrange font-semibold tracking-wider">EXPERTISE</span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-800 font-newsreader text-beFoundPurple mb-4">Our Technologies</h2>
+            <h2 className="text-4xl font-bold text-gray-800 font-newsreader text-beFoundPurple mb-4">Our Area of Expertise</h2>
             <p className="text-gray-600">
               We leverage cutting-edge technologies for efficiency, productivity, and growth opportunities.
             </p>
