@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper';
@@ -20,6 +19,10 @@ const HeroSection = () => {
       grabCursor: true,
       centeredSlides: true,
       loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
       modules: [EffectCoverflow, Pagination, Keyboard, Mousewheel],
       coverflowEffect: {
         rotate: 0,
@@ -78,80 +81,82 @@ const HeroSection = () => {
         <p className="leading-relaxed">
           Innovative software solutions that empower businesses to reach their full potential in the digital landscape. Our expertise transforms your vision into reality with modern, scalable technology.
         </p>
-        <a href="#contact" className="inline-block uppercase text-[#717171] font-medium bg-white rounded-full transition-all duration-300 border-2 border-[#c2c2c2] mt-9 py-2.5 px-7.5 hover:border-befoundOrange hover:text-befoundOrange">
+        <a href="#contact" className="inline-block uppercase text-[#717171] font-medium bg-white rounded-full transition-all duration-300 border-2 border-[#c2c2c2] mt-9 py-1.5 pl-4 pr-4 hover:border-befoundOrange hover:text-befoundOrange">
           GET STARTED
         </a>
       </div>
       
       <div className="swiper w-full md:w-3/5 pt-12">
         <div className="swiper-wrapper">
-          <div className="swiper-slide swiper-slide--one rounded-xl">
-            <div>
-              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
+          <div className="swiper-slide swiper-slide--one rounded-xl relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            <div className="relative z-20">
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-1.5 pl-6 uppercase">
                 Web Development
               </h2>
-              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
-                Custom web applications designed to elevate your business. Our development team creates responsive, user-friendly websites that drive results and provide exceptional user experiences.
+              <p className="text-[#dadada] font-newsreader font-light px-6 mb-8 leading-relaxed text-xs line-clamp-4">
+                Custom web applications built with modern technologies. Our expert developers create scalable, secure, and high-performance solutions that drive your business forward.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
-                explore
-              </a>
             </div>
           </div>
           
-          <div className="swiper-slide swiper-slide--two rounded-xl">
-            <div>
-              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
+          <div className="swiper-slide swiper-slide--two rounded-xl relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            <div className="relative z-20">
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-1.5 pl-6 uppercase">
+                Web Design
+              </h2>
+              <p className="text-[#dadada] font-newsreader font-light px-6 mb-8 leading-relaxed text-xs line-clamp-4">
+                Stunning, user-centric designs that captivate your audience. We create beautiful, responsive websites that reflect your brand and deliver exceptional user experiences.
+              </p>
+            </div>
+          </div>
+
+          <div className="swiper-slide swiper-slide--three rounded-xl relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            <div className="relative z-20">
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-1.5 pl-6 uppercase">
                 Mobile Apps
               </h2>
-              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
-                Reach your customers wherever they are with powerful, intuitive mobile applications. We develop cross-platform solutions that work seamlessly across iOS and Android devices.
+              <p className="text-[#dadada] font-newsreader font-light px-6 mb-8 leading-relaxed text-xs line-clamp-4">
+                Native and cross-platform mobile applications that engage users. We develop intuitive, feature-rich apps that work seamlessly across iOS and Android platforms.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
-                explore
-              </a>
             </div>
           </div>
 
-          <div className="swiper-slide swiper-slide--three rounded-xl">
-            <div>
-              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
-                AI Solutions
+          <div className="swiper-slide swiper-slide--four rounded-xl relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            <div className="relative z-20">
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-1.5 pl-6 uppercase">
+                AI Chatbots
               </h2>
-              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
-                Harness the power of artificial intelligence to transform your business processes. Our AI solutions help you automate tasks, gain insights from data, and create more personalized user experiences.
+              <p className="text-[#dadada] font-newsreader font-light px-6 mb-8 leading-relaxed text-xs line-clamp-4">
+                Intelligent chatbots that enhance customer engagement. Our AI-powered solutions provide 24/7 support, automate responses, and deliver personalized user experiences.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
-                explore
-              </a>
             </div>
           </div>
 
-          <div className="swiper-slide swiper-slide--four rounded-xl">
-            <div>
-              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
-                Cloud Services
+          <div className="swiper-slide swiper-slide--five rounded-xl relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            <div className="relative z-20">
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-1.5 pl-6 uppercase">
+                SEO Optimization
               </h2>
-              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
-                Scale your business with secure, reliable cloud infrastructure. Our team designs and implements cloud solutions that optimize performance, enhance security, and reduce operational costs.
+              <p className="text-[#dadada] font-newsreader font-light px-6 mb-8 leading-relaxed text-xs line-clamp-4">
+                Strategic SEO solutions that boost your online visibility. We optimize your website to rank higher in search results and attract more organic traffic.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
-                explore
-              </a>
             </div>
           </div>
 
-          <div className="swiper-slide swiper-slide--five rounded-xl">
-            <div>
-              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
-                Digital Marketing
+          <div className="swiper-slide swiper-slide--six rounded-xl relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            <div className="relative z-20">
+              <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-1.5 pl-6 uppercase">
+                E-commerce Solutions
               </h2>
-              <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
-                Increase your online visibility and reach your target audience. Our digital marketing strategies help you connect with customers, build brand awareness, and drive measurable business growth.
+              <p className="text-[#dadada] font-newsreader font-light px-6 mb-8 leading-relaxed text-xs line-clamp-4">
+                Complete e-commerce platforms that drive sales. We build secure, scalable online stores with seamless payment integration and inventory management.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
-                explore
-              </a>
             </div>
           </div>
         </div>
@@ -160,14 +165,14 @@ const HeroSection = () => {
       </div>
       
       <img 
-        src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1000" 
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000" 
         alt="Technology background" 
-        className="fixed top-[-4rem] left-[-12rem] z-[-1] opacity-0 md:opacity-10"
+        className="fixed top-[-4rem] left-[-8rem] z-[-1] opacity-0 md:opacity-10"
       />
       <img 
-        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" 
+        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" 
         alt="Circuit board" 
-        className="fixed bottom-[-2rem] right-[-3rem] z-[-1] w-[9.375rem] opacity-0 md:opacity-10"
+        className="fixed bottom-[-2rem] right-[-2rem] z-[-1] w-[9.84375rem] opacity-0 md:opacity-10"
       />
     </main>
   );
