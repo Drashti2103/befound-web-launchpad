@@ -1,27 +1,27 @@
 
 import React from 'react';
-import { UserSecret, Bullseye, Timeline, Keyboard } from 'lucide-react';
+import { ShieldCheck, Target, LineChart, Laptop } from 'lucide-react';
 
 type ServiceCardProps = {
   title: string;
   description: string;
-  iconType: 'user-secret' | 'bullseye' | 'timeline' | 'keyboard';
+  iconType: 'shield-check' | 'target' | 'line-chart' | 'laptop';
 }
 
 const ServiceCard = ({ title, description, iconType }: ServiceCardProps) => {
   // Select the appropriate icon based on iconType
   const renderIcon = () => {
     switch(iconType) {
-      case 'user-secret':
-        return <UserSecret className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
-      case 'bullseye':
-        return <Bullseye className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
-      case 'timeline':
-        return <Timeline className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
-      case 'keyboard':
-        return <Keyboard className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
+      case 'shield-check':
+        return <ShieldCheck className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
+      case 'target':
+        return <Target className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
+      case 'line-chart':
+        return <LineChart className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
+      case 'laptop':
+        return <Laptop className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
       default:
-        return <UserSecret className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
+        return <ShieldCheck className="h-10 w-10 text-white group-hover:text-befoundPurple transition-colors duration-300" />;
     }
   };
   
@@ -111,25 +111,25 @@ const WhyChooseUsSection = () => {
           <ServiceCard 
             title="Cyber Security" 
             description="We know our people are our greatest asset, and we are putting our money where our values are." 
-            iconType="user-secret"
+            iconType="shield-check"
           />
           
           <ServiceCard 
             title="Internet Thinking" 
             description="We're so excited about our new Learning & Development programs where people can grow their skills." 
-            iconType="bullseye"
+            iconType="target"
           />
           
           <ServiceCard 
             title="Digital Marketing" 
             description="From the basics, including health and life insurance, and retirement and savings plans." 
-            iconType="timeline"
+            iconType="line-chart"
           />
           
           <ServiceCard 
             title="UI/UX Design" 
             description="We're wildly passionate about our purpose, and it has us transforming everything we do." 
-            iconType="keyboard"
+            iconType="laptop"
           />
         </div>
         
