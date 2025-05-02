@@ -31,13 +31,13 @@ export default function Expertise() {
       id: 2,
       icon: <Server className="text-befoundOrange" size={24} />,
       title: 'Back End',
-      description: 'Robust development services for scalable, secure, and high-performing applications',
+      description: 'SQL, Supabase, Firebase, and more integrations to support your business needs.',
     },
     {
       id: 3,
       icon: <Layout className="text-befoundOrange" size={24} />,
       title: 'Front End',
-      description: 'Captivating user experiences through intuitive design and seamless functionality',
+      description: 'MEAN, MERN, and more used to build scalable, secure, and high-performing applications',
     },
     {
       id: 4,
