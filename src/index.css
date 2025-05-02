@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap');
 @tailwind base;
 @tailwind components;
@@ -110,12 +109,14 @@
 
 /* Swiper specific styles */
 .swiper-slide {
-  width: 18.75rem;
+  width: 21rem;
   height: 28.125rem;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: self-start;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .swiper-pagination-bullet,
@@ -186,4 +187,164 @@
 .scroll-to-top.visible {
   opacity: 1;
   visibility: visible;
+}
+
+/* Why Choose Us section styles */
+.service-card {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  padding: 75px 24px 44px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(1, 25, 59, 6%);
+  transition: 0.3s cubic-bezier(0.24, 0.74, 0.58, 1);
+  z-index: -1;
+}
+
+.service-card-overlay {
+  background-image: linear-gradient(to left, #7114ef, #1475f7);
+  height: 152px;
+  width: 100%;
+  position: absolute;
+  top: -44px;
+  left: 0;
+  z-index: -1;
+  border-radius: 15px 15px 0 0;
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.24, 0.74, 0.58, 1);
+}
+
+.service-card-overlay:before {
+  content: "";
+  z-index: 88;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.service-card-icon {
+  min-width: 76px;
+  width: 76px;
+  height: 76px;
+  line-height: 76px;
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+  top: -38px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.3s cubic-bezier(0.24, 0.74, 0.58, 1);
+}
+
+.service-card-icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #7114ef, #1475f7);
+  border-radius: 25px;
+  box-shadow: 0 6px 6px rgba(113, 20, 239, 0.3);
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+.service-card-title {
+  font-size: 20px;
+  color: #101130;
+  padding-bottom: 24px;
+  margin-bottom: 25px;
+  position: relative;
+  transition: 0.3s cubic-bezier(0.24, 0.74, 0.58, 1);
+}
+
+.service-card-title:before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 4px;
+  width: 88px;
+  background-image: linear-gradient(to right, #7114ef, #1475f7);
+  position: absolute;
+  transition: 0.3s cubic-bezier(0.24, 0.74, 0.58, 1);
+}
+
+.service-card-desc {
+  color: #57586d;
+  text-align: center;
+  line-height: 1.5;
+  transition: 0.3s cubic-bezier(0.24, 0.74, 0.58, 1);
+}
+
+.service-card-readmore {
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.24, 0.74, 0.58, 1);
+  visibility: hidden;
+}
+
+/* Hover effects */
+.service-card:hover:before {
+  box-shadow: 0 34px 32px rgba(1, 25, 59, 0.14);
+  border-radius: 8px 60px 8px 8px;
+  height: calc(100% + 44px);
+}
+
+.service-card:hover .service-card-overlay {
+  opacity: 1;
+}
+
+.service-card:hover .service-card-icon {
+  top: -8px;
+}
+
+.service-card:hover .service-card-icon:before {
+  background: #fff !important;
+}
+
+.service-card:hover .service-card-icon svg {
+  color: #7114ef;
+}
+
+.service-card:hover .service-card-title {
+  transform: translateY(60px);
+}
+
+.service-card:hover .service-card-title:before {
+  transform: scaleX(0);
+}
+
+.service-card:hover .service-card-desc {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card:hover .service-card-readmore {
+  opacity: 1;
+  visibility: visible;
+  bottom: 31px;
 }

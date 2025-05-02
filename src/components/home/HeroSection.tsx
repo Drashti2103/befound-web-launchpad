@@ -83,9 +83,9 @@ const HeroSection = () => {
         </a>
       </div>
       
-      <div className="swiper w-full pt-12 md:w-1/2">
+      <div className="swiper w-full md:w-3/5 pt-12">
         <div className="swiper-wrapper">
-          <div className="swiper-slide swiper-slide--one">
+          <div className="swiper-slide swiper-slide--one rounded-xl">
             <div>
               <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
                 Web Development
@@ -93,13 +93,13 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Custom web applications designed to elevate your business. Our development team creates responsive, user-friendly websites that drive results and provide exceptional user experiences.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
           </div>
           
-          <div className="swiper-slide swiper-slide--two">
+          <div className="swiper-slide swiper-slide--two rounded-xl">
             <div>
               <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
                 Mobile Apps
@@ -107,13 +107,13 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Reach your customers wherever they are with powerful, intuitive mobile applications. We develop cross-platform solutions that work seamlessly across iOS and Android devices.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
           </div>
 
-          <div className="swiper-slide swiper-slide--three">
+          <div className="swiper-slide swiper-slide--three rounded-xl">
             <div>
               <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
                 AI Solutions
@@ -121,13 +121,13 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Harness the power of artificial intelligence to transform your business processes. Our AI solutions help you automate tasks, gain insights from data, and create more personalized user experiences.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
           </div>
 
-          <div className="swiper-slide swiper-slide--four">
+          <div className="swiper-slide swiper-slide--four rounded-xl">
             <div>
               <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
                 Cloud Services
@@ -135,13 +135,13 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Scale your business with secure, reliable cloud infrastructure. Our team designs and implements cloud solutions that optimize performance, enhance security, and reduce operational costs.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
           </div>
 
-          <div className="swiper-slide swiper-slide--five">
+          <div className="swiper-slide swiper-slide--five rounded-xl">
             <div>
               <h2 className="text-white font-newsreader font-normal text-[1.4rem] leading-tight mb-2.5 pl-6 uppercase">
                 Digital Marketing
@@ -149,7 +149,7 @@ const HeroSection = () => {
               <p className="text-[#dadada] font-newsreader font-light px-6 leading-relaxed text-xs line-clamp-4">
                 Increase your online visibility and reach your target audience. Our digital marketing strategies help you connect with customers, build brand awareness, and drive measurable business growth.
               </p>
-              <a href="#contact" className="mx-6 mb-14 mt-5 py-1.5 px-7.5 text-sm font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
+              <a href="#contact" className="mx-6 mb-14 mt-5 py-2 px-8 text-base font-medium bg-white rounded-full transition-all duration-300 hover:text-befoundOrange">
                 explore
               </a>
             </div>
