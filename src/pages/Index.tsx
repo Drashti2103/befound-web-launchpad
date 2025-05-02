@@ -1,14 +1,13 @@
-
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
 import AboutSection from '../components/home/AboutSection';
 import WhyChooseUsSection from '../components/home/WhyChooseUsSection';
-import ExpertiseSection from '../components/home/ExpertiseSection';
 import FocusSectorsSection from '../components/home/FocusSectorsSection';
 import ContactSection from '../components/home/ContactSection';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
+import Expertise from '../components/home/expertise';
 
 const Index = () => {
   return (
@@ -17,7 +16,7 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <WhyChooseUsSection />
-      <ExpertiseSection />
+      <Expertise />
       <FocusSectorsSection />
       <ContactSection />
       <Footer />
