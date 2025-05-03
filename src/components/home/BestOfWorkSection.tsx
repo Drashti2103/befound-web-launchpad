@@ -67,7 +67,7 @@ const BestOfWorkSection = () => {
     <section className="w-full bg-[#f8fafc] py-20">
       <div className="max-w-5xl mx-auto px-4 flex flex-col items-center">
         <span className="text-befoundOrange font-semibold tracking-wider mb-2 text-center">OUR FINEST ACHIEVEMENTS</span>
-        <h2 className="text-4xl md:text-5xl font-bold text-befoundPurple text-center mb-4">Best of Our Work</h2>
+        <h2 className="text-4xl md:text-5xl font-newsreader font-bold text-befoundPurple text-center mb-4">Best of Our Work</h2>
         <p className="text-gray-600 text-center max-w-2xl mb-8">
           With a track record of successful projects and satisfied clients, we strive for excellence in every endeavour, ensuring that our best work becomes a catalyst for our client's success.
         </p>

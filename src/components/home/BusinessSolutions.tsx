@@ -43,7 +43,7 @@ const BusinessSolutions = () => {
             <div className="w-12 h-1 bg-befoundOrange"></div>
           </div>
           <span className="text-befoundOrange font-semibold text-lg mb-2 tracking-wide">WHAT WE PROVIDE</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-newsreader text-beFoundPurple text-center mb-4">Our Transformative Business Solutions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-newsreader text-beFoundPurple text-center mb-4">Our Transformative Business Solutions</h2>
           <p className="text-gray-500 text-center max-w-2xl">
             beFound delivers tailored strategies that drive efficiency, enable data-driven decisions, and enhance customer experiences.
           </p>

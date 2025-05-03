@@ -21,7 +21,7 @@ const ContactSection = () => {
         <rect width="200" height="200" fill="url(#dots2)" />
       </svg>
       <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl mx-auto px-4">
-        <h2 className="text-xl md:text-3xl font-extrabold text-white mb-6 leading-tight">Develop App that Engages Users, & Better Results</h2>
+        <h2 className="text-xl md:text-3xl font-extrabold text-white mb-6 font-newsreader leading-tight">Develop App that Engages Users, & Better Results</h2>
         <p className="text-white text-lg md:text-xl mb-8 font-medium">
           Drive better conversions, ROI and user engagement through our application development consulting services.
         </p>
