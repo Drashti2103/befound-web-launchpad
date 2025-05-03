@@ -1,58 +1,59 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const projects = [
   {
+    id: 1,
+    number: '01',
+    title: 'Cafe Castle',
+    description: 'A medieval-themed café website with menu and booking.',
+    bullets: [
+      'Interactive menu display',
+      'Table booking system',
+    ],
+    images: [
+      '/images/cafecastle.png',
+    ],
+    link: '/projects/1',
+    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion']
+  },
+  {
+    id: 2,
+    number: '02',
+    title: 'Dishsnap',
+    description: 'AI-powered food photography generator for restaurants.',
+    bullets: [
+      'AI image generation',
+      'Customizable menu building',
+    ],
+    images: [
+      '/images/dishsnap.png',
+    ],
+    link: '/projects/2',
+    tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript']
+  },
+  {
+    id: 3,
     number: '03',
-    title: 'Investor Information App',
-    description:
-      'A client working in the public-oriented transportation field was looking for a unique funding solution for public transportation and municipality projects.',
+    title: 'Make Media Sense',
+    description: 'A modern marketing agency website with dynamic content.',
     bullets: [
-      'Integrated support for authentication through Microsoft Active Directory.',
-      'Integrated support for video content through the JW player.',
+      'Responsive design',
+      'Interactive charts',
     ],
     images: [
-      '/images/more.png', // Placeholder, swap with real images as needed
-      '/images/more.png',
+      '/images/makemediasense.png',
     ],
-    link: '#',
-  },
-  {
-    number: '04',
-    title: 'Smart City Dashboard',
-    description:
-      'A comprehensive dashboard for city administrators to monitor and manage urban infrastructure and services.',
-    bullets: [
-      'Real-time analytics and reporting.',
-      'Seamless integration with IoT devices.',
-    ],
-    images: [
-      '/images/more.png',
-      '/images/more.png',
-    ],
-    link: '#',
-  },
-  {
-    number: '0  5',
-    title: 'Investor Information App',
-    description:
-      'A client working in the public-oriented transportation field was looking for a unique funding solution for public transportation and municipality projects.',
-    bullets: [
-      'Integrated support for authentication through Microsoft Active Directory.',
-      'Integrated support for video content through the JW player.',
-    ],
-    images: [
-      '/images/more.png', // Placeholder, swap with real images as needed
-      '/images/more.png',
-    ],
-    link: '#',
+    link: '/projects/3',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts']
   }
-  // Add more projects as needed
 ];
 
 const BestOfWorkSection = () => {
   const [current, setCurrent] = useState(0);
+  const navigate = useNavigate();
   const prevIdx = (current - 1 + projects.length) % projects.length;
   const nextIdx = (current + 1) % projects.length;
 
@@ -63,15 +64,22 @@ const BestOfWorkSection = () => {
   const project = projects[current];
   const nextProjectObj = projects[nextIdx];
 
+  const handleReadMore = (link: string) => {
+    navigate(link);
+  };
+
   return (
     <section className="w-full bg-[#f8fafc] py-20">
       <div className="max-w-5xl mx-auto px-4 flex flex-col items-center">
         <span className="text-befoundOrange font-semibold tracking-wider mb-2 text-center">OUR FINEST ACHIEVEMENTS</span>
         <h2 className="text-4xl md:text-5xl font-newsreader font-bold text-befoundPurple text-center mb-4">Best of Our Work</h2>
         <p className="text-gray-600 text-center max-w-2xl mb-8">
-          With a track record of successful projects and satisfied clients, we strive for excellence in every endeavour, ensuring that our best work becomes a catalyst for our client's success.
+          With a track record of successful projects and satisfied clients, we strive for excellence in every endeavour.
         </p>
-        <Button className="mb-12 bg-befoundPurple hover:bg-befoundOrange text-white font-semibold px-8 py-3 rounded-full shadow transition-colors duration-300">
+        <Button 
+          className="mb-12 bg-befoundPurple hover:bg-befoundOrange text-white font-semibold px-8 py-3 rounded-full shadow transition-colors duration-300"
+          onClick={() => navigate('/projects')}
+        >
           View All Portfolio
         </Button>
         {/* Card Stack Carousel */}
@@ -82,7 +90,7 @@ const BestOfWorkSection = () => {
             style={{ width: '60%', maxWidth: 400, opacity: 0.5, pointerEvents: 'none' }}
             aria-hidden="true"
           >
-            <div className="bg-white rounded-2xl shadow-lg flex flex-col md:flex-row items-center p-6 md:p-8 w-full border border-gray-200 select-none">
+            <div className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row items-center p-6 md:p-8 w-full border border-gray-200 select-none">
               <div className="flex-1 min-w-0">
                 <span className="text-befoundOrange font-bold text-lg">{prevProjectObj.number}</span>
                 <h3 className="text-2xl font-bold text-befoundPurple mb-2 mt-1">{prevProjectObj.title}</h3>
@@ -106,7 +114,7 @@ const BestOfWorkSection = () => {
             style={{ width: '60%', maxWidth: 400, opacity: 0.5, pointerEvents: 'none' }}
             aria-hidden="true"
           >
-            <div className="bg-white rounded-2xl shadow-lg flex flex-col md:flex-row items-center p-6 md:p-8 w-full border border-gray-200 select-none">
+            <div className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row items-center p-6 md:p-8 w-full border border-gray-200 select-none">
               <div className="flex-1 min-w-0">
                 <span className="text-befoundOrange font-bold text-lg">{nextProjectObj.number}</span>
                 <h3 className="text-2xl font-bold text-befoundPurple mb-2 mt-1">{nextProjectObj.title}</h3>
@@ -126,7 +134,7 @@ const BestOfWorkSection = () => {
           </div>
           {/* Current Card */}
           <div className="relative z-10 transition-all duration-300 mx-auto" style={{ width: '100%', maxWidth: 700 }}>
-            <div className="bg-white rounded-2xl shadow-lg flex flex-col md:flex-row items-center p-8 md:p-12 w-full max-w-3xl transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row items-center p-8 md:p-12 w-full max-w-3xl transition-all duration-300">
               {/* Text Content */}
               <div className="flex-1 min-w-0 mb-8">
                 <span className="text-befoundOrange font-bold text-lg">{project.number}</span>
@@ -140,18 +148,28 @@ const BestOfWorkSection = () => {
                     </li>
                   ))}
                 </ul>
-                <a href={project.link} className="text-befoundOrange font-semibold hover:underline text-sm  mb-8">Read More</a>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <button 
+                  onClick={() => handleReadMore(project.link)}
+                  className="text-befoundOrange font-semibold hover:underline text-sm"
+                >
+                  Read More
+                </button>
               </div>
               {/* Images */}
-              <div className="flex flex-col md:flex-row gap-4 mt-8 md:mt-0 md:ml-8">
-                {project.images.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={img}
-                    alt={project.title + ' screenshot ' + (idx + 1)}
-                    className="w-32 h-64 object-cover rounded-xl border border-gray-100 shadow"
-                  />
-                ))}
+              <div className="flex-1 flex justify-end items-center mt-8 md:mt-0 md:ml-8">
+                <img
+                  src={project.images[0]}
+                  alt={project.title + ' screenshot'}
+                  className="w-64 h-40 object-cover rounded-xl border border-gray-100 shadow-lg"
+                  style={{ maxWidth: '450px', minWidth: '300px' }}
+                />
               </div>
               {/* Navigation Arrows - bottom left inside card */}
               <div className="absolute left-6 bottom-4 flex gap-3 z-20">
