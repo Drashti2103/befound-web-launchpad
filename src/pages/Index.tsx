@@ -9,6 +9,7 @@ import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import Expertise from '../components/home/expertise';
 import BusinessSection from '../components/home/BusinessSolutions';
+import BestOfWorkSection from '../components/home/BestOfWorkSection';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <BusinessSection />
       <FocusSectorsSection />
       <Expertise />
+      <BestOfWorkSection />
       <ContactSection />
       <Footer />
       <ScrollToTop />
