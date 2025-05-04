@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 
 const ServiceCard = ({ title, description, icon, color }: { title: string, description: string, icon: React.ReactNode, color: string }) => {
+  const navigate = useNavigate();
+  
   return (
     <div className={`group relative flex justify-center items-center h-[350px] w-[300px] bg-white transition-all duration-500 ease-in-out shadow-lg`}
          style={{ '--clr': color } as React.CSSProperties}>
@@ -41,11 +44,13 @@ const ServiceCard = ({ title, description, icon, color }: { title: string, descr
         </div>
         
         {/* Button */}
-        <a href="#" className="relative inline-flex px-4 py-2 font-medium no-underline mt-2.5 transition-all duration-500 ease-in-out
-                             group-hover:text-[var(--clr)] group-hover:bg-white"
-           style={{ border: `2px solid ${color}`, color: '#fff', backgroundColor: color }}>
+        <button
+          onClick={() => navigate('/projects')}
+          className="relative inline-flex px-4 py-2 font-medium no-underline mt-2.5 transition-all duration-500 ease-in-out
+                    group-hover:text-[var(--clr)] group-hover:bg-white cursor-pointer"
+          style={{ border: `2px solid ${color}`, color: '#fff', backgroundColor: color }}>
           view Portfolio
-        </a>
+        </button>
       </div>
     </div>
   );
