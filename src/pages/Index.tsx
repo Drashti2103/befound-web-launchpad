@@ -10,6 +10,7 @@ import ScrollToTop from '../components/layout/ScrollToTop';
 import Expertise from '../components/home/Expertise';
 import BusinessSection from '../components/home/BusinessSolutions';
 import BestOfWorkSection from '../components/home/BestOfWorkSection';
+import CTASection from '@/components/home/CTASection';
 
 const Index = () => {
   return (
@@ -22,7 +23,7 @@ const Index = () => {
       <FocusSectorsSection />
       <Expertise />
       <BestOfWorkSection />
-      <ContactSection />
+      <CTASection />
       <Footer />
       <ScrollToTop />
     </div>
