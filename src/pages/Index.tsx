@@ -7,7 +7,7 @@ import ContactSection from '../components/home/ContactSection';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
-import Expertise from '../components/home/Expertise';
+import ExpertiseSection from '../components/home/ExpertiseSection';
 import BusinessSection from '../components/home/BusinessSolutions';
 import BestOfWorkSection from '../components/home/BestOfWorkSection';
 import CTASection from '../components/home/CTASection';
@@ -21,7 +21,7 @@ const Index = () => {
       <WhyChooseUsSection />
       <BusinessSection />
       <FocusSectorsSection />
-      <Expertise />
+      <ExpertiseSection />
       <BestOfWorkSection />
       <CTASection />
       <Footer />

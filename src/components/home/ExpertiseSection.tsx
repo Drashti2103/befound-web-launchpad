@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Server, Layout, Smartphone, Power, Bot, BarChart2 } from 'lucide-react';
 
-export default function Expertise() {
+export default function ExpertiseSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const platforms = [
