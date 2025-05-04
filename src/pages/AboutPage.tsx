@@ -1,94 +1,399 @@
-
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
+import moreImg from '/public/images/more.png';
+import CTASection from '../components/home/CTASection';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
-      <div className="pt-24 pb-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <h1 className="text-4xl font-bold mb-6">About Us</h1>
-          <p className="text-lg text-gray-700 mb-8">
-            Founded in 2025, beFound began with a clear mission: to offer a modern, user-focused approach to web design—one that blends creativity with professionalism. From day one, the goal has been to help businesses of all sizes stand out online with clean, effective, and beautifully built websites.
-          </p>
-          
-          <div className="bg-gray-100 p-8 rounded-lg shadow-md mb-12">
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-            <p className="text-gray-700">
-              At beFound, we're dedicated to helping businesses establish a strong online presence through innovative software solutions and exceptional design. We believe that every business deserves to be found online, and we're here to make that happen.
-            </p>
+      <div className="pt-24 pb-32">
+        {/* Hero Story Section */}
+        <div className="container mx-auto px-4 md:px-6 mb-20">
+          {/* Content wrapper with relative positioning */}
+          <div className="relative w-[88%] max-w-3xl mx-auto">
+            {/* Decorative images */}
+            {/* Top right image */}
+            <div className="absolute -top-8 -right-6 z-10 hidden md:block">
+              <div className="relative w-56 h-44 overflow-visible">
+                <img 
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
+                  alt="Design process"
+                  className="w-full h-full object-cover rounded-xl shadow-xl transform rotate-12 hover:rotate-6 transition-transform duration-300"
+                />
+              </div>
+            </div>
+            
+            {/* Middle right image */}
+            <div className="absolute top-1/3 -right-48 z-20 hidden md:block">
+              <div className="relative w-56 h-72 overflow-visible">
+                <img 
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf"
+                  alt="Creative work"
+                  className="w-full h-full object-cover rounded-xl shadow-xl transform -rotate-6 hover:rotate-0 transition-transform duration-300"
+                />
+              </div>
+            </div>
+            
+            {/* Bottom right image */}
+            <div className="absolute -bottom-16 -right-36 z-30 hidden md:block">
+              <div className="relative w-48 h-48 overflow-visible">
+                <img 
+                  src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc"
+                  alt="Workspace"
+                  className="w-full h-full object-cover rounded-xl shadow-xl transform rotate-12 hover:rotate-6 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Left side images */}
+            <div className="absolute -top-16 -left-32 z-20 hidden md:block">
+              <div className="relative w-48 h-64 overflow-visible">
+                <img 
+                  src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f"
+                  alt="Design thinking"
+                  className="w-full h-full object-cover rounded-xl shadow-xl transform -rotate-12 hover:-rotate-6 transition-transform duration-300"
+                />
+              </div>
+            </div>
+            
+            {/* Bottom left image */}
+            <div className="absolute -bottom-12 -left-36 z-10 hidden md:block">
+              <div className="relative w-44 h-44 overflow-visible">
+                <img 
+                  src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b"
+                  alt="Creative process"
+                  className="w-full h-full object-cover rounded-xl shadow-xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Main content container */}
+            <div className="relative rounded-2xl shadow-2xl p-8 md:p-12" style={{ backgroundColor: '#310d66' }}>
+              {/* Content */}
+              <div className="text-center mb-12">
+                <div className="mb-6">
+                  <svg className="w-8 h-8 mx-auto text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L1 21h22L12 2zm0 3.45l8.22 14.14H3.78L12 5.45z" />
+                  </svg>
+                </div>
+                
+                <h1 className="text-3xl md:text-4xl font-bold mb-6 font-newsreader" style={{ color: '#fca311' }}>
+                  Our Story
+                </h1>
+              </div>
+
+              <div className="space-y-6 text-white leading-relaxed text-justify px-8">
+                <p className="text-lg">
+                  At a pivotal moment in my life, I stood at a crossroads, wrestling with a choice that many face: follow the conventional path of a traditional job or transform my passion for design—my modest freelance side hustle—into something greater. The market was crowded, the noise overwhelming, yet I saw an opportunity to carve out a space where my skills could truly shine. I realized that my strength lay not just in creating visually stunning designs, but in crafting user experiences that resonate, connect, and make a lasting impact.
+                </p>
+                
+                <p className="text-lg">
+                  This clarity sparked a fire within me. I didn't just want to blend into the chaos of the marketplace—I wanted to stand out, to be found. My mission became clear: to deliver exceptional work that speaks for itself, to build trust with every client, and to create solutions that elevate their vision. This wasn't just about design; it was about purpose, connection, and making a difference.
+                </p>
+
+                <p className="text-lg">
+                  From that moment of conviction, <span style={{ color: '#fca311' }}>beFound</span> was born. What started as a personal journey to channel my creative energy into meaningful work grew into a vision to lead with excellence. As the CEO of <span style={{ color: '#fca311' }}>beFound</span>, I'm driven by a commitment to empower businesses with user-centric designs and unforgettable experiences. Our story isn't just about standing out—it's about helping our clients do the same, ensuring their brands are seen, felt, and remembered.
+                </p>
+
+                <p className="text-xl font-medium text-justify font-newsreader" style={{ color: '#fca311' }}>
+                  "At beFound, we believe that exceptional work is the key to being discovered. Let us help you tell your story, create your impact, and be found."
+                </p>
+              </div>
+            </div>
           </div>
-          
-          <h2 className="text-2xl font-bold mb-4">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Jane Doe</h3>
-                <p className="text-gray-500 mb-4">Founder & CEO</p>
-                <p className="text-gray-700">
-                  Jane has over 15 years of experience in software development and has led projects for Fortune 500 companies.
-                </p>
-              </div>
+        </div>
+
+        {/* Values Section */}
+        <div className="container mx-auto px-4 md:px-6 py-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-newsreader font-bold mb-4" style={{ color: '#310d66' }}>
+                Our Values
+              </h2>
+              <div className="w-24 h-1 bg-befoundOrange mx-auto"></div>
             </div>
-            
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">John Smith</h3>
-                <p className="text-gray-500 mb-4">CTO</p>
-                <p className="text-gray-700">
-                  John is a tech innovator with expertise in emerging technologies and a passion for creating intuitive user experiences.
-                </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+              {/* Innovation Value Card */}
+              <div className="group bg-white rounded-xl p-6 shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0" style={{ backgroundColor: '#310d66' }}></div>
+                <div className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white">
+                    <svg className="w-6 h-6 text-purple-600 group-hover:text-[#310d66]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Innovation</h3>
+                  <p className="text-gray-600 text-center group-hover:text-white">We're always exploring new technologies and approaches to deliver cutting-edge solutions.</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Emily Johnson</h3>
-                <p className="text-gray-500 mb-4">Design Director</p>
-                <p className="text-gray-700">
-                  Emily brings creative vision and strategic insight to every project, ensuring beautiful and functional designs.
-                </p>
+
+              {/* Quality Value Card */}
+              <div className="group bg-white rounded-xl p-6 shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0" style={{ backgroundColor: '#310d66' }}></div>
+                <div className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white">
+                    <svg className="w-6 h-6 text-purple-600 group-hover:text-[#310d66]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Quality</h3>
+                  <p className="text-gray-600 text-center group-hover:text-white">Every line of code and design element is crafted with attention to detail.</p>
+                </div>
+              </div>
+
+              {/* Collaboration Value Card */}
+              <div className="group bg-white rounded-xl p-6 shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0" style={{ backgroundColor: '#310d66' }}></div>
+                <div className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white">
+                    <svg className="w-6 h-6 text-purple-600 group-hover:text-[#310d66]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Collaboration</h3>
+                  <p className="text-gray-600 text-center group-hover:text-white">We believe in working closely with clients and incorporating feedback.</p>
+                </div>
+              </div>
+
+              {/* Integrity Value Card */}
+              <div className="group bg-white rounded-xl p-6 shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0" style={{ backgroundColor: '#310d66' }}></div>
+                <div className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white">
+                    <svg className="w-6 h-6 text-purple-600 group-hover:text-[#310d66]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Integrity</h3>
+                  <p className="text-gray-600 text-center group-hover:text-white">We operate with transparency and strong ethical principles.</p>
+                </div>
+              </div>
+
+              {/* Excellence Value Card */}
+              <div className="group bg-white rounded-xl p-6 shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0" style={{ backgroundColor: '#310d66' }}></div>
+                <div className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white">
+                    <svg className="w-6 h-6 text-purple-600 group-hover:text-[#310d66]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Excellence</h3>
+                  <p className="text-gray-600 text-center group-hover:text-white">We strive for excellence in every project we undertake.</p>
+                </div>
+              </div>
+
+              {/* Growth Value Card */}
+              <div className="group bg-white rounded-xl p-6 shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0" style={{ backgroundColor: '#310d66' }}></div>
+                <div className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:bg-white">
+                    <svg className="w-6 h-6 text-purple-600 group-hover:text-[#310d66]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Growth</h3>
+                  <p className="text-gray-600 text-center group-hover:text-white">Continuous learning and improvement drive our success.</p>
+                </div>
               </div>
             </div>
           </div>
-          
-          <h2 className="text-2xl font-bold mb-4">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Quality</h3>
-              <p className="text-gray-700">
-                We never compromise on quality. Every line of code and design element is crafted with attention to detail and a commitment to excellence.
+        </div>
+
+        {/* Mission Section */}
+        <div className="w-full bg-gradient-to-r from-purple-50 to-transparent mt-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="relative max-w-6xl mx-auto">
+              <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 items-center p-8 md:p-12">
+                {/* Left side - Image */}
+                <div className="relative flex justify-center md:justify-start">
+                  <img 
+                    src={moreImg}
+                    alt="Team collaboration"
+                    className="w-3/4 h-3/4 object-cover rounded-2xl shadow-xl"
+                  />
+                </div>
+
+                {/* Right side - Content */}
+                <div className="relative z-10 space-y-6 md:pl-8">
+                  <div className="space-y-4">
+                    <h2 className="text-lg md:text-3xl font-newsreader font-bold" style={{ color: '#310d66' }}>
+                      Our Mission
+                    </h2>
+                    <div className="w-20 h-1 bg-befoundOrange"></div>
+                  </div>
+
+                  <p className="text-lg text-gray-700 font-newsreader leading-relaxed">
+                    At beFound, we're dedicated to helping businesses establish a strong online presence through innovative software solutions and exceptional design. We believe that every business deserves to be found online, and we're here to make that happen.
+                  </p>
+
+                  {/* Mission points */}
+                  <div className="space-y-4 pt-4">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                        </svg>
+                      </div>
+                      <p className="text-lg text-gray-700 font-newsreader">Innovation in every pixel we craft</p>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                        </svg>
+                      </div>
+                      <p className="text-lg text-gray-700 font-newsreader">User-centric design approach</p>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                        </svg>
+                      </div>
+                      <p className="text-lg text-gray-700 font-newsreader">Results that speak for themselves</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Work Process Section */}
+        <div className="container mx-auto px-4 md:px-6 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-newsreader font-bold mb-4" style={{ color: '#310d66' }}>
+                How We Work
+              </h2>
+              <div className="w-24 h-1 bg-befoundOrange mx-auto mb-6"></div>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our proven process ensures we deliver exceptional results that help your business stand out in the digital landscape.
               </p>
             </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Innovation</h3>
-              <p className="text-gray-700">
-                We're always exploring new technologies and approaches to deliver cutting-edge solutions that keep our clients ahead of the curve.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Collaboration</h3>
-              <p className="text-gray-700">
-                We believe the best results come from working closely with our clients, understanding their needs, and incorporating their feedback.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Integrity</h3>
-              <p className="text-gray-700">
-                We operate with transparency, honesty, and a strong ethical framework in all our business dealings.
-              </p>
+
+            {/* Timeline Container */}
+            <div className="max-w-6xl mx-auto px-4">
+              {/* Timeline Steps */}
+              <div className="relative">
+                {/* Dotted Connection Lines */}
+                <div className="hidden lg:block absolute top-8 left-[15%] right-[15%] h-0.5">
+                  <div className="w-full h-full border-t-2 border-dashed border-gray-300"></div>
+                </div>
+
+                {/* Timeline Items */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {/* Step 1 */}
+                  <div className="relative flex flex-col items-center group">
+                    {/* Circle with Number */}
+                    <div className="w-16 h-16 rounded-full bg-white border-2 border-befoundOrange flex items-center justify-center mb-4 relative z-10 transition-all duration-300 ease-in-out group-hover:bg-befoundOrange">
+                      <span className="text-xl font-bold transition-colors duration-300 group-hover:text-white" style={{ color: '#310d66' }}>01</span>
+                    </div>
+                    {/* Content */}
+                    <div className="text-center">
+                      <h3 className="text-xl font-newsreader font-semibold mb-2" style={{ color: '#310d66' }}>
+                        Discovery
+                      </h3>
+                      <p className="text-gray-600">
+                        Understanding your goals
+                      </p>
+                    </div>
+                    {/* Hover Content Box */}
+                    <div className="absolute top-36 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out bg-white rounded-xl p-6 shadow-lg border border-befoundOrange w-64 z-20">
+                      <p className="text-gray-600">
+                        We dive deep into understanding your business goals, target audience, and unique challenges to create tailored solutions.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="relative flex flex-col items-center group">
+                    {/* Circle with Number */}
+                    <div className="w-16 h-16 rounded-full bg-white border-2 border-befoundOrange flex items-center justify-center mb-4 relative z-10 transition-all duration-300 ease-in-out group-hover:bg-befoundOrange">
+                      <span className="text-xl font-bold transition-colors duration-300 group-hover:text-white" style={{ color: '#310d66' }}>02</span>
+                    </div>
+                    {/* Content */}
+                    <div className="text-center">
+                      <h3 className="text-xl font-newsreader font-semibold mb-2" style={{ color: '#310d66' }}>
+                        Strategy
+                      </h3>
+                      <p className="text-gray-600">
+                        Planning your success
+                      </p>
+                    </div>
+                    {/* Hover Content Box */}
+                    <div className="absolute top-36 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out bg-white rounded-xl p-6 shadow-lg border border-befoundOrange w-64 z-20">
+                      <p className="text-gray-600">
+                        We craft a tailored strategy that aligns with your objectives and maximizes your online presence through innovative solutions.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="relative flex flex-col items-center group">
+                    {/* Circle with Number */}
+                    <div className="w-16 h-16 rounded-full bg-white border-2 border-befoundOrange flex items-center justify-center mb-4 relative z-10 transition-all duration-300 ease-in-out group-hover:bg-befoundOrange">
+                      <span className="text-xl font-bold transition-colors duration-300 group-hover:text-white" style={{ color: '#310d66' }}>03</span>
+                    </div>
+                    {/* Content */}
+                    <div className="text-center">
+                      <h3 className="text-xl font-newsreader font-semibold mb-2" style={{ color: '#310d66' }}>
+                        Creation
+                      </h3>
+                      <p className="text-gray-600">
+                        Bringing ideas to life
+                      </p>
+                    </div>
+                    {/* Hover Content Box */}
+                    <div className="absolute top-36 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out bg-white rounded-xl p-6 shadow-lg border border-befoundOrange w-64 z-20">
+                      <p className="text-gray-600">
+                        Our team brings your vision to life with cutting-edge design and development solutions that set you apart from the competition.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className="relative flex flex-col items-center group">
+                    {/* Circle with Number */}
+                    <div className="w-16 h-16 rounded-full bg-white border-2 border-befoundOrange flex items-center justify-center mb-4 relative z-10 transition-all duration-300 ease-in-out group-hover:bg-befoundOrange">
+                      <span className="text-xl font-bold transition-colors duration-300 group-hover:text-white" style={{ color: '#310d66' }}>04</span>
+                    </div>
+                    {/* Content */}
+                    <div className="text-center">
+                      <h3 className="text-xl font-newsreader font-semibold mb-2" style={{ color: '#310d66' }}>
+                        Launch
+                      </h3>
+                      <p className="text-gray-600">
+                        Delivering excellence
+                      </p>
+                    </div>
+                    {/* Hover Content Box */}
+                    <div className="absolute top-36 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out bg-white rounded-xl p-6 shadow-lg border border-befoundOrange w-64 z-20">
+                      <p className="text-gray-600">
+                        We ensure a smooth launch and provide ongoing support to help your business thrive online and achieve lasting success.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Timeline Progress Animation */}
+                <div className="hidden lg:block absolute top-8 left-[15%] right-[15%] h-0.5 z-0">
+                  <div className="h-full bg-befoundOrange transition-all duration-1000 ease-out" 
+                    style={{ width: '0%' }}
+                    id="timeline-progress"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
+      <CTASection/>
       <Footer />
       <ScrollToTop />
     </div>
