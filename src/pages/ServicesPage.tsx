@@ -4,7 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 
-const ServiceCard = ({ title, description, icon, color }: { title: string, description: string, icon: React.ReactNode, color: string }) => {
+const ServiceCard = ({ title, description, icon, color, id }: { title: string, description: string, icon: React.ReactNode, color: string, id: string }) => {
   const navigate = useNavigate();
   
   return (
@@ -45,11 +45,11 @@ const ServiceCard = ({ title, description, icon, color }: { title: string, descr
         
         {/* Button */}
         <button
-          onClick={() => navigate('/projects')}
+          onClick={() => navigate(`/services/${id}`)}
           className="relative inline-flex px-4 py-2 font-medium no-underline mt-2.5 transition-all duration-500 ease-in-out
                     group-hover:text-[var(--clr)] group-hover:bg-white cursor-pointer"
           style={{ border: `2px solid ${color}`, color: '#fff', backgroundColor: color }}>
-          view Portfolio
+          learn more
         </button>
       </div>
     </div>
@@ -73,6 +73,7 @@ const ServicesPage = () => {
           
           <div className="flex flex-wrap justify-center gap-16 w-full max-w-full mx-auto py-16">
             <ServiceCard
+              id="web-development"
               title="Web Development"
               description="Custom websites and web applications that are responsive, fast, and user-friendly, built with modern technologies."
               icon={
@@ -84,6 +85,7 @@ const ServicesPage = () => {
             />
             
             <ServiceCard
+              id="mobile-application-development"
               title="Mobile App Development"
               description="Native and cross-platform mobile applications for iOS and Android that help you reach your customers wherever they are."
               icon={
@@ -95,6 +97,7 @@ const ServicesPage = () => {
             />
             
             <ServiceCard
+              id="ui-ux"
               title="UX/UI Design"
               description="User-centered design that enhances user experience and creates intuitive, beautiful interfaces that users love."
               icon={
@@ -106,6 +109,7 @@ const ServicesPage = () => {
             />
             
             <ServiceCard
+              id="custom-software-development"
               title="Custom Software Development"
               description="Tailored software solutions designed to address your specific business challenges and optimize your operations."
               icon={
@@ -117,6 +121,7 @@ const ServicesPage = () => {
             />
             
             <ServiceCard
+              id="e-commerce-solutions"
               title="E-Commerce Solutions"
               description="Comprehensive e-commerce platforms that make selling products and services online seamless and profitable."
               icon={
@@ -128,6 +133,7 @@ const ServicesPage = () => {
             />
             
             <ServiceCard
+              id="maintenance-and-support"
               title="Maintenance & Support"
               description="Ongoing technical support, updates, and maintenance to ensure your software remains secure and performs optimally."
               icon={
@@ -138,8 +144,8 @@ const ServicesPage = () => {
               color="#5A189A"
             />
             
-            {/* Shopify Sites Card */}
             <ServiceCard
+              id="shopify-applications"
               title="Shopify Sites"
               description="Launch and manage your online store with custom Shopify solutions tailored to your brand."
               icon={
@@ -150,8 +156,8 @@ const ServicesPage = () => {
               color="#7B2CBF"
             />
 
-            {/* SEO Optimization Card */}
             <ServiceCard
+              id="seo-optimization"
               title="SEO Optimization"
               description="Boost your website's visibility and ranking on search engines with our expert SEO strategies."
               icon={
