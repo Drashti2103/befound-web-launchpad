@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../ui/Logo';
@@ -18,6 +17,21 @@ const Navbar = () => {
     };
   }, []);
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const nav = document.getElementById('mobile-menu');
+      if (isMenuOpen && nav && !nav.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -30,10 +44,11 @@ const Navbar = () => {
           
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-gray-800"
+            className="md:hidden text-gray-800 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transition-transform duration-200 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -52,16 +67,21 @@ const Navbar = () => {
         </div>
         
         {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 bg-white py-4 px-4 rounded-lg shadow-lg">
-            <div className="flex flex-col space-y-4">
-              <NavLink to="/" label="Home" onClick={() => setIsMenuOpen(false)} />
-              <NavLink to="/about" label="About Us" onClick={() => setIsMenuOpen(false)} />
-              <NavLink to="/services" label="Services" onClick={() => setIsMenuOpen(false)} />
-              <NavLink to="/contact" label="Contact" onClick={() => setIsMenuOpen(false)} />
-            </div>
+        <div 
+          id="mobile-menu"
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen 
+              ? 'opacity-100 translate-y-0 visible' 
+              : 'opacity-0 -translate-y-2 invisible'
+          } mt-4 bg-white py-4 px-4 rounded-lg shadow-lg absolute left-4 right-4`}
+        >
+          <div className="flex flex-col space-y-4">
+            <NavLink to="/" label="Home" onClick={() => setIsMenuOpen(false)} />
+            <NavLink to="/about" label="About Us" onClick={() => setIsMenuOpen(false)} />
+            <NavLink to="/services" label="Services" onClick={() => setIsMenuOpen(false)} />
+            <NavLink to="/contact" label="Contact" onClick={() => setIsMenuOpen(false)} />
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
@@ -77,7 +97,7 @@ const NavLink = ({ to, label, onClick }: NavLinkProps) => {
   return (
     <Link 
       to={to} 
-      className="text-gray-800 font-medium hover:text-befoundOrange transition-colors" 
+      className="text-gray-800 font-medium hover:text-befoundOrange transition-colors duration-200" 
       onClick={onClick}
     >
       {label}

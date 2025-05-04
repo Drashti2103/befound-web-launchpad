@@ -14,11 +14,11 @@ const AboutPage = () => {
         {/* Hero Story Section */}
         <div className="container mx-auto px-4 md:px-6 mb-20">
           {/* Content wrapper with relative positioning */}
-          <div className="relative w-[88%] max-w-3xl mx-auto">
+          <div className="relative w-[88%] sm:w-[92%] max-w-3xl mx-auto">
             {/* Decorative images */}
             {/* Top right image */}
-            <div className="absolute -top-8 -right-6 z-10 hidden md:block">
-              <div className="relative w-56 h-44 overflow-visible">
+            <div className="absolute -top-8 -right-6 z-10 hidden lg:block">
+              <div className="relative w-40 sm:w-56 h-32 sm:h-44 overflow-visible">
                 <img 
                   src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
                   alt="Design process"
@@ -28,8 +28,8 @@ const AboutPage = () => {
             </div>
             
             {/* Middle right image */}
-            <div className="absolute top-1/3 -right-48 z-20 hidden md:block">
-              <div className="relative w-56 h-72 overflow-visible">
+            <div className="absolute top-1/3 -right-24 sm:-right-48 z-20 hidden lg:block">
+              <div className="relative w-40 sm:w-56 h-56 sm:h-72 overflow-visible">
                 <img 
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf"
                   alt="Creative work"
@@ -39,8 +39,8 @@ const AboutPage = () => {
             </div>
             
             {/* Bottom right image */}
-            <div className="absolute -bottom-16 -right-36 z-30 hidden md:block">
-              <div className="relative w-48 h-48 overflow-visible">
+            <div className="absolute -bottom-16 -right-20 sm:-right-36 z-30 hidden lg:block">
+              <div className="relative w-36 sm:w-48 h-36 sm:h-48 overflow-visible">
                 <img 
                   src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc"
                   alt="Workspace"
@@ -50,8 +50,8 @@ const AboutPage = () => {
             </div>
 
             {/* Left side images */}
-            <div className="absolute -top-16 -left-32 z-20 hidden md:block">
-              <div className="relative w-48 h-64 overflow-visible">
+            <div className="absolute -top-16 -left-20 sm:-left-32 z-20 hidden lg:block">
+              <div className="relative w-36 sm:w-48 h-48 sm:h-64 overflow-visible">
                 <img 
                   src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f"
                   alt="Design thinking"
@@ -61,8 +61,8 @@ const AboutPage = () => {
             </div>
             
             {/* Bottom left image */}
-            <div className="absolute -bottom-12 -left-36 z-10 hidden md:block">
-              <div className="relative w-44 h-44 overflow-visible">
+            <div className="absolute -bottom-12 -left-24 sm:-left-36 z-10 hidden lg:block">
+              <div className="relative w-32 sm:w-44 h-32 sm:h-44 overflow-visible">
                 <img 
                   src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b"
                   alt="Creative process"
@@ -72,34 +72,34 @@ const AboutPage = () => {
             </div>
 
             {/* Main content container */}
-            <div className="relative rounded-2xl shadow-2xl p-8 md:p-12" style={{ backgroundColor: '#310d66' }}>
+            <div className="relative rounded-2xl shadow-2xl p-4 sm:p-8 md:p-12" style={{ backgroundColor: '#310d66' }}>
               {/* Content */}
-              <div className="text-center mb-12">
-                <div className="mb-6">
-                  <svg className="w-8 h-8 mx-auto text-white" viewBox="0 0 24 24" fill="currentColor">
+              <div className="text-center mb-8 sm:mb-12">
+                <div className="mb-4 sm:mb-6">
+                  <svg className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-white" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2L1 21h22L12 2zm0 3.45l8.22 14.14H3.78L12 5.45z" />
                   </svg>
                 </div>
                 
-                <h1 className="text-3xl md:text-4xl font-bold mb-6 font-newsreader" style={{ color: '#fca311' }}>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 font-newsreader" style={{ color: '#fca311' }}>
                   Our Story
                 </h1>
               </div>
 
-              <div className="space-y-6 text-white leading-relaxed text-justify px-8">
-                <p className="text-lg">
+              <div className="space-y-4 sm:space-y-6 text-white leading-relaxed text-justify px-2 sm:px-8">
+                <p className="text-base sm:text-lg">
                   At a pivotal moment in my life, I stood at a crossroads, wrestling with a choice that many face: follow the conventional path of a traditional job or transform my passion for design—my modest freelance side hustle—into something greater. The market was crowded, the noise overwhelming, yet I saw an opportunity to carve out a space where my skills could truly shine. I realized that my strength lay not just in creating visually stunning designs, but in crafting user experiences that resonate, connect, and make a lasting impact.
                 </p>
                 
-                <p className="text-lg">
+                <p className="text-base sm:text-lg">
                   This clarity sparked a fire within me. I didn't just want to blend into the chaos of the marketplace—I wanted to stand out, to be found. My mission became clear: to deliver exceptional work that speaks for itself, to build trust with every client, and to create solutions that elevate their vision. This wasn't just about design; it was about purpose, connection, and making a difference.
                 </p>
 
-                <p className="text-lg">
+                <p className="text-base sm:text-lg">
                   From that moment of conviction, <span style={{ color: '#fca311' }}>beFound</span> was born. What started as a personal journey to channel my creative energy into meaningful work grew into a vision to lead with excellence. As the CEO of <span style={{ color: '#fca311' }}>beFound</span>, I'm driven by a commitment to empower businesses with user-centric designs and unforgettable experiences. Our story isn't just about standing out—it's about helping our clients do the same, ensuring their brands are seen, felt, and remembered.
                 </p>
 
-                <p className="text-xl font-medium text-justify font-newsreader" style={{ color: '#fca311' }}>
+                <p className="text-lg sm:text-xl font-medium text-justify font-newsreader" style={{ color: '#fca311' }}>
                   "At beFound, we believe that exceptional work is the key to being discovered. Let us help you tell your story, create your impact, and be found."
                 </p>
               </div>
@@ -108,16 +108,16 @@ const AboutPage = () => {
         </div>
 
         {/* Values Section */}
-        <div className="container mx-auto px-4 md:px-6 py-16">
+        <div className="container mx-auto px-4 md:px-6 py-12 sm:py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-newsreader font-bold mb-4" style={{ color: '#310d66' }}>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-newsreader font-bold mb-4" style={{ color: '#310d66' }}>
                 Our Values
               </h2>
               <div className="w-24 h-1 bg-befoundOrange mx-auto"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
               {/* Innovation Value Card */}
               <div className="group bg-white rounded-xl p-6 shadow-lg relative overflow-hidden">
                 <div className="absolute inset-0 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0" style={{ backgroundColor: '#310d66' }}></div>
