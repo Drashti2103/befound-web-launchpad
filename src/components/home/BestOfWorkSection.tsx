@@ -69,7 +69,7 @@ const BestOfWorkSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#f8fafc] py-20">
+    <section className="w-full bg-[#f8fafc] py-20 mb-12">
       <div className="max-w-5xl mx-auto px-4 flex flex-col items-center">
         <span className="text-befoundOrange font-semibold tracking-wider mb-2 text-center">OUR FINEST ACHIEVEMENTS</span>
         <h2 className="text-4xl md:text-5xl font-newsreader font-bold text-befoundPurple text-center mb-4">Best of Our Work</h2>
@@ -82,11 +82,12 @@ const BestOfWorkSection = () => {
         >
           View All Portfolio
         </Button>
+
         {/* Card Stack Carousel */}
-        <div className="relative w-full flex justify-center items-center min-h-[380px]" style={{height: 400}}>
+        <div className="relative w-full flex justify-center items-center min-h-[500px] md:min-h-[400px]">
           {/* Previous Card (peek effect left) */}
           <div
-            className="absolute left-0 top-8 z-0 transition-all duration-300 flex justify-start"
+            className="absolute left-0 top-8 z-0 transition-all duration-300 hidden md:flex justify-start"
             style={{ width: '60%', maxWidth: 400, opacity: 0.5, pointerEvents: 'none' }}
             aria-hidden="true"
           >
@@ -108,9 +109,10 @@ const BestOfWorkSection = () => {
               </div>
             </div>
           </div>
+
           {/* Next Card (peek effect right) */}
           <div
-            className="absolute right-0 top-8 z-0 transition-all duration-300 flex justify-end"
+            className="absolute right-0 top-8 z-0 transition-all duration-300 hidden md:flex justify-end"
             style={{ width: '60%', maxWidth: 400, opacity: 0.5, pointerEvents: 'none' }}
             aria-hidden="true"
           >
@@ -132,11 +134,12 @@ const BestOfWorkSection = () => {
               </div>
             </div>
           </div>
+
           {/* Current Card */}
-          <div className="relative z-10 transition-all duration-300 mx-auto" style={{ width: '100%', maxWidth: 700 }}>
-            <div className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row items-center p-8 md:p-12 w-full max-w-3xl transition-all duration-300">
+          <div className="relative z-10 transition-all duration-300 mx-auto w-full" style={{ maxWidth: 700 }}>
+            <div className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row items-start p-6 md:p-8 w-full transition-all duration-300">
               {/* Text Content */}
-              <div className="flex-1 min-w-0 mb-8">
+              <div className="flex-1 min-w-0 mb-8 md:mb-0 md:pr-8">
                 <span className="text-befoundOrange font-bold text-lg">{project.number}</span>
                 <h3 className="text-2xl font-bold text-befoundPurple mb-2 mt-1">{project.title}</h3>
                 <p className="text-gray-700 mb-4">{project.description}</p>
@@ -162,17 +165,19 @@ const BestOfWorkSection = () => {
                   Read More
                 </button>
               </div>
+
               {/* Images */}
-              <div className="flex-1 flex justify-end items-center mt-8 md:mt-0 md:ml-8">
+              <div className="w-full md:w-auto flex justify-center md:justify-end items-center">
                 <img
                   src={project.images[0]}
                   alt={project.title + ' screenshot'}
-                  className="w-64 h-40 object-cover rounded-xl border border-gray-100 shadow-lg"
-                  style={{ maxWidth: '450px', minWidth: '300px' }}
+                  className="w-full md:w-64 h-40 object-cover rounded-xl border border-gray-100 shadow-lg"
+                  style={{ maxWidth: '100%' }}
                 />
               </div>
-              {/* Navigation Arrows - bottom left inside card */}
-              <div className="absolute left-6 bottom-4 flex gap-3 z-20">
+
+              {/* Navigation Arrows - bottom center on mobile, bottom left on desktop */}
+              <div className="absolute left-1/2 -bottom-16 md:left-6 md:bottom-4 flex gap-3 z-20 transform -translate-x-1/2 md:translate-x-0">
                 <button
                   onClick={prevProject}
                   className="bg-befoundPurple hover:bg-befoundOrange text-white rounded-full p-3 shadow transition-colors duration-300"

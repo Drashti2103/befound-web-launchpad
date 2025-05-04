@@ -60,12 +60,24 @@ export default function ExpertiseSection() {
   ];
 
   return (
-    <div className="w-full bg-[#f1f3f6] overflow-hidden">
-      {/* Main Section with Hero Image and Title on Right */}
-      <div className="container mx-auto px-4 py-8 relative">
-        <div className="flex flex-col lg:flex-row">
-          {/* Background Image - Taking 2/3 of the container on desktop */}
-          <div className="w-full lg:w-2/3 h-96 relative overflow-hidden rounded-lg">
+    <div className="w-full bg-[#f1f3f6] overflow-hidden py-12 md:py-20">
+      {/* Main Section with Hero Image and Title */}
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-16 md:mb-24">
+          {/* Title Section */}
+          <div className="w-full lg:w-1/3 order-2 lg:order-1">
+            <div className="flex items-start mb-2">
+              <div className="h-1 w-8 bg-befoundOrange mr-2 mt-3"></div>
+              <span className="text-befoundOrange font-semibold tracking-wider">EXPERTISE</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-newsreader text-beFoundPurple mb-4">Our Area of Expertise</h2>
+            <p className="text-gray-600">
+              We leverage cutting-edge technologies for efficiency, productivity, and growth opportunities.
+            </p>
+          </div>
+
+          {/* Background Image */}
+          <div className="w-full lg:w-2/3 h-64 md:h-96 relative overflow-hidden rounded-lg order-1 lg:order-2">
             <div className="absolute inset-0 bg-gradient-to-r from-befoundPurple/40 to-befoundOrange/10 z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80"
@@ -87,63 +99,35 @@ export default function ExpertiseSection() {
               </div>
             </div> */}
           </div>
-
-          {/* Title Section - Taking 1/3 of the container and aligned to right */}
-          <div className="w-full lg:w-1/3 pt-8 lg:pt-20 lg:pl-12">
-            <div className="flex items-start mb-2">
-              <div className="h-1 w-8 bg-befoundOrange mr-2 mt-3"></div>
-              <span className="text-befoundOrange font-semibold tracking-wider">EXPERTISE</span>
-            </div>
-            <h2 className="text-4xl font-bold text-gray-800 font-newsreader text-beFoundPurple mb-4">Our Area of Expertise</h2>
-            <p className="text-gray-600">
-              We leverage cutting-edge technologies for efficiency, productivity, and growth opportunities.
-            </p>
-          </div>
         </div>
 
-        {/* Cards Row - Positioned to overlap the image by 15% */}
-        <div className="relative -mt-16 z-30">
-          {/* Horizontal scrollable container for cards */}
-          <div className="flex overflow-x-auto pb-8 hide-scrollbar">
-            <div className="flex gap-6">
-              {serviceCards.map((card) => (
-                <div
-                  key={card.id}
-                  className="bg-white p-6 rounded shadow-sm relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105 flex-shrink-0 w-64"
-                  style={{ transitionProperty: 'box-shadow, transform' }}
-                  onMouseEnter={() => setHoveredCard(card.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
-                  <div className="mb-4">{card.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-1">{card.title}</h3>
-                  <div className="h-0.5 w-12 bg-befoundOrange mb-4"></div>
-                  <p className="text-gray-600 text-sm">{card.description}</p>
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {serviceCards.map((card) => (
+            <div
+              key={card.id}
+              className="bg-white p-6 rounded shadow-sm relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105"
+              style={{ transitionProperty: 'box-shadow, transform' }}
+              onMouseEnter={() => setHoveredCard(card.id)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <div className="mb-4">{card.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-1">{card.title}</h3>
+              <div className="h-0.5 w-12 bg-befoundOrange mb-4"></div>
+              <p className="text-gray-600 text-sm">{card.description}</p>
 
-                  {/* Hover Effect - Multi-shade circles in bottom right corner */}
-                  <div className={`pointer-events-none absolute -bottom-20 -right-20 transition-all duration-300 ${
-                    hoveredCard === card.id ? 'translate-x-0 translate-y-0 opacity-100' : 'translate-x-8 translate-y-8 opacity-0'
-                  }`}>
-                    <div className="absolute w-40 h-40 rounded-full bg-befoundOrange/10" style={{zIndex:1}}></div>
-                    <div className="absolute w-32 h-32 rounded-full bg-befoundOrange/30 right-4 bottom-4" style={{zIndex:2}}></div>
-                    <div className="absolute w-24 h-24 rounded-full bg-befoundOrange/60 right-8 bottom-8" style={{zIndex:3}}></div>
-                  </div>
-                </div>
-              ))}
+              {/* Hover Effect - Multi-shade circles in bottom right corner */}
+              <div className={`pointer-events-none absolute -bottom-20 -right-20 transition-all duration-300 ${
+                hoveredCard === card.id ? 'translate-x-0 translate-y-0 opacity-100' : 'translate-x-8 translate-y-8 opacity-0'
+              }`}>
+                <div className="absolute w-40 h-40 rounded-full bg-befoundOrange/10" style={{zIndex:1}}></div>
+                <div className="absolute w-32 h-32 rounded-full bg-befoundOrange/30 right-4 bottom-4" style={{zIndex:2}}></div>
+                <div className="absolute w-24 h-24 rounded-full bg-befoundOrange/60 right-8 bottom-8" style={{zIndex:3}}></div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      {/* Add custom CSS to hide scrollbar but maintain scroll functionality */}
-      <style>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </div>
   );
 } 
