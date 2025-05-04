@@ -159,62 +159,105 @@ const ServicesPage = () => {
           </div>
           
           {/* Our Approach Section */}
-          <div className="mt-20">
-            <h2 className="text-2xl font-bold uppercase text-center text-[#2563eb] tracking-wide">Our Approach</h2>
-            <div className="flex justify-center mb-8 mt-2">
-              <div className="h-1 w-20 bg-[#2563eb] rounded-full"></div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-10 max-w-5xl mx-auto">
-              {/* Left: Image */}
-              <div className="flex-1 flex justify-center md:justify-end mb-8 md:mb-0">
-                <img src="/images/more.png" alt="Our Approach Illustration" className="w-72 md:w-96 rounded-xl shadow-lg object-contain" />
+          <div className="relative mt-20 px-4 md:px-8 py-16 overflow-hidden min-h-[80vh] w-full bg-[#fcfcfc]">
+            {/* Main Content */}
+            <div className="relative container mx-auto z-10">
+              {/* Heading */}
+              <div className="text-center mb-16">
+                <div className="relative inline-block">
+                  <h2 className="text-4xl font-bold mb-2 font-newsreader text-center text-befoundPurple">
+                    Our Approach
+                    <div className="flex justify-center mb-6">
+            <div className="h-1 w-24 bg-befoundOrange rounded-full"></div>
+          </div>
+                  </h2>
+                </div>
+                <p className="text-[#4A4A4A] max-w-3xl mx-auto text-lg">
+                  Every product or service has its unique identity and requires a tailored approach and plan. 
+                  Our team follows a concrete and thorough process to ensure success.
+                </p>
               </div>
-              {/* Right: Steps */}
-              <div className="flex-1 flex flex-col gap-8 w-full">
-                {/* Step 1 */}
-                <div className="flex items-start bg-white rounded-xl shadow-lg p-6 gap-4">
-                  <div className="flex-shrink-0">
-                    {/* Research & Ideation Icon */}
-                    <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#FFB300" strokeWidth="1.5">
-                      <circle cx="12" cy="12" r="10" fill="#FFF8E1" />
-                      <path d="M8 15l4-4 4 4" stroke="#43A047" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 11V7" stroke="#43A047" strokeWidth="2" strokeLinecap="round"/>
-                      <circle cx="16" cy="8" r="2" fill="#FFB300" />
-                    </svg>
+
+              {/* Process Steps Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Research & Ideation */}
+                <div className="group relative border border-[#e6e6e6] p-12 text-center transition-all duration-500 hover:border-transparent
+                               before:absolute before:inset-0 before:bg-black/30 before:opacity-0 before:transition-opacity
+                               hover:before:opacity-100 before:z-10 overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <img 
+                      src="https://i.ibb.co/mykzQks/services1.jpg" 
+                      alt="service background" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold uppercase text-[#2563eb] mb-1">Research & Ideation</h3>
-                    <p className="text-gray-800">Before starting a project, we research, choose keywords, and understand USPs and target audience to create meaningful campaigns with flawless execution.</p>
-                  </div>
-                </div>
-                {/* Step 2 */}
-                <div className="flex items-start bg-white rounded-xl shadow-lg p-6 gap-4">
-                  <div className="flex-shrink-0">
-                    {/* Design & Development Icon */}
-                    <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#7B2CBF" strokeWidth="1.5">
-                      <rect x="4" y="4" width="16" height="12" rx="2" fill="#EDE9FE" />
-                      <path d="M8 8h8M8 12h4" stroke="#7B2CBF" strokeWidth="2" strokeLinecap="round"/>
-                      <circle cx="18" cy="16" r="2" fill="#FF8C42" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold uppercase text-[#2563eb] mb-1">Design and Development</h3>
-                    <p className="text-gray-800">Carefully considering the findings of the research and brainstorming session, we design the product as per the requirement. It goes under a proper and evaluated design and development process.</p>
+                  <div className="relative z-20">
+                    <div className="text-befoundOrange mb-5 group-hover:text-white transition-colors duration-500">
+                      <svg className="w-10 h-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    <h4 className="text-xl font-semibold text-[#1e2331] mb-4 group-hover:text-white transition-colors duration-500">
+                      Research & Ideation
+                    </h4>
+                    <p className="text-gray-600 mb-4 group-hover:text-white transition-colors duration-500">
+                      Before starting a project, we research, choose keywords, and understand USPs and target 
+                      audience to create meaningful campaigns with flawless execution.
+                    </p>
                   </div>
                 </div>
-                {/* Step 3 */}
-                <div className="flex items-start bg-white rounded-xl shadow-lg p-6 gap-4">
-                  <div className="flex-shrink-0">
-                    {/* Testing & Deployment Icon */}
-                    <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#45B7D1" strokeWidth="1.5">
-                      <circle cx="12" cy="12" r="10" fill="#E0F7FA" />
-                      <path d="M9 12l2 2 4-4" stroke="#45B7D1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <circle cx="8" cy="8" r="1.5" fill="#7B2CBF" />
-                    </svg>
+
+                {/* Design and Development */}
+                <div className="group relative border border-[#e6e6e6] p-12 text-center transition-all duration-500 hover:border-transparent
+                               before:absolute before:inset-0 before:bg-black/30 before:opacity-0 before:transition-opacity
+                               hover:before:opacity-100 before:z-10 overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <img 
+                      src="https://i.ibb.co/mykzQks/services1.jpg" 
+                      alt="service background" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold uppercase text-[#2563eb] mb-1">Testing and Deployment</h3>
-                    <p className="text-gray-800">We follow strict quality check protocols to ensure glitch-free products. Once everything is in place and our client is happy with the outcome, we deploy one final QC before launching.</p>
+                  <div className="relative z-20">
+                    <div className="text-befoundOrange mb-5 group-hover:text-white transition-colors duration-500">
+                      <svg className="w-10 h-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                      </svg>
+                    </div>
+                    <h4 className="text-xl font-semibold text-[#1e2331] mb-4 group-hover:text-white transition-colors duration-500">
+                      Design and Development
+                    </h4>
+                    <p className="text-gray-600 mb-4 group-hover:text-white transition-colors duration-500">
+                      Carefully considering the findings of the research and brainstorming session, we design 
+                      the product as per the requirement. It goes under a proper and evaluated design process.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Testing and Deployment */}
+                <div className="group relative border border-[#e6e6e6] p-12 text-center transition-all duration-500 hover:border-transparent
+                               before:absolute before:inset-0 before:bg-black/30 before:opacity-0 before:transition-opacity
+                               hover:before:opacity-100 before:z-10 overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <img 
+                      src="https://i.ibb.co/mykzQks/services1.jpg" 
+                      alt="service background" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="relative z-20">
+                    <div className="text-befoundOrange mb-5 group-hover:text-white transition-colors duration-500">
+                      <svg className="w-10 h-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h4 className="text-xl font-semibold text-[#1e2331] mb-4 group-hover:text-white transition-colors duration-500">
+                      Testing and Deployment
+                    </h4>
+                    <p className="text-gray-600 mb-4 group-hover:text-white transition-colors duration-500">
+                      We follow strict quality check protocols to ensure glitch-free products. Once everything 
+                      is in place and our client is happy with the outcome, we deploy one final QC before launching.
+                    </p>
                   </div>
                 </div>
               </div>
