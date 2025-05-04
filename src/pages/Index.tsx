@@ -7,10 +7,10 @@ import ContactSection from '../components/home/ContactSection';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
-import Expertise from '@/components/home/Expertise';
+import Expertise from '../components/home/Expertise';
 import BusinessSection from '../components/home/BusinessSolutions';
 import BestOfWorkSection from '../components/home/BestOfWorkSection';
-import CTASection from '@/components/home/CTASection';
+import CTASection from '../components/home/CTASection';
 
 const Index = () => {
   return (
