@@ -37,7 +37,7 @@ const projects = [
     images: [
       '/images/dishsnap.png',
     ],
-    liveUrl: '',
+    liveUrl: 'https://dishsnap.vercel.app/',
     challenge: 'Affordable solution for small businesses to generate food photography.',
     solution: 'Used OpenAI for image generation and an intuitive interface for customization.'
   },
@@ -54,7 +54,7 @@ const projects = [
     images: [
       '/images/makemediasense.png',
     ],
-    liveUrl: '',
+    liveUrl: 'https://media-make-sense-vamc.vercel.app/',
     challenge: 'Showcase digital marketing services with optimal performance.',
     solution: 'Clean, modern design with smooth animations and responsive layouts.'
   },
@@ -71,7 +71,7 @@ const projects = [
     images: [
       '/images/servesmart.png',
     ],
-    liveUrl: '',
+    liveUrl: 'https://www.servesmart.co.nz/',
     challenge: 'Showcase digital marketing services with optimal performance.',
     solution: 'Clean, modern design with smooth animations and responsive layouts.'
   },
