@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../ui/Logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +32,13 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isMenuOpen]);
+
+  const handleNavClick = (path: string) => {
+    if (location.pathname === path && path === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav 
@@ -59,15 +67,15 @@ const Navbar = () => {
           
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-8">
-            <NavLink to="/" label="Home" />
-            <NavLink to="/about" label="About Us" />
-            <NavLink to="/services" label="Services" />
-            <NavLink to="/contact" label="Contact" />
+            <NavLink to="/" label="Home" onClick={() => handleNavClick('/')} />
+            <NavLink to="/about" label="About Us" onClick={() => handleNavClick('/about')} />
+            <NavLink to="/services" label="Services" onClick={() => handleNavClick('/services')} />
+            <NavLink to="/contact" label="Contact" onClick={() => handleNavClick('/contact')} />
           </div>
         </div>
         
         {/* Mobile menu */}
-        <div 
+        <div
           id="mobile-menu"
           className={`md:hidden transition-all duration-300 ease-in-out ${
             isMenuOpen 
@@ -76,10 +84,10 @@ const Navbar = () => {
           } mt-4 bg-white py-4 px-4 rounded-lg shadow-lg absolute left-4 right-4`}
         >
           <div className="flex flex-col space-y-4">
-            <NavLink to="/" label="Home" onClick={() => setIsMenuOpen(false)} />
-            <NavLink to="/about" label="About Us" onClick={() => setIsMenuOpen(false)} />
-            <NavLink to="/services" label="Services" onClick={() => setIsMenuOpen(false)} />
-            <NavLink to="/contact" label="Contact" onClick={() => setIsMenuOpen(false)} />
+            <NavLink to="/" label="Home" onClick={() => handleNavClick('/')} />
+            <NavLink to="/about" label="About Us" onClick={() => handleNavClick('/about')} />
+            <NavLink to="/services" label="Services" onClick={() => handleNavClick('/services')} />
+            <NavLink to="/contact" label="Contact" onClick={() => handleNavClick('/contact')} />
           </div>
         </div>
       </div>
@@ -94,10 +102,15 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ to, label, onClick }: NavLinkProps) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+
   return (
     <Link 
       to={to} 
-      className="text-gray-800 font-medium hover:text-befoundOrange transition-colors duration-200" 
+      className={`text-gray-800 font-medium hover:text-befoundOrange transition-colors duration-200 ${
+        isActive ? 'text-befoundOrange' : ''
+      }`}
       onClick={onClick}
     >
       {label}

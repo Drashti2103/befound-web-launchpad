@@ -13,7 +13,7 @@ const sectorData = [
     circleClip: 'circle(calc(6.25rem + 7.5vw) at 100% 100%)',
     overlayClip: 'circle(calc(6.25rem + 7.5vw) at 100% 100%)',
     overlayClipHover: 'circle(110vw at 100% 100%)',
-    prpl: 'lg:pr-52',
+    prpl: 'lg:pr-64 sm:pr-48',
   },
   {
     title: 'Legacy',
@@ -23,7 +23,7 @@ const sectorData = [
     circleClip: 'circle(calc(6.25rem + 7.5vw) at 0% 100%)',
     overlayClip: 'circle(calc(6.25rem + 7.5vw) at 0% 100%)',
     overlayClipHover: 'circle(110vw at 0% 100%)',
-    prpl: 'lg:pl-48',
+    prpl: 'lg:pl-64 sm:pl-48',
   },
   {
     title: 'Education',
@@ -33,7 +33,7 @@ const sectorData = [
     circleClip: 'circle(calc(6.25rem + 7.5vw) at 100% 0%)',
     overlayClip: 'circle(calc(6.25rem + 7.5vw) at 100% 0%)',
     overlayClipHover: 'circle(110vw at 100% 0%)',
-    prpl: 'lg:pr-44',
+    prpl: 'lg:pr-44 sm:pr-24',
   },
   {
     title: 'Finance',
@@ -43,7 +43,7 @@ const sectorData = [
     circleClip: 'circle(calc(6.25rem + 7.5vw) at 0% 0%)',
     overlayClip: 'circle(calc(6.25rem + 7.5vw) at 0% 0%)',
     overlayClipHover: 'circle(110vw at 0% 0%)',
-    prpl: 'lg:pl-48',
+    prpl: 'lg:pl-64 sm:pl-48',
   },
 ];
 

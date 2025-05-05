@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <svg className="h-5 w-5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none"/><path d="M22 6l-10 7L2 6" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>
-                <a href="mailto:contact@befound.com" className="flex-1 hover:text-befoundOrange transition-colors duration-200">contact@befound.com</a>
+                <a href="mailto:info@befound.com" className="flex-1 hover:text-befoundOrange transition-colors duration-200">info@befound.com</a>
               </li>
             </ul>
           </div>

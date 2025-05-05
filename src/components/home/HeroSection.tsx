@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper';
 import { EffectCoverflow, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
@@ -11,6 +12,7 @@ register();
 
 const HeroSection = () => {
   const swiperElRef = useRef<HTMLElement | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Initialize Swiper
@@ -84,7 +86,7 @@ const HeroSection = () => {
     <main className="relative w-[95%] sm:w-[90%] max-w-7xl mx-auto min-h-[calc(100vh-4rem)] flex flex-col md:flex-row items-center gap-8 sm:gap-12 py-16 sm:py-24 px-4 sm:px-6">
       <div className="w-full md:w-1/2 text-center md:text-left">
         <span className="uppercase tracking-wider text-sm sm:text-base text-[#717171]">SOFTWARE SOLUTIONS</span>
-        <h1 className="capitalize tracking-wide font-newsreader font-black text-[2.5rem] sm:text-[3.4375rem] md:text-[4rem] leading-tight">
+        <h1 className="tracking-wide font-black text-[2.5rem] sm:text-[3.4375rem] md:text-[4rem] leading-tight">
           <span className="text-befoundOrange lowercase">be</span>
           <span className="text-befoundPurple font-newsreader font-bold">Found</span>
         </h1>
@@ -93,12 +95,12 @@ const HeroSection = () => {
         <p className="leading-relaxed text-sm sm:text-base max-w-xl mx-auto md:mx-0">
           Innovative software solutions that empower businesses to reach their full potential in the digital landscape. Our expertise transforms your vision into reality with modern, scalable technology.
         </p>
-        <a 
-          href="#contact" 
+        <button 
+          onClick={() => navigate('/services')}
           className="inline-block uppercase text-[#717171] font-medium bg-white rounded-full transition-all duration-300 border-2 border-[#c2c2c2] mt-6 sm:mt-9 py-1.5 px-4 text-sm sm:text-base hover:border-befoundOrange hover:text-befoundOrange"
         >
           GET STARTED
-        </a>
+        </button>
       </div>
       
       <div className="swiper w-full md:w-3/5 pt-8 sm:pt-12">

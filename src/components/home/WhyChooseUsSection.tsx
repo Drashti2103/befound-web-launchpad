@@ -1,7 +1,10 @@
 import React from "react";
 import more from "../../public/more.png";
+import { useNavigate } from 'react-router-dom';
 
 const WhyChooseUsSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="w-full bg-white py-16 flex justify-center items-center">
       <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-12 px-4 md:px-0">
@@ -34,12 +37,12 @@ const WhyChooseUsSection = () => {
               <span><b>Client-First Approach:</b> Your goals are our top priority.</span>
             </li>
           </ul>
-          <a
-            href="#contact"
+          <button
+            onClick={() => navigate('/contact')}
             className="inline-block bg-befoundOrange text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-befoundPurple transition-colors duration-300"
           >
             Let's Work Together
-          </a>
+          </button>
         </div>
       </div>
     </section>
