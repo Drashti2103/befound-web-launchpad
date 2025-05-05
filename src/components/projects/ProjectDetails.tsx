@@ -18,9 +18,9 @@ const projects = [
       'Table booking system',
     ],
     images: [
-      '/images/cafecaste.png',
+      '/images/cafecastle.png',
     ],
-    liveUrl: '',
+    liveUrl: 'https://cafe-castle.vercel.app/',
     challenge: 'Combine medieval aesthetics with modern functionality and easy navigation.',
     solution: 'Immersive themed design with smooth transitions and a user-friendly booking system.'
   },
@@ -57,7 +57,42 @@ const projects = [
     liveUrl: '',
     challenge: 'Showcase digital marketing services with optimal performance.',
     solution: 'Clean, modern design with smooth animations and responsive layouts.'
+  },
+  {
+    id: 4,
+    title: 'Serve Smart Technologies',
+    category: 'Frontend',
+    description: 'A modern marketing agency website with dynamic content.',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    features: [
+      'Responsive design',
+      'Interactive charts',
+    ],
+    images: [
+      '/images/servesmart.png',
+    ],
+    liveUrl: '',
+    challenge: 'Showcase digital marketing services with optimal performance.',
+    solution: 'Clean, modern design with smooth animations and responsive layouts.'
+  },
+  {
+    id: 5,
+    title: '3 Tigers',
+    category: 'Frontend',
+    description: 'A modern marketing agency website with dynamic content.',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    features: [
+      'Responsive design',
+      'Interactive charts',
+    ],
+    images: [
+      '/images/3tigers.png',
+    ],
+    liveUrl: 'https://www.3tigers.co.nz/',
+    challenge: 'Showcase digital marketing services with optimal performance.',
+    solution: 'Clean, modern design with smooth animations and responsive layouts.'
   }
+
 ];
 
 const ProjectDetails = () => {

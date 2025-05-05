@@ -72,7 +72,7 @@ export default function ExpertiseSection() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-newsreader text-beFoundPurple mb-4">Our Area of Expertise</h2>
             <p className="text-gray-600">
-              We leverage cutting-edge technologies for efficiency, productivity, and growth opportunities.
+              We leverage cutting-edge technologies for efficiency, productivity, and growth opportunities. Our expertise spans across modern frameworks, cloud platforms, and emerging technologies, enabling us to deliver scalable solutions that drive digital transformation. From custom software development to AI-powered automation, we help businesses stay ahead in today's competitive landscape while ensuring robust security and optimal performance.
             </p>
           </div>
 

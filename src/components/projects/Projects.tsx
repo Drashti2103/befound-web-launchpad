@@ -33,6 +33,24 @@ const projects = [
     tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
     image: '/images/makemediasense.png',
     link: '/projects/3'
+  },
+  {
+    id: 4,
+    title: 'Serve Smart Technologies',
+    category: 'Frontend',
+    description: 'A modern marketing agency website with dynamic content.',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    image: '/images/servesmart.png',
+    link: '/projects/4'
+  },
+  {
+    id: 5,
+    title: '3 Tigers',
+    category: 'Frontend',
+    description: 'Where flavours meet the future.',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    image: '/images/3tigers.png',
+    link: '/projects/5'
   }
 ];
 
@@ -62,7 +80,7 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
               >
                 <div className="relative h-48">
                   <img
@@ -70,15 +88,10 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
-                  {/* <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-befoundPurple text-white text-sm rounded-full">
-                      {project.category}
-                    </span>
-                  </div> */}
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h2 className="text-2xl font-bold text-befoundPurple mb-2">{project.title}</h2>
-                  <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                  <p className="text-gray-600 mb-4 line-clamp-2 flex-grow">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, i) => (
                       <span key={i} className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">
@@ -88,7 +101,7 @@ const Projects = () => {
                   </div>
                   <Button
                     onClick={() => navigate(project.link)}
-                    className="w-full bg-befoundPurple hover:bg-befoundOrange text-white"
+                    className="w-full bg-befoundPurple hover:bg-befoundOrange text-white mt-auto"
                   >
                     View Project
                   </Button>

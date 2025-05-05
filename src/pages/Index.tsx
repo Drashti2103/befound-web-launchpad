@@ -22,8 +22,10 @@ const Index = () => {
       <BusinessSection />
       <FocusSectorsSection />
       <ExpertiseSection />
-      <BestOfWorkSection />
-      <CTASection />
+      <div className="flex flex-col space-y-0">
+        <BestOfWorkSection />
+        <CTASection />
+      </div>
       <Footer />
       <ScrollToTop />
     </div>

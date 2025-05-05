@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import moreImg from '/public/images/more.png';
+import bottomLeftImg from '/public/images/about/bottomLeft.png';
+import leftTopImg from '/public/images/about/leftTop.png';
+import teamCollaborationImg from '/public/images/about/team-collab.jpg';
+import designProcessImg from '/public/images/about/design-process.jpg';
+import creativeWorkImg from '/public/images/about/creative-work.jpg';
 import CTASection from '../components/home/CTASection';
 
 const AboutPage = () => {
+  const imagesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show-image');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const images = imagesRef.current?.querySelectorAll('.story-image') || [];
+    images.forEach((image) => observer.observe(image));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -18,55 +43,60 @@ const AboutPage = () => {
             {/* Decorative images */}
             {/* Top right image */}
             <div className="absolute -top-8 -right-6 z-10 hidden lg:block">
-              <div className="relative w-40 sm:w-56 h-32 sm:h-44 overflow-visible">
+              <div className="relative w-40 sm:w-56 h-32 sm:h-44">
                 <img 
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
+                  src={designProcessImg}
                   alt="Design process"
-                  className="w-full h-full object-cover rounded-xl shadow-xl transform rotate-12 hover:rotate-6 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-xl shadow-lg transform rotate-12 hover:rotate-6 transition-transform duration-500"
                 />
               </div>
             </div>
             
             {/* Middle right image */}
             <div className="absolute top-1/3 -right-24 sm:-right-48 z-20 hidden lg:block">
-              <div className="relative w-40 sm:w-56 h-56 sm:h-72 overflow-visible">
+              <div className="relative w-40 sm:w-56 h-56 sm:h-72">
                 <img 
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf"
+                  src={creativeWorkImg}
                   alt="Creative work"
-                  className="w-full h-full object-cover rounded-xl shadow-xl transform -rotate-6 hover:rotate-0 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-xl shadow-lg transform -rotate-6 hover:rotate-0 transition-transform duration-500"
                 />
               </div>
             </div>
             
             {/* Bottom right image */}
             <div className="absolute -bottom-16 -right-20 sm:-right-36 z-30 hidden lg:block">
-              <div className="relative w-36 sm:w-48 h-36 sm:h-48 overflow-visible">
+              <div className="relative w-36 sm:w-48 h-36 sm:h-48">
                 <img 
-                  src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc"
+                  src={teamCollaborationImg}
                   alt="Workspace"
-                  className="w-full h-full object-cover rounded-xl shadow-xl transform rotate-12 hover:rotate-6 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-xl shadow-lg transform rotate-12 hover:rotate-6 transition-transform duration-500"
                 />
               </div>
             </div>
 
             {/* Left side images */}
             <div className="absolute -top-16 -left-20 sm:-left-32 z-20 hidden lg:block">
-              <div className="relative w-36 sm:w-48 h-48 sm:h-64 overflow-visible">
+              <div className="relative w-36 sm:w-48 h-48 sm:h-64">
                 <img 
-                  src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f"
+                  src={leftTopImg}
                   alt="Design thinking"
-                  className="w-full h-full object-cover rounded-xl shadow-xl transform -rotate-12 hover:-rotate-6 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-xl shadow-lg transform -rotate-12 hover:-rotate-6 transition-transform duration-500"
                 />
               </div>
             </div>
             
             {/* Bottom left image */}
             <div className="absolute -bottom-12 -left-24 sm:-left-36 z-10 hidden lg:block">
-              <div className="relative w-32 sm:w-44 h-32 sm:h-44 overflow-visible">
+              <div className="relative w-32 sm:w-44 h-32 sm:h-44">
                 <img 
-                  src="https://images.unsplash.com/photo-1509343256512-d77a5cb3791b"
+                  src={bottomLeftImg}
                   alt="Creative process"
-                  className="w-full h-full object-cover rounded-xl shadow-xl transform rotate-6 hover:rotate-0 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-xl shadow-lg transform rotate-6 hover:rotate-0 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -127,7 +157,7 @@ const AboutPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Innovation</h3>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2 group-hover:text-white">Innovation</h3>
                   <p className="text-gray-600 text-center group-hover:text-white">We're always exploring new technologies and approaches to deliver cutting-edge solutions.</p>
                 </div>
               </div>
@@ -141,7 +171,7 @@ const AboutPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Quality</h3>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2 group-hover:text-white">Quality</h3>
                   <p className="text-gray-600 text-center group-hover:text-white">Every line of code and design element is crafted with attention to detail.</p>
                 </div>
               </div>
@@ -155,7 +185,7 @@ const AboutPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Collaboration</h3>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2 group-hover:text-white">Collaboration</h3>
                   <p className="text-gray-600 text-center group-hover:text-white">We believe in working closely with clients and incorporating feedback.</p>
                 </div>
               </div>
@@ -169,7 +199,7 @@ const AboutPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Integrity</h3>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2 group-hover:text-white">Integrity</h3>
                   <p className="text-gray-600 text-center group-hover:text-white">We operate with transparency and strong ethical principles.</p>
                 </div>
               </div>
@@ -183,7 +213,7 @@ const AboutPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Excellence</h3>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2 group-hover:text-white">Excellence</h3>
                   <p className="text-gray-600 text-center group-hover:text-white">We strive for excellence in every project we undertake.</p>
                 </div>
               </div>
@@ -197,7 +227,7 @@ const AboutPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2" style={{ color: '#310d66' }}>Growth</h3>
+                  <h3 className="text-xl font-newsreader font-semibold text-center mb-2 group-hover:text-white">Growth</h3>
                   <p className="text-gray-600 text-center group-hover:text-white">Continuous learning and improvement drive our success.</p>
                 </div>
               </div>

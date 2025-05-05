@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
+import researchBg from '/public/images/services/researchbg.png';
+import designBg from '/public/images/services/designbg.png';
+import testingBg from '/public/images/services/testingbg.png';
 
 const ServiceCard = ({ title, description, icon, color, id }: { title: string, description: string, icon: React.ReactNode, color: string, id: string }) => {
   const navigate = useNavigate();
@@ -197,9 +200,10 @@ const ServicesPage = () => {
                                hover:before:opacity-100 before:z-10 overflow-hidden">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <img 
-                      src="https://i.ibb.co/mykzQks/services1.jpg" 
-                      alt="service background" 
+                      src={researchBg} 
+                      alt="Research and Ideation background" 
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="relative z-20">
@@ -224,9 +228,10 @@ const ServicesPage = () => {
                                hover:before:opacity-100 before:z-10 overflow-hidden">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <img 
-                      src="https://i.ibb.co/mykzQks/services1.jpg" 
-                      alt="service background" 
+                      src={designBg} 
+                      alt="Design and Development background" 
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="relative z-20">
@@ -251,9 +256,10 @@ const ServicesPage = () => {
                                hover:before:opacity-100 before:z-10 overflow-hidden">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <img 
-                      src="https://i.ibb.co/mykzQks/services1.jpg" 
-                      alt="service background" 
+                      src={testingBg} 
+                      alt="Testing and Deployment background" 
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="relative z-20">
