@@ -85,7 +85,7 @@ const HeroSection = () => {
       <div className="w-full md:w-1/2 text-center md:text-left">
         <span className="uppercase tracking-wider text-sm sm:text-base text-[#717171]">SOFTWARE SOLUTIONS</span>
         <h1 className="capitalize tracking-wide font-newsreader font-black text-[2.5rem] sm:text-[3.4375rem] md:text-[4rem] leading-tight">
-          <span className="text-befoundOrange">be</span>
+          <span className="text-befoundOrange lowercase">be</span>
           <span className="text-befoundPurple font-newsreader font-bold">Found</span>
         </h1>
         <h2 className="text-base sm:text-lg text-gray-600 mt-2">Be Seen - Be Heard - Be Found</h2>
