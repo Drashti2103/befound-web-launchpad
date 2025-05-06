@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
+import { useToast } from '../ui/use-toast';
 
 interface ContactFormData {
   fullName: string;
@@ -10,12 +11,14 @@ interface ContactFormData {
 }
 
 const ContactSection = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
     email: '',
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,8 +30,45 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement form submission logic
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
+      }
+
+      // Clear form
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+
+      toast({
+        title: "Success!",
+        description: "Message sent successfully! We will get back to you soon.",
+      });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -127,8 +167,9 @@ const ContactSection = () => {
               <Button 
                 type="submit"
                 className="w-full bg-befoundPurple hover:bg-befoundOrange text-white font-semibold py-2.5 sm:py-3 text-sm sm:text-base rounded-md transition-colors duration-300"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
