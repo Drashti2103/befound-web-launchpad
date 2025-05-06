@@ -13,7 +13,7 @@ import ProjectDetails from "./components/projects/ProjectDetails";
 import ServiceDetails from "./components/services/ServiceDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-import { useScrollToTop } from "./hooks/useScrollToTop";
+import useScrollToTop from "./hooks/useScrollToTop";
 
 const queryClient = new QueryClient();
 
