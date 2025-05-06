@@ -10,8 +10,8 @@ const sectorData = [
     desc: 'From real estate, food industry, shops, and more, we empower businesses to thrive in the digital age with tailored solutions.',
     img: 'https://plus.unsplash.com/premium_photo-1726783279226-13907b4d5543?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMwfHx8ZW58MHx8fHx8',
     circleClass: 'bottom-0 right-0',
-    circleClip: 'circle(calc(6.25rem + 7.5vw) at 100% 100%)',
-    overlayClip: 'circle(calc(6.25rem + 7.5vw) at 100% 100%)',
+    circleClip: 'circle(calc(5rem + 5vw) at 100% 100%)',
+    overlayClip: 'circle(calc(5rem + 5vw) at 100% 100%)',
     overlayClipHover: 'circle(110vw at 100% 100%)',
     prpl: 'lg:pr-64 sm:pr-48',
   },
@@ -20,8 +20,8 @@ const sectorData = [
     desc: 'Modernize and future-proof your legacy systems with our expert digital transformation services.',
     img: 'https://plus.unsplash.com/premium_photo-1698084059484-021206e1c62a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGxlZ2FsfGVufDB8fDB8fHww',
     circleClass: 'bottom-0 left-0',
-    circleClip: 'circle(calc(6.25rem + 7.5vw) at 0% 100%)',
-    overlayClip: 'circle(calc(6.25rem + 7.5vw) at 0% 100%)',
+    circleClip: 'circle(calc(5rem + 5vw) at 0% 100%)',
+    overlayClip: 'circle(calc(5rem + 5vw) at 0% 100%)',
     overlayClipHover: 'circle(110vw at 0% 100%)',
     prpl: 'lg:pl-64 sm:pl-48',
   },
@@ -30,8 +30,8 @@ const sectorData = [
     desc: 'Empowering educational institutions with innovative technology for better learning outcomes.',
     img: 'https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     circleClass: 'top-0 right-0',
-    circleClip: 'circle(calc(6.25rem + 7.5vw) at 100% 0%)',
-    overlayClip: 'circle(calc(6.25rem + 7.5vw) at 100% 0%)',
+    circleClip: 'circle(calc(5rem + 5vw) at 100% 0%)',
+    overlayClip: 'circle(calc(5rem + 5vw) at 100% 0%)',
     overlayClipHover: 'circle(110vw at 100% 0%)',
     prpl: 'lg:pr-44 sm:pr-24',
   },
@@ -40,8 +40,8 @@ const sectorData = [
     desc: 'Secure, scalable, and innovative solutions for the financial sector to drive growth and compliance.',
     img: 'https://images.unsplash.com/photo-1565514158740-064f34bd6cfd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQyfHx8ZW58MHx8fHx8',
     circleClass: 'top-0 left-0',
-    circleClip: 'circle(calc(6.25rem + 7.5vw) at 0% 0%)',
-    overlayClip: 'circle(calc(6.25rem + 7.5vw) at 0% 0%)',
+    circleClip: 'circle(calc(5rem + 5vw) at 0% 0%)',
+    overlayClip: 'circle(calc(5rem + 5vw) at 0% 0%)',
     overlayClipHover: 'circle(110vw at 0% 0%)',
     prpl: 'lg:pl-64 sm:pl-48',
   },
@@ -73,15 +73,27 @@ const FocusSectorsSection = () => {
               }}
             />
             <style>{`
-              .card:hover .card-overlay {
-                clip-path: ${sector.overlayClipHover} !important;
-                transition: clip-path 0.7s cubic-bezier(0.4,0,0.2,1);
+              @media (max-width: 2330px) {
+                .card:hover .card-overlay {
+                  clip-path: ${sector.overlayClipHover} !important;
+                  transition: clip-path 0.7s cubic-bezier(0.4,0,0.2,1);
+                }
+                .card .content p {
+                  transition: color 0.8s;
+                }
+                .card:hover .content h2, .card:hover .content p {
+                  color: #fff !important;
+                }
               }
-              .card .content p {
-                transition: color 0.8s;
-              }
-              .card:hover .content h2, .card:hover .content p {
-                color: #fff !important;
+              @media (min-width: 2331px) {
+                .card {
+                  min-height: 340px;
+                  height: 340px;
+                }
+                .circle {
+                  transform: scale(1);
+                  background-size: cover !important;
+                }
               }
             `}</style>
             {/* Circle image background (always above overlay) */}
@@ -90,6 +102,8 @@ const FocusSectorsSection = () => {
               style={{
                 background: `url('${sector.img}') no-repeat 50% 50% / cover`,
                 clipPath: sector.circleClip,
+                maxWidth: 'calc(5rem + 5vw)',
+                maxHeight: 'calc(5rem + 5vw)',
               }}
             />
             {/* Card content */}
