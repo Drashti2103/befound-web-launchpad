@@ -10,6 +10,6 @@ const useScrollToTop = () => {
       behavior: 'smooth'
     });
   }, [pathname, key]);
-};
+}; 
 
 export default useScrollToTop; 
