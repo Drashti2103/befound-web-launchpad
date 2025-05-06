@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
-import { useToast } from '../ui/use-toast';
+import { toast } from '../ui/toast';
 
 interface ContactFormData {
   fullName: string;
@@ -11,7 +11,6 @@ interface ContactFormData {
 }
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
     email: '',
@@ -55,17 +54,10 @@ const ContactSection = () => {
         message: ''
       });
 
-      toast({
-        title: "Success!",
-        description: "Message sent successfully! We will get back to you soon.",
-      });
+      toast.success("Message sent successfully! We will get back to you soon.");
     } catch (error) {
       console.error('Error sending message:', error);
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
-        variant: "destructive",
-      });
+      toast.error("Failed to send message. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
