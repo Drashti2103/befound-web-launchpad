@@ -103,7 +103,7 @@ const HeroSection = () => {
         </button>
       </div>
       
-      <div className="swiper w-full md:w-3/5 pt-8 sm:pt-12">
+      <div className="swiper w-full md:w-[65%] pt-8 sm:pt-12">
         <div className="swiper-wrapper">
           <div className="swiper-slide swiper-slide--one rounded-xl relative">
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
@@ -182,9 +182,9 @@ const HeroSection = () => {
       </div>
       
       <img 
-        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=140&w=1050&height=709 0" 
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=140&w=1050&height=745" 
         alt="Technology background" 
-        className="fixed top-[-4rem] left-[-8rem] z-[-1] hidden md:block opacity-10"
+        className="fixed top-[-4rem] left-[-8rem] z-[-1] hidden md:block opacity-10 2xl:left-[-10rem] 2xl:w-[60%]"
       />
       <img 
         src="https://images.unsplash.com/photo-1654618977232-a6c6dea9d1e8?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&q=80&w=800&height=750" 
