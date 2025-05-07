@@ -40,21 +40,28 @@ const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong');
+        if (!response.ok) {
+          throw new Error(data.message || 'Something went wrong');
+        }
+
+        // Clear form
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+
+        toast.success("Message sent successfully! We will get back to you soon.");
+      } else {
+        const text = await response.text();
+        console.error('Non-JSON response:', text);
+        toast.error("Failed to send message. Please try again later.");
       }
-
-      // Clear form
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-
-      toast.success("Message sent successfully! We will get back to you soon.");
     } catch (error) {
       console.error('Error sending message:', error);
       toast.error("Failed to send message. Please try again later.");
