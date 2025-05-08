@@ -9,20 +9,20 @@ import ScrollToTop from '../layout/ScrollToTop';
 const projects = [
   {
     id: 1,
-    title: 'Cafe Castle',
-    category: 'Restaurant',
-    description: 'A medieval-themed café website with menu and booking.',
-    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
+    title: 'Serve Smart Technologies',
+    category: 'Frontend',
+    description: 'A modern marketing agency website with dynamic content.',
+    tags: ['React', 'SAAS', 'Framer Motion', 'Recharts'],
     features: [
-      'Interactive menu display',
-      'Table booking system',
+      'Responsive design',
+      'Interactive charts',
     ],
     images: [
-      '/images/cafecastle.png',
+      '/images/servesmart.png',
     ],
-    liveUrl: 'https://cafe-castle.vercel.app/',
-    challenge: 'Combine medieval aesthetics with modern functionality and easy navigation.',
-    solution: 'Immersive themed design with smooth transitions and a user-friendly booking system.'
+    liveUrl: 'https://www.servesmart.co.nz/',
+    challenge: 'Showcase digital marketing services with optimal performance.',
+    solution: 'Clean, modern design with smooth animations and responsive layouts.'
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ const projects = [
     title: 'Make Media Sense',
     category: 'Frontend',
     description: 'A modern marketing agency website with dynamic content.',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    tags: ['React', 'SAAS', 'Framer Motion', 'Recharts'],
     features: [
       'Responsive design',
       'Interactive charts',
@@ -60,27 +60,27 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Serve Smart Technologies',
-    category: 'Frontend',
-    description: 'A modern marketing agency website with dynamic content.',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    title: 'Cafe Castle',
+    category: 'Restaurant',
+    description: 'A medieval-themed café website with menu and booking.',
+    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
     features: [
-      'Responsive design',
-      'Interactive charts',
+      'Interactive menu display',
+      'Table booking system',
     ],
     images: [
-      '/images/servesmart.png',
+      '/images/cafecastle.png',
     ],
-    liveUrl: 'https://www.servesmart.co.nz/',
-    challenge: 'Showcase digital marketing services with optimal performance.',
-    solution: 'Clean, modern design with smooth animations and responsive layouts.'
+    liveUrl: 'https://cafe-castle.vercel.app/',
+    challenge: 'Combine medieval aesthetics with modern functionality and easy navigation.',
+    solution: 'Immersive themed design with smooth transitions and a user-friendly booking system.'
   },
   {
     id: 5,
     title: '3 Tigers',
     category: 'Frontend',
     description: 'A modern marketing agency website with dynamic content.',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    tags: ['React', 'SAAS', 'Framer Motion', 'Recharts'],
     features: [
       'Responsive design',
       'Interactive charts',
