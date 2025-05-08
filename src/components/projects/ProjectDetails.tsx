@@ -29,7 +29,7 @@ const projects = [
     title: 'Dishsnap',
     category: 'Full Stack',
     description: 'AI-powered food photography generator for restaurants.',
-    tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
+    tags: ['Next.js', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
     features: [
       'AI image generation',
       'Customizable menu building',
