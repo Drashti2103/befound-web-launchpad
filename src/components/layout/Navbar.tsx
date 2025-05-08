@@ -70,6 +70,7 @@ const Navbar = () => {
             <NavLink to="/" label="Home" onClick={() => handleNavClick('/')} />
             <NavLink to="/about" label="About Us" onClick={() => handleNavClick('/about')} />
             <NavLink to="/services" label="Services" onClick={() => handleNavClick('/services')} />
+            <NavLink to="/projects" label="Portfolio" onClick={() => handleNavClick('/projects')} />
             <NavLink to="/contact" label="Contact" onClick={() => handleNavClick('/contact')} />
           </div>
         </div>
@@ -87,6 +88,7 @@ const Navbar = () => {
             <NavLink to="/" label="Home" onClick={() => handleNavClick('/')} />
             <NavLink to="/about" label="About Us" onClick={() => handleNavClick('/about')} />
             <NavLink to="/services" label="Services" onClick={() => handleNavClick('/services')} />
+            <NavLink to="/projects" label="Portfolio" onClick={() => handleNavClick('/projects')} />
             <NavLink to="/contact" label="Contact" onClick={() => handleNavClick('/contact')} />
           </div>
         </div>

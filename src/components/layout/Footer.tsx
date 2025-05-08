@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <Logo />
             <p className="mt-4 text-gray-500 max-w-xs text-sm sm:text-base">
-              Creating modern, sleek and professional digital experiences with a touch of pastel elegance.
+              Empowering businesses with innovative digital solutions, web development, and strategic consulting to help them thrive in the digital landscape.
             </p>
             <div className="mt-6 flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-befoundOrange transition-colors duration-200">
@@ -43,6 +43,7 @@ const Footer = () => {
               <li><Link to="/" className="text-gray-500 hover:text-befoundOrange transition-colors duration-200">Home</Link></li>
               <li><Link to="/about" className="text-gray-500 hover:text-befoundOrange transition-colors duration-200">About Us</Link></li>
               <li><Link to="/services" className="text-gray-500 hover:text-befoundOrange transition-colors duration-200">Services</Link></li>
+              <li><Link to="/projects" className="text-gray-500 hover:text-befoundOrange transition-colors duration-200">Portfolio</Link></li>
               <li><Link to="/contact" className="text-gray-500 hover:text-befoundOrange transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
