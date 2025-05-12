@@ -18,7 +18,7 @@ const Pricing = () => {
         '1 Month Free Support',
         'Standard Hosting Setup'
       ],
-      buttonText: 'Get Started',
+      buttonText: 'Contact Us',
       highlighted: false
     },
     {
@@ -36,7 +36,7 @@ const Pricing = () => {
         'Performance Optimization',
         'Advanced Analytics Setup'
       ],
-      buttonText: 'Get Started',
+      buttonText: 'Contact Us',
       highlighted: true
     },
     {
