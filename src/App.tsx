@@ -12,6 +12,7 @@ import ProjectDetails from "./components/projects/ProjectDetails";
 import ServiceDetails from "./components/services/ServiceDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Pricing from "./pages/Pricing";
 import useScrollToTop from "./hooks/useScrollToTop";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const AppContent = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:projectId" element={<ProjectDetails />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
