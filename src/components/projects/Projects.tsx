@@ -9,15 +9,6 @@ import ScrollToTop from '../layout/ScrollToTop';
 const projects = [
   {
     id: 1,
-    title: 'Cafe Castle',
-    category: 'Restaurant',
-    description: 'A medieval-themed café website with menu and booking.',
-    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
-    image: '/images/cafecastle.png',
-    link: '/projects/1'
-  },
-  {
-    id: 2,
     title: 'Dishsnap',
     category: 'Full Stack',
     description: 'AI-powered food photography generator for restaurants.',
@@ -26,7 +17,7 @@ const projects = [
     link: '/projects/2'
   },
   {
-    id: 3,
+    id: 2,
     title: 'Make Media Sense',
     category: 'Frontend',
     description: 'A modern marketing agency website with dynamic content.',
@@ -34,24 +25,7 @@ const projects = [
     image: '/images/makemediasense.png',
     link: '/projects/3'
   },
-  {
-    id: 4,
-    title: 'Serve Smart Technologies',
-    category: 'Frontend',
-    description: 'A modern marketing agency website with dynamic content.',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
-    image: '/images/servesmart.png',
-    link: '/projects/4'
-  },
-  {
-    id: 5,
-    title: '3 Tigers',
-    category: 'Frontend',
-    description: 'Where flavours meet the future.',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
-    image: '/images/3tigers.png',
-    link: '/projects/5'
-  }
+ 
 ];
 
 const Projects = () => {
