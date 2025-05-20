@@ -15,6 +15,24 @@ const projects = [
     tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
     image: '/images/dishsnap.png',
     link: '/projects/2'
+  },
+  {
+    id: 2,
+    title: 'Cafe Castle',
+    category: 'Restaurant',
+    description: 'A medieval-themed café website with menu and booking.',
+    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
+    image: '/images/cafecastle.png',
+    link: '/projects/1'
+  },
+  {
+    id: 3,
+    title: 'Make Media Sense',
+    category: 'Frontend',
+    description: 'A modern marketing agency website with dynamic content.',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    image: '/images/makemediasense.png',
+    link: '/projects/3'
   }
  
 ];
