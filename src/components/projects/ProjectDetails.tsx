@@ -9,23 +9,6 @@ import ScrollToTop from '../layout/ScrollToTop';
 const projects = [
   {
     id: 1,
-    title: 'Serve Smart Technologies',
-    category: 'Frontend',
-    description: 'A modern marketing agency website with dynamic content.',
-    tags: ['React', 'SAAS', 'Framer Motion', 'Recharts'],
-    features: [
-      'Responsive design',
-      'Interactive charts',
-    ],
-    images: [
-      '/images/servesmart.png',
-    ],
-    liveUrl: 'https://www.servesmart.co.nz/',
-    challenge: 'Showcase digital marketing services with optimal performance.',
-    solution: 'Clean, modern design with smooth animations and responsive layouts.'
-  },
-  {
-    id: 2,
     title: 'Dishsnap',
     category: 'Full Stack',
     description: 'AI-powered food photography generator for restaurants.',
@@ -42,7 +25,7 @@ const projects = [
     solution: 'Used OpenAI for image generation and an intuitive interface for customization.'
   },
   {
-    id: 3,
+    id: 2,
     title: 'Make Media Sense',
     category: 'Frontend',
     description: 'A modern marketing agency website with dynamic content.',
@@ -59,7 +42,7 @@ const projects = [
     solution: 'Clean, modern design with smooth animations and responsive layouts.'
   },
   {
-    id: 4,
+    id: 3,
     title: 'Cafe Castle',
     category: 'Restaurant',
     description: 'A medieval-themed café website with menu and booking.',
@@ -75,23 +58,6 @@ const projects = [
     challenge: 'Combine medieval aesthetics with modern functionality and easy navigation.',
     solution: 'Immersive themed design with smooth transitions and a user-friendly booking system.'
   },
-  {
-    id: 5,
-    title: '3 Tigers',
-    category: 'Frontend',
-    description: 'A modern marketing agency website with dynamic content.',
-    tags: ['React', 'SAAS', 'Framer Motion', 'Recharts'],
-    features: [
-      'Responsive design',
-      'Interactive charts',
-    ],
-    images: [
-      '/images/3tigers.png',
-    ],
-    liveUrl: 'https://www.3tigers.co.nz/',
-    challenge: 'Showcase digital marketing services with optimal performance.',
-    solution: 'Clean, modern design with smooth animations and responsive layouts.'
-  }
 
 ];
 
