@@ -20,7 +20,7 @@ const projects = [
   //   tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion']
   // },
   {
-    id: 2,
+    id: 1,
     number: '02',
     title: 'Dishsnap',
     description: 'AI-powered food photography generator for restaurants.',
@@ -35,7 +35,7 @@ const projects = [
     tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript']
   },
   {
-    id: 3,
+    id: 2,
     number: '03',
     title: 'Make Media Sense',
     description: 'A modern marketing agency website with dynamic content.',
