@@ -4,21 +4,21 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const projects = [
-  {
-    id: 1,
-    number: '01',
-    title: 'Cafe Castle',
-    description: 'A medieval-themed café website with menu and booking.',
-    bullets: [
-      'Interactive menu display',
-      'Table booking system',
-    ],
-    images: [
-      '/images/cafecastle.png',
-    ],
-    link: '/projects/1',
-    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion']
-  },
+  // {
+  //   id: 1,
+  //   number: '01',
+  //   title: 'Cafe Castle',
+  //   description: 'A medieval-themed café website with menu and booking.',
+  //   bullets: [
+  //     'Interactive menu display',
+  //     'Table booking system',
+  //   ],
+  //   images: [
+  //     '/images/cafecastle.png',
+  //   ],
+  //   link: '/projects/3',
+  //   tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion']
+  // },
   {
     id: 2,
     number: '02',
