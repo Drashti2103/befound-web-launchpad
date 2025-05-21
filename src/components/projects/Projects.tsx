@@ -24,6 +24,15 @@ const projects = [
     tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
     image: '/images/makemediasense.png',
     link: '/projects/3'
+  },
+  {
+    id: 3,
+    title: 'Astralis AI',
+    category: 'Full Stack',
+    description: 'We are committed to helping you grow emotionally. Our AI companion provides insights and support to help you understand and manage your feelings.',
+    tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
+    image: '/images/astralis.png',
+    link: '/projects/4'
   }
  
 ];

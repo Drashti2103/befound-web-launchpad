@@ -48,6 +48,25 @@ const projects = [
     ],
     link: '/projects/3',
     tags: ['React', 'SASS', 'Framer Motion', 'Recharts']
+  },
+  {
+    id: 3,
+    number: '04',
+    title: 'Astralis AI',
+    description: 'We are committed to helping you grow emotionally. Our AI companion provides insights and support to help you understand and manage your feelings.',
+    bullets: [
+      'Responsive design',
+      'AI chatbot',
+      'AI Notes keeper',
+      'AI emotional companion',
+      'emotional intelligence',
+      
+    ],
+    images: [
+      '/images/astralis.png',
+    ],
+    link: '/projects/4',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts']
   }
 ];
 
