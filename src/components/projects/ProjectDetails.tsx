@@ -43,23 +43,6 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Cafe Castle',
-    category: 'Restaurant',
-    description: 'A medieval-themed café website with menu and booking.',
-    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
-    features: [
-      'Interactive menu display',
-      'Table booking system',
-    ],
-    images: [
-      '/images/cafecastle.png',
-    ],
-    liveUrl: 'https://cafe-castle.vercel.app/',
-    challenge: 'Combine medieval aesthetics with modern functionality and easy navigation.',
-    solution: 'Immersive themed design with smooth transitions and a user-friendly booking system.'
-  },
-  {
-    id: 4,
     title: 'Astralis AI',
     category: 'Full Stack',
     description: 'We are committed to helping you grow emotionally. Our AI companion provides insights and support to help you understand and manage your feelings.',
@@ -76,8 +59,24 @@ const projects = [
     liveUrl: 'https://astralis-notes.vercel.app/',
     challenge: 'Create an AI companion that can help users understand and manage their emotions.',
     solution: 'Used OpenAI for the chatbot and notes keeper, and a user-friendly interface for the emotional companion.'
+  },
+  {
+    id: 4,
+    title: 'Cafe Castle',
+    category: 'Restaurant',
+    description: 'A medieval-themed café website with menu and booking.',
+    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
+    features: [
+      'Interactive menu display',
+      'Table booking system',
+    ],
+    images: [
+      '/images/cafecastle.png',
+    ],
+    liveUrl: 'https://cafe-castle.vercel.app/',
+    challenge: 'Combine medieval aesthetics with modern functionality and easy navigation.',
+    solution: 'Immersive themed design with smooth transitions and a user-friendly booking system.'
   }
-
 ];
 
 const ProjectDetails = () => {

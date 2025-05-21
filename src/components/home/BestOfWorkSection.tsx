@@ -21,7 +21,7 @@ const projects = [
   // },
   {
     id: 1,
-    number: '02',
+    number: '01',
     title: 'Dishsnap',
     description: 'AI-powered food photography generator for restaurants.',
     bullets: [
@@ -36,7 +36,7 @@ const projects = [
   },
   {
     id: 2,
-    number: '03',
+    number: '02',
     title: 'Make Media Sense',
     description: 'A modern marketing agency website with dynamic content.',
     bullets: [
@@ -46,12 +46,12 @@ const projects = [
     images: [
       '/images/makemediasense.png',
     ],
-    link: '/projects/3',
+    link: '/projects/2',
     tags: ['React', 'SASS', 'Framer Motion', 'Recharts']
   },
   {
     id: 3,
-    number: '04',
+    number: '03',
     title: 'Astralis AI',
     description: 'We are committed to helping you grow emotionally. Our AI companion provides insights and support to help you understand and manage your feelings.',
     bullets: [
@@ -65,7 +65,7 @@ const projects = [
     images: [
       '/images/astralis.png',
     ],
-    link: '/projects/4',
+    link: '/projects/3',
     tags: ['React', 'SASS', 'Framer Motion', 'Recharts']
   }
 ];

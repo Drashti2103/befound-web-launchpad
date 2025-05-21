@@ -23,7 +23,7 @@ const projects = [
     description: 'A modern marketing agency website with dynamic content.',
     tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
     image: '/images/makemediasense.png',
-    link: '/projects/3'
+    link: '/projects/2'
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const projects = [
     description: 'We are committed to helping you grow emotionally. Our AI companion provides insights and support to help you understand and manage your feelings.',
     tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
     image: '/images/astralis.png',
-    link: '/projects/4'
+    link: '/projects/3'
   }
  
 ];
