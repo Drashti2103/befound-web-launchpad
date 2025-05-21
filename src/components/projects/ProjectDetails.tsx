@@ -73,7 +73,7 @@ const projects = [
     images: [
       '/images/astralis.png',
     ],
-    liveUrl: 'https://astralis-ai.vercel.app/',
+    liveUrl: 'https://astralis-notes.vercel.app/',
     challenge: 'Create an AI companion that can help users understand and manage their emotions.',
     solution: 'Used OpenAI for the chatbot and notes keeper, and a user-friendly interface for the emotional companion.'
   }
