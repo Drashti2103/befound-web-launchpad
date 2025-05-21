@@ -58,6 +58,25 @@ const projects = [
     challenge: 'Combine medieval aesthetics with modern functionality and easy navigation.',
     solution: 'Immersive themed design with smooth transitions and a user-friendly booking system.'
   },
+  {
+    id: 4,
+    title: 'Astralis AI',
+    category: 'Full Stack',
+    description: 'We are committed to helping you grow emotionally. Our AI companion provides insights and support to help you understand and manage your feelings.',
+    tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
+    features: [
+      'AI chatbot',
+      'AI notes keeper',
+      'AI emotional companion',
+      'emotional intelligence',
+    ],
+    images: [
+      '/images/astralis.png',
+    ],
+    liveUrl: 'https://astralis-ai.vercel.app/',
+    challenge: 'Create an AI companion that can help users understand and manage their emotions.',
+    solution: 'Used OpenAI for the chatbot and notes keeper, and a user-friendly interface for the emotional companion.'
+  }
 
 ];
 
