@@ -14,7 +14,7 @@ const projects = [
     description: 'AI-powered food photography generator for restaurants.',
     tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
     image: '/images/dishsnap.png',
-    link: '/projects/2'
+    link: '/projects/1'
   },
   {
     id: 2,

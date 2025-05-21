@@ -31,7 +31,7 @@ const projects = [
     images: [
       '/images/dishsnap.png',
     ],
-    link: '/projects/2',
+    link: '/projects/1',
     tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript']
   },
   {
