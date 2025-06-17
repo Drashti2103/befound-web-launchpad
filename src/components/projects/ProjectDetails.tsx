@@ -93,7 +93,7 @@ const projects = [
     images: [
       '/images/premmanigobal.png',
     ],
-    liveUrl: 'https://premmanigloballlp.com/',
+    liveUrl: 'https://premmaniglobal.com/',
     challenge: 'Create a platform for users to express their emotions and share their stories.',
     solution: 'Used supabase for the database and vercel for the deployment.'
   },
