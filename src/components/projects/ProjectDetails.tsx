@@ -91,7 +91,7 @@ const projects = [
       'Custom JS',
     ],
     images: [
-      '/images/premmanigobal.png',
+      '/images/premmaniglobal.png',
     ],
     liveUrl: 'https://premmaniglobal.com/',
     challenge: 'Create a platform for users to express their emotions and share their stories.',

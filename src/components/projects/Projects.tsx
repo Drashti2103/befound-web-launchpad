@@ -49,7 +49,7 @@ const projects = [
     category: 'Wordpress',
     description: 'Worked with WordPress and Elementor to make non-disruptive live changes, ensuring brand consistency and seamless user navigation.',
     tags: ['Wordpress', 'Elementor', 'Custom CSS', 'Custom PHP', 'Custom JS'],
-    image: '/images/premmanigobal.png',
+    image: '/images/premmaniglobal.png',
     link: '/projects/5'
   },
   {
