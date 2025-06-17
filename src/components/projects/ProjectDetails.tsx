@@ -79,6 +79,45 @@ const projects = [
   },
   {
     id: 5,
+    title: 'Premmani Gobal LLP',
+    category: 'Wordpress',
+    description: 'Worked with WordPress and Elementor to make non-disruptive live changes, ensuring brand consistency and seamless user navigation.',
+    tags: ['Wordpress', 'Elementor', 'Custom CSS', 'Custom PHP', 'Custom JS'],
+    features: [
+      'Wordpress',
+      'Elementor',
+      'Custom CSS',
+      'Custom PHP',
+      'Custom JS',
+    ],
+    images: [
+      '/images/premmanigobal.png',
+    ],
+    liveUrl: 'https://premmanigloballlp.com/',
+    challenge: 'Create a platform for users to express their emotions and share their stories.',
+    solution: 'Used supabase for the database and vercel for the deployment.'
+  },
+  {
+    id: 6,
+    title: 'Crazy Virality',
+    category: 'Full Stack',
+    description: '•	Engineered a personal full-stack blog and portfolio platform focused on emotional expression and storytelling through minimalist, and SEO friendlycontent. ',
+    tags: ['React', 'supabase', 'Vercel Deployment', 'customAPI', 'TailwindCSS', 'Serverless Function', 'resend'],
+    features: [
+      'SEO friendly',
+      'Emotional expression',
+      'Storytelling',
+      'Minimalist',
+    ],
+    images: [
+      '/images/crazyvirality.png',
+    ],
+    liveUrl: 'https://crazy-virality.vercel.app/',
+    challenge: 'Create a platform for users to express their emotions and share their stories.',
+    solution: 'Used supabase for the database and vercel for the deployment.'
+  },
+  {
+    id: 7,
     title: 'Cafe Castle',
     category: 'Restaurant',
     description: 'A medieval-themed café website with menu and booking.',

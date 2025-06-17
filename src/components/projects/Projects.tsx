@@ -42,6 +42,24 @@ const projects = [
     tags: ['React', 'supabase', 'Vercel Deployment', 'customAPI', 'TailwindCSS', 'Serverless Function', 'resend'],
     image: '/images/tearsrundry.png',
     link: '/projects/4'
+  },
+  {
+    id: 5,
+    title: 'Premmani Gobal LLP',
+    category: 'Wordpress',
+    description: 'Worked with WordPress and Elementor to make non-disruptive live changes, ensuring brand consistency and seamless user navigation.',
+    tags: ['Wordpress', 'Elementor', 'Custom CSS', 'Custom PHP', 'Custom JS'],
+    image: '/images/premmanigobal.png',
+    link: '/projects/5'
+  },
+  {
+    id: 6,
+    title: 'Crazy Virality',
+    category: 'Full Stack',
+    description: '•	Engineered a personal full-stack blog and portfolio platform focused on emotional expression and storytelling through minimalist, and SEO friendlycontent. ',
+    tags: ['React', 'supabase', 'Vercel Deployment', 'customAPI', 'TailwindCSS', 'Serverless Function', 'resend'],
+    image: '/images/crazyvirality.png',
+    link: '/projects/6'
   }
  
 ];
