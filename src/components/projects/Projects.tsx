@@ -33,6 +33,15 @@ const projects = [
     tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
     image: '/images/astralis.png',
     link: '/projects/3'
+  },
+  {
+    id: 4,
+    title: 'Tears Run Dry',
+    category: 'Full Stack',
+    description: '•	Engineered a personal full-stack blog and portfolio platform focused on emotional expression and storytelling through minimalist, poetic content. ',
+    tags: ['React', 'supabase', 'Vercel Deployment', 'customAPI', 'TailwindCSS', 'Serverless Function', 'resend'],
+    image: '/images/tearsrundry.png',
+    link: '/projects/4'
   }
  
 ];

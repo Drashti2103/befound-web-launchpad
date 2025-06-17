@@ -62,6 +62,23 @@ const projects = [
   },
   {
     id: 4,
+    title: 'Tears Run Dry',
+    category: 'Full Stack',
+    description: '•	Engineered a personal full-stack blog and portfolio platform focused on emotional expression and storytelling through minimalist, poetic content. ',
+    tags: ['React', 'supabase', 'Vercel Deployment', 'customAPI', 'TailwindCSS', 'Serverless Function', 'resend'],
+    features: [
+      'Emotional expression',
+      'Storytelling',
+    ],
+    images: [
+      '/images/tearsrundry.png',
+    ],
+    liveUrl: 'https://tearsrundry.com/',
+    challenge: 'Create a platform for users to express their emotions and share their stories.',
+    solution: 'Used supabase for the database and vercel for the deployment.'
+  },
+  {
+    id: 5,
     title: 'Cafe Castle',
     category: 'Restaurant',
     description: 'A medieval-themed café website with menu and booking.',
