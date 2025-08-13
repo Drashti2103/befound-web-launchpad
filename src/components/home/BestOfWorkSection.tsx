@@ -4,69 +4,56 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const projects = [
-  // {
-  //   id: 1,
-  //   number: '01',
-  //   title: 'Cafe Castle',
-  //   description: 'A medieval-themed café website with menu and booking.',
-  //   bullets: [
-  //     'Interactive menu display',
-  //     'Table booking system',
-  //   ],
-  //   images: [
-  //     '/images/cafecastle.png',
-  //   ],
-  //   link: '/projects/3',
-  //   tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion']
-  // },
   {
     id: 1,
     number: '01',
-    title: 'Dishsnap',
-    description: 'AI-powered food photography generator for restaurants.',
+    title: '3 Tigers',
+    description: 'Professional business website with modern design and comprehensive business information.',
     bullets: [
-      'AI image generation',
-      'Customizable menu building',
+      'Professional business website',
+      'Company information and services',
+      'Modern responsive design',
+      'Business portfolio showcase'
     ],
     images: [
-      '/images/dishsnap.png',
+      '/images/3tigers.png',
     ],
-    link: '/projects/1',
-    tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript']
+    link: '/projects/5',
+    tags: ['React', 'Business Website', 'Professional Design']
   },
   {
     id: 2,
     number: '02',
-    title: 'Make Media Sense',
-    description: 'A modern marketing agency website with dynamic content.',
+    title: 'Kiazen Interiors',
+    description: 'Professional interior design company website showcasing portfolio, services, and design expertise.',
     bullets: [
-      'Responsive design',
-      'Interactive charts',
+      'Interior design portfolio showcase',
+      'Service offerings display',
+      'Design expertise presentation',
+      'Professional company branding'
     ],
     images: [
-      '/images/makemediasense.png',
+      '/images/kiinterior.png',
     ],
-    link: '/projects/2',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts']
+    link: '/projects/3',
+    tags: ['React', 'Interior Design', 'Portfolio', 'Professional Design']
   },
   {
     id: 3,
     number: '03',
-    title: 'Astralis AI',
-    description: 'We are committed to helping you grow emotionally. Our AI companion provides insights and support to help you understand and manage your feelings.',
+    title: 'Weston Family Dental Florida',
+    description: 'Complete dental practice website with appointment booking system, form integrations, and comprehensive service management.',
     bullets: [
-      'Responsive design',
-      'AI chatbot',
-      'AI Notes keeper',
-      'AI emotional companion',
-      'emotional intelligence',
-      
+      'Complete website design and development',
+      'Appointment booking system',
+      'Form integrations for patient inquiries',
+      'Responsive design for all devices'
     ],
     images: [
-      '/images/astralis.png',
+      '/images/westonDentalFlorida.png',
     ],
-    link: '/projects/3',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts']
+    link: '/projects/2',
+    tags: ['WordPress', 'Appointment System', 'Healthcare', 'Responsive Design']
   }
 ];
 
