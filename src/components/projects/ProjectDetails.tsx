@@ -222,28 +222,28 @@ const projects = [
     challenge: 'Build a comprehensive financial platform for mutual fund investments with user-friendly portfolio management.',
     solution: 'Developed a React-based financial platform with modern design, portfolio management tools, and comprehensive investment information.'
   },
+  // {
+  //   id: 12,
+  //   title: 'NW9 Digital',
+  //   category: 'Digital Agency',
+  //   description: 'Comprehensive digital solutions including web development, ERP solutions, SEO optimization, and recruitment services for business growth.',
+  //   tags: ['React', 'Web Development', 'ERP Solutions', 'SEO', 'Recruitment Services'],
+  //   features: [
+  //     'Custom website development',
+  //     'ERP system solutions',
+  //     'SEO optimization services',
+  //     'Recruitment services',
+  //     'Responsive design'
+  //   ],
+  //   images: [
+  //     '/images/nw9.png',
+  //   ],
+  //   liveUrl: 'https://nw9.digital/',
+  //   challenge: 'Create a comprehensive digital agency platform that showcases multiple service offerings including web development, ERP solutions, SEO, and recruitment.',
+  //   solution: 'Developed a modern React-based website highlighting NW9 Digital\'s expertise in web development, ERP solutions, SEO optimization, and recruitment services with a professional design.'
+  // },
   {
     id: 12,
-    title: 'NW9 Digital',
-    category: 'Digital Agency',
-    description: 'Comprehensive digital solutions including web development, ERP solutions, SEO optimization, and recruitment services for business growth.',
-    tags: ['React', 'Web Development', 'ERP Solutions', 'SEO', 'Recruitment Services'],
-    features: [
-      'Custom website development',
-      'ERP system solutions',
-      'SEO optimization services',
-      'Recruitment services',
-      'Responsive design'
-    ],
-    images: [
-      '/images/nw9.png',
-    ],
-    liveUrl: 'https://nw9.digital/',
-    challenge: 'Create a comprehensive digital agency platform that showcases multiple service offerings including web development, ERP solutions, SEO, and recruitment.',
-    solution: 'Developed a modern React-based website highlighting NW9 Digital\'s expertise in web development, ERP solutions, SEO optimization, and recruitment services with a professional design.'
-  },
-  {
-    id: 13,
     title: 'Dishsnap',
     category: 'Full Stack',
     description: 'AI-powered food photography generator for restaurants.',
@@ -260,7 +260,7 @@ const projects = [
     solution: 'Used OpenAI for image generation and an intuitive interface for customization.'
   },
   {
-    id: 14,
+      id: 13,
     title: 'Crazy Virality',
     category: 'Digital Marketing',
     description: 'Digital marketing and viral content creation platform with innovative tools and strategies.',
@@ -279,7 +279,7 @@ const projects = [
     solution: 'Developed a React-based marketing platform with innovative tools for content creation and marketing strategy implementation.'
   },
   {
-    id: 15,
+    id: 14,
     title: 'Make Media Sense',
     category: 'Frontend',
     description: 'A modern marketing agency website with dynamic content.',
