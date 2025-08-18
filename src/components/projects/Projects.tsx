@@ -106,41 +106,41 @@ const projects = [
     image: '/images/deepmutualfunds.png',
     link: '/projects/11'
   },
+  // {
+  //   id: 12,
+  //   title: 'NW9 Digital',
+  //   category: 'Digital Agency',
+  //   description: 'Comprehensive digital solutions including web development, ERP solutions, SEO optimization, and recruitment services for business growth.',
+  //   tags: ['React', 'Web Development', 'ERP Solutions', 'SEO', 'Recruitment Services'],
+  //   image: '/images/nw9.png',
+  //   link: '/projects/12'
+  // },
   {
     id: 12,
-    title: 'NW9 Digital',
-    category: 'Digital Agency',
-    description: 'Comprehensive digital solutions including web development, ERP solutions, SEO optimization, and recruitment services for business growth.',
-    tags: ['React', 'Web Development', 'ERP Solutions', 'SEO', 'Recruitment Services'],
-    image: '/images/nw9.png',
-    link: '/projects/12'
-  },
-  {
-    id: 13,
     title: 'Dishsnap',
     category: 'Full Stack',
     description: 'AI-powered food photography generator for restaurants.',
     tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
     image: '/images/dishsnap.png',
-    link: '/projects/13'
+    link: '/projects/12'
   },
   {
-    id: 14,
+    id: 13,
     title: 'Crazy Virality',
     category: 'Digital Marketing',
     description: 'Digital marketing and viral content creation platform with innovative tools and strategies.',
     tags: ['React', 'Digital Marketing', 'Content Creation'],
     image: '/images/crazyvirality.png',
-    link: '/projects/14'
+    link: '/projects/13'
   },
   {
-    id: 15,
+    id: 14,
     title: 'Make Media Sense',
     category: 'Frontend',
     description: 'A modern marketing agency website with dynamic content.',
     tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
     image: '/images/makemediasense.png',
-    link: '/projects/15'
+    link: '/projects/14'
   }
 ];
 
