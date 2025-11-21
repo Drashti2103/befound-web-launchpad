@@ -310,7 +310,7 @@ const projects = [
       'Responsive design'
     ],
     images: [
-      '/images/gopalansir.png',
+      '/images/doctorgopallan.png',
     ],
     liveUrl: 'https://gopalansir.vercel.app/',
     challenge: 'Create a professional portfolio website that effectively showcases thought leadership, achievements, and media recognition.',
@@ -331,7 +331,7 @@ const projects = [
       'Responsive artistic design'
     ],
     images: [
-      '/images/museandmasterpiece.png',
+      '/images/musemasterpiece.png',
     ],
     liveUrl: 'https://muse-and-masterpiece.vercel.app/',
     challenge: 'Create an elegant art studio website that effectively showcases murals, sculptures, and creative masterpieces with a timeless aesthetic.',
@@ -352,7 +352,7 @@ const projects = [
       'Premium design aesthetic'
     ],
     images: [
-      '/images/blueescapeholidays.png',
+      '/images/blueescape.png',
     ],
     liveUrl: 'https://www.blueescapeholidays.com/',
     challenge: 'Create a luxury travel agency website that effectively showcases exclusive travel experiences and bespoke holiday packages.',
