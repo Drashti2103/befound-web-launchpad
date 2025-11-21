@@ -7,19 +7,19 @@ const projects = [
   {
     id: 1,
     number: '01',
-    title: '3 Tigers',
-    description: 'Professional business website with modern design and comprehensive business information.',
+    title: 'Muse & Masterpiece',
+    description: 'Art studio website showcasing murals, sculptures, and creative masterpieces by Deepak Bhadoriya.',
     bullets: [
-      'Professional business website',
-      'Company information and services',
-      'Modern responsive design',
-      'Business portfolio showcase'
+      'Artwork gallery and portfolio',
+      'Mural and sculpture showcases',
+      'Studio information and about section',
+      'Responsive artistic design'
     ],
     images: [
-      '/images/3tigers.png',
+      '/images/musemasterpiece.png',
     ],
-    link: '/projects/5',
-    tags: ['React', 'Business Website', 'Professional Design']
+    link: '/projects/16',
+    tags: ['React', 'Art Portfolio', 'Creative Design', 'Visual Arts']
   },
   {
     id: 2,

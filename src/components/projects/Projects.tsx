@@ -43,15 +43,15 @@ const projects = [
     image: '/images/PatrickKalenzi.png',
     link: '/projects/4'
   },
-  {
-    id: 5,
-    title: '3 Tigers',
-    category: 'Business',
-    description: 'Professional business website with modern design and comprehensive business information.',
-    tags: ['React', 'Business Website', 'Professional Design'],
-    image: '/images/3tigers.png',
-    link: '/projects/5'
-  },
+  // {
+  //   id: 5,
+  //   title: '3 Tigers',
+  //   category: 'Business',
+  //   description: 'Professional business website with modern design and comprehensive business information.',
+  //   tags: ['React', 'Business Website', 'Professional Design'],
+  //   image: '/images/3tigers.png',
+  //   link: '/projects/5'
+  // },
   // {
   //   id: 6,
   //   title: 'Serve Smart',
@@ -106,24 +106,24 @@ const projects = [
     image: '/images/blueescape.png',
     link: '/projects/17'
   },
-  {
-    id: 9,
-    title: 'Cafe Castle',
-    category: 'Restaurant',
-    description: 'A medieval-themed café website with menu and booking.',
-    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
-    image: '/images/cafecastle.png',
-    link: '/projects/9'
-  },
-  {
-    id: 10,
-    title: 'Suril Udeshi',
-    category: 'Personal Portfolio',
-    description: 'Professional personal portfolio website showcasing skills, projects, and professional experience with modern design.',
-    tags: ['React', 'Portfolio', 'Personal Branding', 'Modern Design'],
-    image: '/images/restaurant.png',
-    link: '/projects/10'
-  },
+  // {
+  //   id: 9,
+  //   title: 'Cafe Castle',
+  //   category: 'Restaurant',
+  //   description: 'A medieval-themed café website with menu and booking.',
+  //   tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
+  //   image: '/images/cafecastle.png',
+  //   link: '/projects/9'
+  // },
+  // {
+  //   id: 10,
+  //   title: 'Suril Udeshi',
+  //   category: 'Personal Portfolio',
+  //   description: 'Professional personal portfolio website showcasing skills, projects, and professional experience with modern design.',
+  //   tags: ['React', 'Portfolio', 'Personal Branding', 'Modern Design'],
+  //   image: '/images/restaurant.png',
+  //   link: '/projects/10'
+  // },
   // {
   //   id: 12,
   //   title: 'NW9 Digital',
@@ -168,6 +168,15 @@ const projects = [
     tags: ['React', 'Art Portfolio', 'Creative Design', 'Visual Arts'],
     image: '/images/musemasterpiece.png',
     link: '/projects/16'
+  },
+  {
+    id: 10,
+    title: 'Suril Udeshi',
+    category: 'Personal Portfolio',
+    description: 'Professional personal portfolio website showcasing skills, projects, and professional experience with modern design.',
+    tags: ['React', 'Portfolio', 'Personal Branding', 'Modern Design'],
+    image: '/images/restaurant.png',
+    link: '/projects/10'
   }
 ];
 
@@ -194,7 +203,7 @@ const Projects = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {projects.slice(0, 10).map((project) => (
+            {projects.slice(0, 9).map((project) => (
               <div
                 key={project.id}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
@@ -231,7 +240,7 @@ const Projects = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-befoundPurple mb-8 text-center">Ongoing Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.slice(10).map((project) => (
+              {projects.slice(9).map((project) => (
                 <div
                   key={project.id}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
