@@ -52,15 +52,15 @@ const projects = [
     image: '/images/3tigers.png',
     link: '/projects/5'
   },
-  {
-    id: 6,
-    title: 'Serve Smart',
-    category: 'Business',
-    description: 'Professional business website with modern design and comprehensive business information.',
-    tags: ['React', 'Business Website', 'Professional Design'],
-    image: '/images/servesmart.png',
-    link: '/projects/6'
-  },
+  // {
+  //   id: 6,
+  //   title: 'Serve Smart',
+  //   category: 'Business',
+  //   description: 'Professional business website with modern design and comprehensive business information.',
+  //   tags: ['React', 'Business Website', 'Professional Design'],
+  //   image: '/images/servesmart.png',
+  //   link: '/projects/6'
+  // },
   {
     id: 7,
     title: 'United International',
@@ -80,6 +80,33 @@ const projects = [
     link: '/projects/8'
   },
   {
+    id: 11,
+    title: 'Deep Mutual Funds',
+    category: 'Finance',
+    description: 'Financial services platform for mutual fund investments and portfolio management.',
+    tags: ['React', 'Finance', 'Investment Platform', 'Portfolio Management', 'Vercel'],
+    image: '/images/deepmutualfunds.png',
+    link: '/projects/11'
+  },
+  {
+    id: 14,
+    title: 'Make Media Sense',
+    category: 'Frontend',
+    description: 'A modern marketing agency website with dynamic content.',
+    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
+    image: '/images/makemediasense.png',
+    link: '/projects/14'
+  },
+  {
+    id: 17,
+    title: 'Blue Escape Holidays',
+    category: 'Travel',
+    description: 'Luxury travel agency website offering exclusive travel experiences and bespoke holiday packages.',
+    tags: ['React', 'Travel', 'Luxury Travel', 'Responsive Design'],
+    image: '/images/blueescape.png',
+    link: '/projects/17'
+  },
+  {
     id: 9,
     title: 'Cafe Castle',
     category: 'Restaurant',
@@ -96,15 +123,6 @@ const projects = [
     tags: ['React', 'Portfolio', 'Personal Branding', 'Modern Design'],
     image: '/images/restaurant.png',
     link: '/projects/10'
-  },
-  {
-    id: 11,
-    title: 'Deep Mutual Funds',
-    category: 'Finance',
-    description: 'Financial services platform for mutual fund investments and portfolio management.',
-    tags: ['React', 'Finance', 'Investment Platform', 'Portfolio Management', 'Vercel'],
-    image: '/images/deepmutualfunds.png',
-    link: '/projects/11'
   },
   // {
   //   id: 12,
@@ -134,13 +152,22 @@ const projects = [
     link: '/projects/13'
   },
   {
-    id: 14,
-    title: 'Make Media Sense',
-    category: 'Frontend',
-    description: 'A modern marketing agency website with dynamic content.',
-    tags: ['React', 'SASS', 'Framer Motion', 'Recharts'],
-    image: '/images/makemediasense.png',
-    link: '/projects/14'
+    id: 15,
+    title: 'Dr. Uppiliappan Gopalan',
+    category: 'Personal Portfolio',
+    description: 'Professional portfolio website for Dr. Uppiliappan Gopalan showcasing thought leadership, achievements, and media features.',
+    tags: ['React', 'Portfolio', 'Personal Branding', 'Professional Design'],
+    image: '/images/doctorgopallan.png',
+    link: '/projects/15'
+  },
+  {
+    id: 16,
+    title: 'Muse & Masterpiece',
+    category: 'Art & Design',
+    description: 'Art studio website showcasing murals, sculptures, and creative masterpieces by Deepak Bhadoriya.',
+    tags: ['React', 'Art Portfolio', 'Creative Design', 'Visual Arts'],
+    image: '/images/musemasterpiece.png',
+    link: '/projects/16'
   }
 ];
 
@@ -167,7 +194,7 @@ const Projects = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {projects.slice(0, 8).map((project) => (
+            {projects.slice(0, 10).map((project) => (
               <div
                 key={project.id}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
@@ -204,7 +231,7 @@ const Projects = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-befoundPurple mb-8 text-center">Ongoing Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.slice(8).map((project) => (
+              {projects.slice(10).map((project) => (
                 <div
                   key={project.id}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
