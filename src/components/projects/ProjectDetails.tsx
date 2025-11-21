@@ -218,7 +218,7 @@ const projects = [
     images: [
       '/images/deepmutualfunds.png',
     ],
-    liveUrl: 'https://deep-mutual-funds-gamma.vercel.app/',
+    liveUrl: 'https://www.deepinvestment.co/',
     challenge: 'Build a comprehensive financial platform for mutual fund investments with user-friendly portfolio management.',
     solution: 'Developed a React-based financial platform with modern design, portfolio management tools, and comprehensive investment information.'
   },
@@ -291,9 +291,72 @@ const projects = [
     images: [
       '/images/makemediasense.png',
     ],
-    liveUrl: 'https://media-make-sense-vamc.vercel.app/',
+    liveUrl: 'http://www.makesensemedia.in/',
     challenge: 'Showcase digital marketing services with optimal performance.',
     solution: 'Clean, modern design with smooth animations and responsive layouts.'
+  },
+  {
+    id: 15,
+    title: 'Dr. Uppiliappan Gopalan',
+    category: 'Personal Portfolio',
+    description: 'Professional portfolio website for Dr. Uppiliappan Gopalan showcasing thought leadership, achievements, media features, and professional accomplishments.',
+    tags: ['React', 'Portfolio', 'Personal Branding', 'Professional Design', 'Thought Leadership'],
+    features: [
+      'Professional portfolio showcase',
+      'Media features and achievements',
+      'Thought leadership content',
+      'Blog and insights section',
+      'Contact and engagement features',
+      'Responsive design'
+    ],
+    images: [
+      '/images/gopalansir.png',
+    ],
+    liveUrl: 'https://gopalansir.vercel.app/',
+    challenge: 'Create a professional portfolio website that effectively showcases thought leadership, achievements, and media recognition.',
+    solution: 'Developed a modern React-based portfolio website with clean design, comprehensive achievement showcase, and professional presentation of thought leadership work.'
+  },
+  {
+    id: 16,
+    title: 'Muse & Masterpiece',
+    category: 'Art & Design',
+    description: 'Art studio website showcasing murals, sculptures, and creative masterpieces by Deepak Bhadoriya, featuring timeless artistic works.',
+    tags: ['React', 'Art Portfolio', 'Creative Design', 'Visual Arts', 'Art Showcase'],
+    features: [
+      'Artwork gallery and portfolio',
+      'Mural and sculpture showcases',
+      'Studio information and about section',
+      'Achievements and recognition',
+      'Contact and inquiry features',
+      'Responsive artistic design'
+    ],
+    images: [
+      '/images/museandmasterpiece.png',
+    ],
+    liveUrl: 'https://muse-and-masterpiece.vercel.app/',
+    challenge: 'Create an elegant art studio website that effectively showcases murals, sculptures, and creative masterpieces with a timeless aesthetic.',
+    solution: 'Developed a modern React-based art portfolio website with sophisticated design, comprehensive artwork showcase, and elegant presentation of creative works.'
+  },
+  {
+    id: 17,
+    title: 'Blue Escape Holidays',
+    category: 'Travel',
+    description: 'Luxury travel agency website offering exclusive travel experiences, bespoke holiday packages, and premium travel services.',
+    tags: ['React', 'Travel', 'Luxury Travel', 'Responsive Design', 'Travel Agency'],
+    features: [
+      'Luxury travel package showcase',
+      'Destination highlights',
+      'Enquiry and booking system',
+      'Travel experience gallery',
+      'Responsive travel interface',
+      'Premium design aesthetic'
+    ],
+    images: [
+      '/images/blueescapeholidays.png',
+    ],
+    liveUrl: 'https://www.blueescapeholidays.com/',
+    challenge: 'Create a luxury travel agency website that effectively showcases exclusive travel experiences and bespoke holiday packages.',
+    solution: 'Developed a modern React-based travel website with premium design, comprehensive travel package presentation, and elegant user experience for luxury travelers.'
   }
 ];
 
