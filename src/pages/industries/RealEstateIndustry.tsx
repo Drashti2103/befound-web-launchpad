@@ -8,6 +8,10 @@ import { CaseStudyCard } from '../../components/caseStudies/CaseStudyCard';
 import { getPostsByCategory } from '../../data/blogPosts';
 import { getCaseStudiesByIndustry } from '../../data/caseStudies';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/layout/Navbar';
+import Footer from '../../components/layout/Footer';
+import ScrollToTop from '../../components/layout/ScrollToTop';
+import ExpandCards from '../../components/ui/expand-cards';
 import {
   Building2,
   MapPin,
@@ -176,8 +180,51 @@ export const RealEstateIndustry = () => {
 
   const faqSchema = getFAQSchema(faqs);
 
+  const serviceItems = [
+    {
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+      title: 'Custom Real Estate Websites',
+      description: 'Stunning, high-converting websites tailored to your real estate brand. Showcase properties with advanced search, filters, and interactive maps.',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop',
+      title: 'Real Estate CRM Development',
+      description: 'Powerful CRM systems to manage leads, track client interactions, and automate follow-ups. Never miss an opportunity.',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop',
+      title: 'Property Portal Development',
+      description: 'Complete property listing platforms with thousands of listings, agent management, and advanced search capabilities.',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop',
+      title: 'Mobile Apps for Real Estate',
+      description: 'Native iOS and Android apps for property searching on-the-go. Push notifications for new listings and price changes.',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1568605117033-2066af9c465a?w=800&h=600&fit=crop',
+      title: 'SEO for Real Estate',
+      description: 'Dominate local search results and attract qualified buyers. Our SEO strategies put you on page 1 for high-intent keywords.',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1568605117033-2066af9c465a?w=800&h=600&fit=crop&ixlib=rb-4.0.3&auto=format',
+      title: 'Virtual Tour Integration',
+      description: '360-degree virtual tours, video walkthroughs, and drone footage integration. Let buyers explore properties remotely.',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&auto=format',
+      title: 'Lead Generation Systems',
+      description: 'Automated lead capture forms, chatbot integrations, and email marketing campaigns to convert visitors into qualified leads.',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop&auto=format',
+      title: 'Analytics & Reporting',
+      description: 'Comprehensive analytics dashboards to track property views, lead sources, conversion rates, and ROI metrics.',
+    },
+  ];
+
   return (
-    <>
+    <div className="min-h-screen">
       <SEO
         title="Real Estate Website Development USA | Custom Property Websites"
         description="Professional real estate website development company specializing in custom real estate websites, property portals, MLS integration, and CRM solutions. Drive 300% more leads with our proven real estate digital solutions."
@@ -185,35 +232,35 @@ export const RealEstateIndustry = () => {
         canonicalUrl="https://befound.com/industries/real-estate"
         structuredData={[breadcrumbSchema, serviceSchema, faqSchema]}
       />
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-befoundPurple via-befoundPurple/90 to-befoundOrange/80 text-white py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNjAgMTAgTSAxMCAwIEwgMTAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
-
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-befoundPurple via-befoundPurple/95 to-black overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&h=1080&fit=crop')] opacity-10 bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-befoundPurple/50 to-black"></div>
+        
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+          <div className="max-w-5xl mx-auto text-center">
+            <Badge className="mb-6 bg-befoundOrange/20 text-befoundOrange border-befoundOrange/30 text-sm px-4 py-1.5">
               Real Estate Website Development USA
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
               Transform Your Real Estate Business with Custom Digital Solutions
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90">
-              Drive 300% more leads with professional real estate websites, property portals, and CRM systems
-              built for the US market
+            <p className="text-lg md:text-xl lg:text-2xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Drive 300% more leads with professional real estate websites, property portals, and CRM systems built for the US market
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-befoundOrange hover:bg-befoundOrange/90 text-white">
+              <a href="https://calendly.com/thebefoundcompany/30min" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-befoundOrange hover:bg-befoundOrange/90 text-white text-base px-8 py-6">
                   Get Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </Link>
+              </a>
               <Link to="/projects">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white/30"
+                  className="bg-transparent hover:bg-white/10 text-white border-white/30 text-base px-8 py-6"
                 >
                   View Portfolio
                 </Button>
@@ -224,71 +271,52 @@ export const RealEstateIndustry = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-gray-50 border-y">
+      <section className="py-8 md:py-12 bg-gray-50 border-y">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-2 text-befoundOrange">{stat.icon}</div>
-                <div className="text-3xl md:text-4xl font-bold text-befoundPurple mb-1">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-befoundPurple mb-1">{stat.value}</div>
+                <div className="text-xs sm:text-sm md:text-base text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Real Estate Technology Solutions That Drive Results
-            </h2>
-            <p className="text-xl text-gray-600">
-              From custom websites to comprehensive property portals, we build digital solutions that help
-              real estate professionals succeed in competitive markets.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-befoundOrange/20 to-befoundPurple/20 rounded-lg flex items-center justify-center text-befoundOrange mb-4">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+      {/* Services Section with Expand Cards */}
+      <section className="py-0 bg-white">
+        <ExpandCards 
+          services={serviceItems} 
+          defaultExpanded={3}
+          title="Real Estate Technology Solutions That Drive Results"
+          subtitle="Comprehensive digital solutions built for real estate professionals"
+        />
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-              Powerful Features for Real Estate Websites
-            </h2>
-            <div className="grid md:grid-cols-2 gap-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-befoundPurple px-4">
+                Powerful Features for Real Estate Websites
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+                Everything you need to showcase properties, capture leads, and grow your real estate business
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg">
-                  <CheckCircle2 className="w-5 h-5 text-befoundOrange flex-shrink-0 mt-0.5" />
-                  <span>{feature}</span>
+                <div 
+                  key={index} 
+                  className="flex items-start gap-3 bg-white p-4 md:p-5 rounded-xl border border-gray-100 hover:border-befoundOrange/30 hover:shadow-md transition-all duration-200"
+                >
+                  <div className="flex-shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-befoundOrange" />
+                  </div>
+                  <span className="text-sm md:text-base text-gray-700 font-medium">{feature}</span>
                 </div>
               ))}
             </div>
@@ -298,15 +326,15 @@ export const RealEstateIndustry = () => {
 
       {/* Case Studies Section */}
       {caseStudies.length > 0 && (
-        <section className="py-20">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Real Estate Success Stories</h2>
-              <p className="text-xl text-gray-600">
+            <div className="text-center mb-6 md:mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-befoundPurple px-4">Real Estate Success Stories</h2>
+              <p className="text-base sm:text-lg text-gray-600 px-4">
                 See how we've helped real estate businesses transform their digital presence
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-7xl mx-auto">
               {caseStudies.map((caseStudy) => (
                 <CaseStudyCard key={caseStudy.id} caseStudy={caseStudy} />
               ))}
@@ -316,12 +344,12 @@ export const RealEstateIndustry = () => {
       )}
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-befoundPurple to-befoundPurple/90 text-white">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-befoundPurple to-befoundPurple/90 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center px-4">
             What Real Estate Professionals Say
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-white/10 border-white/20 text-white">
                 <CardHeader>
@@ -345,10 +373,10 @@ export const RealEstateIndustry = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center px-4">
               Frequently Asked Questions
             </h2>
             <Accordion type="single" collapsible className="w-full">
@@ -367,21 +395,21 @@ export const RealEstateIndustry = () => {
       {blogPosts.length > 0 && (
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Real Estate Insights & Guides</h2>
-              <p className="text-xl text-gray-600">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Real Estate Insights & Guides</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 px-4">
                 Expert advice on real estate website development and digital marketing
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
               {blogPosts.map((post) => (
                 <BlogCard key={post.id} post={post} />
               ))}
             </div>
-            <div className="text-center mt-12">
+            <div className="text-center mt-8 md:mt-12">
               <Link to="/blog">
-                <Button variant="outline" size="lg">
-                  View All Articles <ArrowRight className="ml-2 w-5 h-5" />
+                <Button variant="outline" size="lg" className="text-sm md:text-base">
+                  View All Articles <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                 </Button>
               </Link>
             </div>
@@ -390,33 +418,45 @@ export const RealEstateIndustry = () => {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-befoundOrange to-befoundOrange/90 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+      <section className="relative w-full py-16 md:py-24 bg-gradient-to-r from-befoundPurple via-[#1a0a2a] to-black overflow-hidden mt-8">
+        {/* Dotted SVGs for corners */}
+        <svg className="absolute left-0 top-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
+          <defs>
+            <pattern id="dots-re" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="#fff" />
+            </pattern>
+          </defs>
+          <rect width="200" height="200" fill="url(#dots-re)" />
+        </svg>
+        <svg className="absolute right-0 bottom-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
+          <defs>
+            <pattern id="dots2-re" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="2" fill="#fff" />
+            </pattern>
+          </defs>
+          <rect width="200" height="200" fill="url(#dots2-re)" />
+        </svg>
+        
+        <div className="relative container mx-auto px-4 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4 sm:mb-6 font-newsreader leading-tight">
             Ready to Transform Your Real Estate Business?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-            Get a free consultation and discover how custom real estate website development can drive more
-            leads, close more deals, and grow your business.
+          <p className="text-white text-base sm:text-lg md:text-xl mb-6 sm:mb-8 font-medium px-4 sm:px-8">
+            Get a free consultation and discover how custom real estate website development can drive more leads, close more deals, and grow your business.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-befoundOrange hover:bg-gray-100">
-                Schedule Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link to="/pricing">
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-              >
-                View Pricing
-              </Button>
-            </Link>
-          </div>
+          <a 
+            href="https://calendly.com/thebefoundcompany/30min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-befoundPurple font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow hover:bg-befoundOrange hover:text-white transition-colors duration-300 text-sm sm:text-base md:text-lg"
+          >
+            Contact Us Today
+          </a>
         </div>
       </section>
-    </>
+
+      <Footer />
+      <ScrollToTop />
+    </div>
   );
 };
