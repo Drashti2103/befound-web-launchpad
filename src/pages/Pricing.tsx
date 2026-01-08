@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
+import { SEO } from '../components/common/SEO';
 
 const Pricing = () => {
   const pricingPlans = [
@@ -60,8 +61,73 @@ const Pricing = () => {
     }
   ];
 
+  const pricingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Basic Plan',
+        description: 'Perfect for small businesses and startups looking to establish their online presence.',
+        price: '180',
+        priceCurrency: 'USD',
+        priceValidUntil: '2026-12-31',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Basic Software Solutions Package',
+          provider: {
+            '@type': 'Organization',
+            name: 'beFound',
+          },
+        },
+        availability: 'https://schema.org/InStock',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Professional Plan',
+        description: 'Ideal for growing businesses that need advanced features and functionality.',
+        price: '300',
+        priceCurrency: 'USD',
+        priceValidUntil: '2026-12-31',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Professional Software Solutions Package',
+          provider: {
+            '@type': 'Organization',
+            name: 'beFound',
+          },
+        },
+        availability: 'https://schema.org/InStock',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Enterprise Plan',
+        description: 'Comprehensive solutions for large businesses requiring complex, scalable systems.',
+        price: '550',
+        priceCurrency: 'USD',
+        priceValidUntil: '2026-12-31',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Enterprise Software Solutions Package',
+          provider: {
+            '@type': 'Organization',
+            name: 'beFound',
+          },
+        },
+        availability: 'https://schema.org/InStock',
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Pricing Plans - Affordable Software Solutions"
+        description="Flexible pricing plans starting at $180. Choose from Basic, Professional, or Enterprise packages for web development and software solutions."
+        keywords="software pricing, web development cost, affordable software solutions, pricing plans, software packages, beFound pricing"
+        canonicalUrl="https://befound.com/pricing"
+        structuredData={pricingSchema}
+      />
       <Navbar />
       
       <main className="flex-grow">

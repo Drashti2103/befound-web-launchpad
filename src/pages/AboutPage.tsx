@@ -9,6 +9,7 @@ import teamCollaborationImg from '/public/images/about/team-collab.jpg';
 import designProcessImg from '/public/images/about/design-process.jpg';
 import creativeWorkImg from '/public/images/about/creative-work.jpg';
 import CTASection from '../components/home/CTASection';
+import { SEO } from '../components/common/SEO';
 
 const AboutPage = () => {
   const imagesRef = useRef<HTMLDivElement>(null);
@@ -31,8 +32,33 @@ const AboutPage = () => {
     return () => observer.disconnect();
   }, []);
 
+  const aboutPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About beFound',
+    description: 'Learn about beFound\'s mission to deliver exceptional software solutions and user-centric designs that help businesses stand out.',
+    url: 'https://befound.com/about',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'beFound',
+      description: 'A software solutions company dedicated to helping businesses establish a strong online presence through innovative design and development.',
+      foundingDate: '2025',
+      founder: {
+        '@type': 'Person',
+        name: 'beFound CEO',
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="About Us - beFound Story & Mission"
+        description="Discover beFound's journey from a freelance passion to a leading software solutions company. Innovation, quality, and excellence drive us."
+        keywords="about beFound, software company story, our mission, company values, innovation, user-centric design, software development team"
+        canonicalUrl="https://befound.com/about"
+        structuredData={aboutPageSchema}
+      />
       <Navbar />
       
       <div className="pt-24 pb-32">
