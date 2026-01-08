@@ -2,7 +2,7 @@ import { blogPosts } from '../data/blogPosts';
 import { caseStudies } from '../data/caseStudies';
 
 export const generateSitemap = () => {
-  const baseUrl = 'https://befound.com';
+  const baseUrl = 'https://befound.dev';
   const currentDate = new Date().toISOString().split('T')[0];
 
   const staticPages = [
@@ -42,10 +42,11 @@ export const generateSitemap = () => {
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 ${allUrls
   .map(
     (item) => `  <url>
@@ -60,4 +61,5 @@ ${allUrls
 
   return sitemap;
 };
+
 
