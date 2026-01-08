@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 import ScrollToTop from '../layout/ScrollToTop';
+import { SEO, getBreadcrumbSchema } from '../common/SEO';
 
 const projects = [
   {
@@ -357,8 +358,215 @@ const projects = [
     liveUrl: 'https://www.blueescapeholidays.com/',
     challenge: 'Create a luxury travel agency website that effectively showcases exclusive travel experiences and bespoke holiday packages.',
     solution: 'Developed a modern React-based travel website with premium design, comprehensive travel package presentation, and elegant user experience for luxury travelers.'
+  },
+  {
+    id: 18,
+    title: 'NW9 Digital',
+    category: 'Digital Agency',
+    description: 'Comprehensive digital solutions including web development, ERP solutions, SEO optimization, and recruitment services for business growth.',
+    tags: ['React', 'Web Development', 'ERP Solutions', 'SEO', 'Recruitment Services'],
+    features: [
+      'Custom website development',
+      'ERP system solutions',
+      'SEO optimization services',
+      'Recruitment services',
+      'Responsive design'
+    ],
+    images: [
+      '/images/nw9.png',
+    ],
+    liveUrl: 'https://nw9.digital/',
+    challenge: 'Create a comprehensive digital agency platform that showcases multiple service offerings including web development, ERP solutions, SEO, and recruitment.',
+    solution: 'Developed a modern React-based website highlighting NW9 Digital\'s expertise in web development, ERP solutions, SEO optimization, and recruitment services with a professional design.'
+  },
+  {
+    id: 19,
+    title: 'NW9.in',
+    category: 'Digital Agency',
+    description: 'Digital solutions platform offering web development, marketing, and business automation services.',
+    tags: ['React', 'Web Development', 'Digital Marketing', 'Business Automation'],
+    features: [
+      'Web development services',
+      'Digital marketing solutions',
+      'Business automation tools',
+      'Responsive design',
+      'Professional branding'
+    ],
+    images: [
+      '/images/nw9digital2.png',
+    ],
+    liveUrl: '#',
+    challenge: 'Develop a digital solutions platform that effectively showcases web development, marketing, and business automation services.',
+    solution: 'Created a modern React-based platform with clean design, comprehensive service presentation, and professional branding for digital agency services.'
   }
 ];
+
+// Helper function to generate SEO-friendly keywords and descriptions
+const getSEOData = (project: typeof projects[0]) => {
+  const baseKeywords = [
+    'web development',
+    'website development',
+    'custom website',
+    'web design',
+    'responsive design',
+    'modern website',
+    'professional website',
+    'beFound',
+    'software solutions',
+    'digital solutions'
+  ];
+
+  const categoryKeywords: Record<string, string[]> = {
+    'E-commerce': [
+      'e-commerce website development',
+      'online store development',
+      'ecommerce platform',
+      'WooCommerce development',
+      'payment integration',
+      'product management system',
+      'online shopping website',
+      'e-commerce solutions',
+      'digital commerce platform'
+    ],
+    'Healthcare': [
+      'healthcare website development',
+      'dental website design',
+      'medical website development',
+      'healthcare digital solutions',
+      'patient portal development',
+      'appointment booking system',
+      'healthcare web design',
+      'medical practice website',
+      'dental clinic website'
+    ],
+    'Interior Design': [
+      'interior design website',
+      'portfolio website development',
+      'creative agency website',
+      'design portfolio',
+      'interior design company website',
+      'professional portfolio website'
+    ],
+    'Author Website': [
+      'author website development',
+      'personal website design',
+      'content management system',
+      'author platform',
+      'book marketing website',
+      'personal branding website'
+    ],
+    'Restaurant': [
+      'restaurant website development',
+      'restaurant web design',
+      'online menu website',
+      'restaurant booking system',
+      'food service website',
+      'restaurant digital solutions',
+      'cafe website development',
+      'restaurant online ordering'
+    ],
+    'Business': [
+      'business website development',
+      'corporate website design',
+      'business web development',
+      'company website development',
+      'professional business website',
+      'corporate web solutions',
+      'business digital solutions'
+    ],
+    'Finance': [
+      'financial website development',
+      'investment platform development',
+      'fintech website design',
+      'financial services website',
+      'portfolio management system',
+      'mutual fund website',
+      'financial technology solutions'
+    ],
+    'Full Stack': [
+      'full stack development',
+      'AI-powered application',
+      'machine learning website',
+      'artificial intelligence development',
+      'full stack web application',
+      'AI integration services'
+    ],
+    'Digital Marketing': [
+      'digital marketing platform',
+      'marketing website development',
+      'content creation platform',
+      'social media marketing tools',
+      'digital marketing solutions',
+      'marketing automation platform'
+    ],
+    'Frontend': [
+      'frontend development',
+      'modern web design',
+      'interactive website',
+      'dynamic web application',
+      'responsive web design',
+      'user interface design'
+    ],
+    'Personal Portfolio': [
+      'portfolio website development',
+      'personal website design',
+      'professional portfolio',
+      'personal branding website',
+      'portfolio web design',
+      'personal website development'
+    ],
+    'Art & Design': [
+      'art portfolio website',
+      'creative portfolio development',
+      'art gallery website',
+      'design portfolio website',
+      'artistic website design',
+      'creative agency website'
+    ],
+    'Travel': [
+      'travel website development',
+      'travel agency website',
+      'tour booking website',
+      'travel portal development',
+      'luxury travel website',
+      'travel booking system',
+      'holiday booking platform'
+    ],
+    'Digital Agency': [
+      'digital agency website',
+      'web development agency',
+      'digital marketing agency',
+      'ERP solutions development',
+      'SEO optimization services',
+      'business automation solutions',
+      'digital transformation services'
+    ]
+  };
+
+  const techKeywords = project.tags.map(tag => 
+    tag.toLowerCase().includes('react') ? 'React development' :
+    tag.toLowerCase().includes('wordpress') ? 'WordPress development' :
+    tag.toLowerCase().includes('next.js') ? 'Next.js development' :
+    tag.toLowerCase().includes('python') ? 'Python development' :
+    tag.toLowerCase().includes('typescript') ? 'TypeScript development' :
+    tag.toLowerCase().includes('seo') ? 'SEO optimization' :
+    `${tag.toLowerCase()} development`
+  );
+
+  const keywords = [
+    ...baseKeywords,
+    ...(categoryKeywords[project.category] || []),
+    ...techKeywords,
+    project.title.toLowerCase(),
+    `${project.title} website`,
+    `${project.category.toLowerCase()} website development`,
+    `${project.category.toLowerCase()} web design`
+  ].join(', ');
+
+  const description = `${project.title} - Professional ${project.category.toLowerCase()} website development project by beFound. ${project.description} Built with ${project.tags.join(', ')}. Expert ${project.category.toLowerCase()} web design, custom development, responsive design, and modern UI/UX. View our portfolio of successful ${project.category.toLowerCase()} websites and digital solutions.`;
+
+  return { keywords, description };
+};
 
 const ProjectDetails = () => {
   const { projectId } = useParams();
@@ -387,8 +595,76 @@ const ProjectDetails = () => {
     );
   }
 
+  const seoData = getSEOData(project);
+  const siteUrl = 'https://befound.com';
+  const canonicalUrl = `${siteUrl}/projects/${project.id}`;
+  const ogImage = project.images[0] || '/og-image.jpg';
+
+  // Structured data for WebPage
+  const webpageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `${project.title} - ${project.category} Website Development Project`,
+    description: seoData.description,
+    url: canonicalUrl,
+    image: `${siteUrl}${ogImage}`,
+    mainEntity: {
+      '@type': 'CreativeWork',
+      name: project.title,
+      description: project.description,
+      creator: {
+        '@type': 'Organization',
+        name: 'beFound',
+        url: siteUrl
+      },
+      keywords: seoData.keywords,
+      ...(project.liveUrl && {
+        url: project.liveUrl
+      })
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: siteUrl
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Projects',
+          item: `${siteUrl}/projects`
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: project.title,
+          item: canonicalUrl
+        }
+      ]
+    }
+  };
+
+  // Breadcrumb schema
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: siteUrl },
+    { name: 'Projects', url: `${siteUrl}/projects` },
+    { name: project.title, url: canonicalUrl }
+  ]);
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title={`${project.title} - ${project.category} Website Development | beFound Portfolio`}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={canonicalUrl}
+        ogImage={ogImage}
+        ogType="website"
+        structuredData={[webpageSchema, breadcrumbSchema]}
+      />
       <Navbar />
       
       <div className="pt-24 pb-16">
@@ -401,36 +677,39 @@ const ProjectDetails = () => {
             Back to Projects
           </Button>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+          <article className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/2">
-                <h1 className="text-4xl font-bold text-befoundPurple mb-4">{project.title}</h1>
-                <p className="text-gray-600 mb-6">{project.description}</p>
+                <h1 className="text-4xl font-bold text-befoundPurple mb-4">{project.title} - {project.category} Website Development</h1>
+                <p className="text-gray-600 mb-6 text-lg leading-relaxed">{project.description}</p>
                 
                 <div className="mb-6">
-                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Category</h2>
-                  <span className="px-4 py-2 bg-gray-100 text-gray-600 rounded-full">
-                    {project.category}
+                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Project Category</h2>
+                  <span className="px-4 py-2 bg-gray-100 text-gray-600 rounded-full font-medium">
+                    {project.category} Website Development
                   </span>
                 </div>
 
                 <div className="mb-6">
-                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Technologies Used</h2>
+                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Technologies & Tools Used</h2>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, i) => (
-                      <span key={i} className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full">
+                      <span key={i} className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
                         {tag}
                       </span>
                     ))}
                   </div>
+                  <p className="text-sm text-gray-500 mt-3">
+                    This {project.category.toLowerCase()} website was built using modern web development technologies including {project.tags.slice(0, 3).join(', ')} and more, ensuring optimal performance, SEO optimization, and responsive design.
+                  </p>
                 </div>
 
                 <div className="mb-6">
-                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Key Features</h2>
+                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Key Features & Functionality</h2>
                   <ul className="space-y-2">
                     {project.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="mt-1 w-2 h-2 bg-befoundPurple rounded-full inline-block"></span>
+                        <span className="mt-1 w-2 h-2 bg-befoundPurple rounded-full inline-block flex-shrink-0"></span>
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -438,21 +717,28 @@ const ProjectDetails = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Challenge</h2>
-                  <p className="text-gray-700">{project.challenge}</p>
+                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Project Challenge</h2>
+                  <p className="text-gray-700 leading-relaxed">{project.challenge}</p>
                 </div>
 
                 <div className="mb-6">
-                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Solution</h2>
-                  <p className="text-gray-700">{project.solution}</p>
+                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">Our Solution</h2>
+                  <p className="text-gray-700 leading-relaxed">{project.solution}</p>
                 </div>
 
-                {project.liveUrl && (
+                <div className="mb-6">
+                  <h2 className="text-xl font-semibold text-befoundPurple mb-3">About This {project.category} Website Project</h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    This {project.category.toLowerCase()} website development project showcases beFound's expertise in creating modern, responsive, and SEO-optimized websites. Our team specializes in {project.category.toLowerCase()} web design, custom development, and digital solutions that drive results. This project demonstrates our commitment to delivering high-quality {project.category.toLowerCase()} websites with exceptional user experience and performance.
+                  </p>
+                </div>
+
+                {project.liveUrl && project.liveUrl !== '#' && (
                   <Button
                     onClick={() => window.open(project.liveUrl, '_blank')}
                     className="bg-befoundPurple hover:bg-befoundOrange text-white"
                   >
-                    Visit Live Site
+                    Visit Live Website
                   </Button>
                 )}
               </div>
@@ -463,15 +749,32 @@ const ProjectDetails = () => {
                     <div key={i} className="rounded-xl overflow-hidden shadow-lg">
                       <img
                         src={image}
-                        alt={`${project.title} screenshot ${i + 1}`}
+                        alt={`${project.title} ${project.category.toLowerCase()} website screenshot ${i + 1} - ${project.category} web development project by beFound`}
+                        title={`${project.title} - ${project.category} Website Development Project`}
                         className="w-full h-auto object-cover"
+                        loading={i === 0 ? 'eager' : 'lazy'}
                       />
                     </div>
                   ))}
                 </div>
+                <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                  <h3 className="font-semibold text-befoundPurple mb-2">Looking for Similar {project.category} Website Development?</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    beFound specializes in {project.category.toLowerCase()} website development, custom web design, and digital solutions. We create responsive, SEO-optimized websites that drive results.
+                  </p>
+                  <a 
+                    href="https://calendly.com/thebefoundcompany/30min" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-befoundPurple hover:bg-befoundOrange text-white text-sm w-full">
+                      Get Free Consultation
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
       

@@ -43,24 +43,24 @@ const projects = [
     image: '/images/PatrickKalenzi.png',
     link: '/projects/4'
   },
-  // {
-  //   id: 5,
-  //   title: '3 Tigers',
-  //   category: 'Business',
-  //   description: 'Professional business website with modern design and comprehensive business information.',
-  //   tags: ['React', 'Business Website', 'Professional Design'],
-  //   image: '/images/3tigers.png',
-  //   link: '/projects/5'
-  // },
-  // {
-  //   id: 6,
-  //   title: 'Serve Smart',
-  //   category: 'Business',
-  //   description: 'Professional business website with modern design and comprehensive business information.',
-  //   tags: ['React', 'Business Website', 'Professional Design'],
-  //   image: '/images/servesmart.png',
-  //   link: '/projects/6'
-  // },
+  {
+    id: 5,
+    title: '3 Tigers',
+    category: 'Restaurant',
+    description: 'Modern restaurant website for 3 Tigers Thai Restaurant & Bar with online menu, booking system, and mobile-optimized experience.',
+    tags: ['React', 'Restaurant Website', 'Next.js', 'Professional Design'],
+    image: '/images/3tigers.png',
+    link: '/projects/5'
+  },
+  {
+    id: 6,
+    title: 'Serve Smart',
+    category: 'Business',
+    description: 'Professional business website with modern design and comprehensive business information.',
+    tags: ['React', 'Business Website', 'Professional Design'],
+    image: '/images/servesmart.png',
+    link: '/projects/6'
+  },
   {
     id: 7,
     title: 'United International',
@@ -106,42 +106,6 @@ const projects = [
     image: '/images/blueescape.png',
     link: '/projects/17'
   },
-  // {
-  //   id: 9,
-  //   title: 'Cafe Castle',
-  //   category: 'Restaurant',
-  //   description: 'A medieval-themed café website with menu and booking.',
-  //   tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
-  //   image: '/images/cafecastle.png',
-  //   link: '/projects/9'
-  // },
-  // {
-  //   id: 10,
-  //   title: 'Suril Udeshi',
-  //   category: 'Personal Portfolio',
-  //   description: 'Professional personal portfolio website showcasing skills, projects, and professional experience with modern design.',
-  //   tags: ['React', 'Portfolio', 'Personal Branding', 'Modern Design'],
-  //   image: '/images/restaurant.png',
-  //   link: '/projects/10'
-  // },
-  // {
-  //   id: 12,
-  //   title: 'NW9 Digital',
-  //   category: 'Digital Agency',
-  //   description: 'Comprehensive digital solutions including web development, ERP solutions, SEO optimization, and recruitment services for business growth.',
-  //   tags: ['React', 'Web Development', 'ERP Solutions', 'SEO', 'Recruitment Services'],
-  //   image: '/images/nw9.png',
-  //   link: '/projects/12'
-  // },
-  {
-    id: 12,
-    title: 'Dishsnap',
-    category: 'Full Stack',
-    description: 'AI-powered food photography generator for restaurants.',
-    tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
-    image: '/images/dishsnap.png',
-    link: '/projects/12'
-  },
   {
     id: 13,
     title: 'Crazy Virality',
@@ -152,15 +116,6 @@ const projects = [
     link: '/projects/13'
   },
   {
-    id: 15,
-    title: 'Dr. Uppiliappan Gopalan',
-    category: 'Personal Portfolio',
-    description: 'Professional portfolio website for Dr. Uppiliappan Gopalan showcasing thought leadership, achievements, and media features.',
-    tags: ['React', 'Portfolio', 'Personal Branding', 'Professional Design'],
-    image: '/images/doctorgopallan.png',
-    link: '/projects/15'
-  },
-  {
     id: 16,
     title: 'Muse & Masterpiece',
     category: 'Art & Design',
@@ -168,6 +123,51 @@ const projects = [
     tags: ['React', 'Art Portfolio', 'Creative Design', 'Visual Arts'],
     image: '/images/musemasterpiece.png',
     link: '/projects/16'
+  },
+  {
+    id: 9,
+    title: 'Cafe Castle',
+    category: 'Restaurant',
+    description: 'A medieval-themed café website with menu and booking.',
+    tags: ['React', 'TailwindCSS', 'Next.js', 'Framer Motion'],
+    image: '/images/cafecastle.png',
+    link: '/projects/9'
+  },
+  {
+    id: 18,
+    title: 'NW9 Digital',
+    category: 'Digital Agency',
+    description: 'Comprehensive digital solutions including web development, ERP solutions, SEO optimization, and recruitment services for business growth.',
+    tags: ['React', 'Web Development', 'ERP Solutions', 'SEO', 'Recruitment Services'],
+    image: '/images/nw9.png',
+    link: '/projects/18'
+  },
+  {
+    id: 19,
+    title: 'NW9.in',
+    category: 'Digital Agency',
+    description: 'Digital solutions platform offering web development, marketing, and business automation services.',
+    tags: ['React', 'Web Development', 'Digital Marketing', 'Business Automation'],
+    image: '/images/nw9digital2.png',
+    link: '/projects/19'
+  },
+  {
+    id: 12,
+    title: 'Dishsnap',
+    category: 'Full Stack',
+    description: 'AI-powered food photography generator for restaurants.',
+    tags: ['React', 'Python', 'OpenAI', 'Flask', 'TailwindCSS', 'TypeScript'],
+    image: '/images/dishsnap.png',
+    link: '/projects/12'
+  },
+  {
+    id: 15,
+    title: 'Dr. Uppiliappan Gopalan',
+    category: 'Personal Portfolio',
+    description: 'Professional portfolio website for Dr. Uppiliappan Gopalan showcasing thought leadership, achievements, and media features.',
+    tags: ['React', 'Portfolio', 'Personal Branding', 'Professional Design'],
+    image: '/images/doctorgopallan.png',
+    link: '/projects/15'
   },
   {
     id: 10,
@@ -182,6 +182,13 @@ const projects = [
 
 const Projects = () => {
   const navigate = useNavigate();
+
+  // Ongoing project IDs: Cafe Castle (9), Suril Udeshi (10), Dishsnap (12), 
+  // Dr. Uppiliappan Gopalan (15), NW9 Digital (18), NW9.in (19)
+  const ongoingProjectIds = [9, 10, 12, 15, 18, 19];
+  
+  const completedProjects = projects.filter(project => !ongoingProjectIds.includes(project.id));
+  const ongoingProjects = projects.filter(project => ongoingProjectIds.includes(project.id));
 
   return (
     <div className="min-h-screen">
@@ -203,7 +210,7 @@ const Projects = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {projects.slice(0, 9).map((project) => (
+            {completedProjects.map((project) => (
               <div
                 key={project.id}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
@@ -240,7 +247,7 @@ const Projects = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-befoundPurple mb-8 text-center">Ongoing Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.slice(9).map((project) => (
+              {ongoingProjects.map((project) => (
                 <div
                   key={project.id}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
