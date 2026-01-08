@@ -5,6 +5,7 @@ import Footer from '../layout/Footer';
 import ScrollToTop from '../layout/ScrollToTop';
 import { Button } from '../ui/button';
 import { ArrowLeft } from 'lucide-react';
+import { SEO, getBreadcrumbSchema, getServiceSchema } from '../common/SEO';
 
 // Define the service data structure
 interface Technology {
@@ -646,8 +647,27 @@ const ServiceDetails = () => {
     );
   }
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://befound.com/' },
+    { name: 'Services', url: 'https://befound.com/services' },
+    { name: service.title, url: `https://befound.com/services/${serviceId}` },
+  ]);
+
+  const serviceSchema = getServiceSchema({
+    name: service.title,
+    description: service.description,
+    url: `https://befound.com/services/${serviceId}`,
+  });
+
   return (
     <div className="min-h-screen bg-[#f8fafc]">
+      <SEO
+        title={`${service.title} - Professional ${service.title} Services | beFound`}
+        description={service.longDescription}
+        keywords={`${service.title}, ${service.title.toLowerCase()} services, web development, software solutions, custom ${service.title.toLowerCase()}, beFound services`}
+        canonicalUrl={`https://befound.com/services/${serviceId}`}
+        structuredData={[breadcrumbSchema, serviceSchema]}
+      />
       <Navbar />
       
       <div className="pt-24 pb-16">
