@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
   <!-- Homepage -->
   <url>
-    <loc>https://befound.com/</loc>
+    <loc>https://befound.dev/</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,35 +15,35 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://befound.com/about</loc>
+    <loc>https://befound.dev/about</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://befound.com/services</loc>
+    <loc>https://befound.dev/services</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://befound.com/contact</loc>
+    <loc>https://befound.dev/contact</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://befound.com/projects</loc>
+    <loc>https://befound.dev/projects</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://befound.com/pricing</loc>
+    <loc>https://befound.dev/pricing</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -50,21 +51,21 @@
   
   <!-- Industry Pages -->
   <url>
-    <loc>https://befound.com/industries/real-estate</loc>
+    <loc>https://befound.dev/industries/real-estate</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://befound.com/industries/dental</loc>
+    <loc>https://befound.dev/industries/dental</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://befound.com/industries/restaurant</loc>
+    <loc>https://befound.dev/industries/restaurant</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -72,7 +73,7 @@
   
   <!-- Blog Listing -->
   <url>
-    <loc>https://befound.com/blog</loc>
+    <loc>https://befound.dev/blog</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -80,43 +81,43 @@
   
   <!-- Blog Posts -->
   <url>
-    <loc>https://befound.com/blog/real-estate-website-development-usa-guide</loc>
+    <loc>https://befound.dev/blog/real-estate-website-development-usa-guide</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://befound.com/blog/essential-features-property-listing-website</loc>
+    <loc>https://befound.dev/blog/essential-features-property-listing-website</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://befound.com/blog/dental-website-development-complete-guide</loc>
+    <loc>https://befound.dev/blog/dental-website-development-complete-guide</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://befound.com/blog/essential-dental-service-pages-2026</loc>
+    <loc>https://befound.dev/blog/essential-dental-service-pages-2026</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://befound.com/blog/restaurant-website-development-complete-guide</loc>
+    <loc>https://befound.dev/blog/restaurant-website-development-complete-guide</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://befound.com/blog/essential-restaurant-website-pages-2026</loc>
+    <loc>https://befound.dev/blog/essential-restaurant-website-pages-2026</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://befound.com/blog/12-essential-real-estate-website-pages-2026</loc>
+    <loc>https://befound.dev/blog/12-essential-real-estate-website-pages-2026</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -124,7 +125,7 @@
   
   <!-- Case Studies Listing -->
   <url>
-    <loc>https://befound.com/case-studies</loc>
+    <loc>https://befound.dev/case-studies</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -132,13 +133,13 @@
   
   <!-- Case Studies -->
   <url>
-    <loc>https://befound.com/case-studies/weston-family-dental-florida</loc>
+    <loc>https://befound.dev/case-studies/weston-family-dental-florida</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://befound.com/case-studies/blue-escape-holidays-travel-platform</loc>
+    <loc>https://befound.dev/case-studies/blue-escape-holidays-travel-platform</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -146,14 +147,14 @@
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://befound.com/privacy-policy</loc>
+    <loc>https://befound.dev/privacy-policy</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://befound.com/terms-and-conditions</loc>
+    <loc>https://befound.dev/terms-and-conditions</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -19,7 +19,7 @@ Allow: /projects
 Allow: /contact
 
 # Sitemap location
-Sitemap: https://befound.com/sitemap.xml
+Sitemap: https://befound.dev/sitemap.xml
 
 # Crawl-delay (optional, adjust as needed)
 Crawl-delay: 1
