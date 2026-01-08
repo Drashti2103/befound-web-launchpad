@@ -131,6 +131,7 @@ const AboutPage = () => {
             <div className="relative rounded-2xl shadow-2xl p-4 sm:p-8 md:p-12" style={{ backgroundColor: '#310d66' }}>
               {/* Content */}
               <div className="text-center mb-8 sm:mb-12">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-white font-newsreader">About beFound</h1>
                 <div className="mb-4 sm:mb-6">
                   <svg className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-white" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2L1 21h22L12 2zm0 3.45l8.22 14.14H3.78L12 5.45z" />

@@ -27,9 +27,16 @@ export const SEO = ({
   articleData,
   structuredData,
 }: SEOProps) => {
-  const siteUrl = 'https://befound.com'; // Update with actual domain
+  const siteUrl = 'https://befound.com';
   const fullTitle = `${title} | beFound - Software Solutions Company`;
-  const fullCanonicalUrl = canonicalUrl || `${siteUrl}${window.location.pathname}`;
+  const getCanonicalUrl = () => {
+    if (canonicalUrl) return canonicalUrl;
+    if (typeof window !== 'undefined') {
+      return `${siteUrl}${window.location.pathname}`;
+    }
+    return siteUrl;
+  };
+  const fullCanonicalUrl = getCanonicalUrl();
 
   return (
     <Helmet>
@@ -39,6 +46,11 @@ export const SEO = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullCanonicalUrl} />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="author" content="beFound" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
