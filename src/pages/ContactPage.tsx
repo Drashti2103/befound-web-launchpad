@@ -3,10 +3,28 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import ContactSection from '../components/home/ContactSection';
+import { SEO, getLocalBusinessSchema } from '../components/common/SEO';
 
 const ContactPage = () => {
+  const localBusinessSchema = getLocalBusinessSchema();
+
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact beFound',
+    description: 'Get in touch with beFound for professional software solutions, web development, and digital services.',
+    url: 'https://befound.com/contact',
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Contact Us - Get Your Free Consultation"
+        description="Ready to transform your vision? Contact beFound for web development, mobile apps, and custom software solutions. Free consultation available."
+        keywords="contact software company, web development consultation, get quote, software solutions contact, beFound contact, free consultation"
+        canonicalUrl="https://befound.com/contact"
+        structuredData={[contactPageSchema, localBusinessSchema]}
+      />
       <Navbar />
       
       <main className="flex-grow">

@@ -6,6 +6,7 @@ import ScrollToTop from '../components/layout/ScrollToTop';
 import researchBg from '/public/images/services/researchbg.png';
 import designBg from '/public/images/services/designbg.png';
 import testingBg from '/public/images/services/testingbg.png';
+import { SEO } from '../components/common/SEO';
 
 const ServiceCard = ({ title, description, icon, color, id }: { title: string, description: string, icon: React.ReactNode, color: string, id: string }) => {
   const navigate = useNavigate();
@@ -60,8 +61,102 @@ const ServiceCard = ({ title, description, icon, color, id }: { title: string, d
 };
 
 const ServicesPage = () => {
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        '@type': 'Service',
+        name: 'Web Development',
+        description: 'Custom websites and web applications that are responsive, fast, and user-friendly, built with modern technologies.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+      {
+        '@type': 'Service',
+        name: 'Mobile App Development',
+        description: 'Native and cross-platform mobile applications for iOS and Android that help you reach your customers wherever they are.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+      {
+        '@type': 'Service',
+        name: 'UX/UI Design',
+        description: 'User-centered design that enhances user experience and creates intuitive, beautiful interfaces that users love.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+      {
+        '@type': 'Service',
+        name: 'Custom Software Development',
+        description: 'Tailored software solutions designed to address your specific business challenges and optimize your operations.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+      {
+        '@type': 'Service',
+        name: 'E-Commerce Solutions',
+        description: 'Comprehensive e-commerce platforms that make selling products and services online seamless and profitable.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+      {
+        '@type': 'Service',
+        name: 'Maintenance & Support',
+        description: 'Ongoing technical support, updates, and maintenance to ensure your software remains secure and performs optimally.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+      {
+        '@type': 'Service',
+        name: 'Shopify Sites',
+        description: 'Launch and manage your online store with custom Shopify solutions tailored to your brand.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+      {
+        '@type': 'Service',
+        name: 'SEO Optimization',
+        description: 'Boost your website\'s visibility and ranking on search engines with our expert SEO strategies.',
+        provider: {
+          '@type': 'Organization',
+          name: 'beFound',
+        },
+        areaServed: 'United States',
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Services - Web Development, Mobile Apps & More"
+        description="Comprehensive software solutions including web development, mobile apps, UI/UX design, e-commerce, Shopify sites, and SEO optimization."
+        keywords="web development services, mobile app development, UI/UX design, custom software, e-commerce solutions, Shopify development, SEO services, software maintenance"
+        canonicalUrl="https://befound.com/services"
+        structuredData={servicesSchema}
+      />
       <Navbar />
       
       <div className="pt-24 pb-16">

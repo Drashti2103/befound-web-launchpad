@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../ui/Logo';
+import { ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,11 +67,21 @@ const Navbar = () => {
           </button>
           
           {/* Desktop menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             <NavLink to="/" label="Home" onClick={() => handleNavClick('/')} />
             <NavLink to="/about" label="About Us" onClick={() => handleNavClick('/about')} />
             <NavLink to="/services" label="Services" onClick={() => handleNavClick('/services')} />
+            <DropdownMenu
+              label="Industries"
+              items={[
+                { to: '/industries/real-estate', label: 'Real Estate' },
+                { to: '/industries/dental', label: 'Dental' },
+                { to: '/industries/restaurant', label: 'Restaurant' },
+              ]}
+            />
             <NavLink to="/projects" label="Portfolio" onClick={() => handleNavClick('/projects')} />
+            <NavLink to="/blog" label="Blog" onClick={() => handleNavClick('/blog')} />
+            <NavLink to="/case-studies" label="Case Studies" onClick={() => handleNavClick('/case-studies')} />
             <NavLink to="/contact" label="Contact" onClick={() => handleNavClick('/contact')} />
           </div>
         </div>
@@ -79,8 +90,8 @@ const Navbar = () => {
         <div
           id="mobile-menu"
           className={`md:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen 
-              ? 'opacity-100 translate-y-0 visible' 
+            isMenuOpen
+              ? 'opacity-100 translate-y-0 visible'
               : 'opacity-0 -translate-y-2 invisible'
           } mt-4 bg-white py-4 px-4 rounded-lg shadow-lg absolute left-4 right-4`}
         >
@@ -88,7 +99,15 @@ const Navbar = () => {
             <NavLink to="/" label="Home" onClick={() => handleNavClick('/')} />
             <NavLink to="/about" label="About Us" onClick={() => handleNavClick('/about')} />
             <NavLink to="/services" label="Services" onClick={() => handleNavClick('/services')} />
+            <div className="flex flex-col space-y-2 pl-4">
+              <p className="text-sm font-semibold text-gray-600">Industries</p>
+              <NavLink to="/industries/real-estate" label="Real Estate" onClick={() => handleNavClick('/industries/real-estate')} />
+              <NavLink to="/industries/dental" label="Dental" onClick={() => handleNavClick('/industries/dental')} />
+              <NavLink to="/industries/restaurant" label="Restaurant" onClick={() => handleNavClick('/industries/restaurant')} />
+            </div>
             <NavLink to="/projects" label="Portfolio" onClick={() => handleNavClick('/projects')} />
+            <NavLink to="/blog" label="Blog" onClick={() => handleNavClick('/blog')} />
+            <NavLink to="/case-studies" label="Case Studies" onClick={() => handleNavClick('/case-studies')} />
             <NavLink to="/contact" label="Contact" onClick={() => handleNavClick('/contact')} />
           </div>
         </div>
@@ -108,8 +127,8 @@ const NavLink = ({ to, label, onClick }: NavLinkProps) => {
   const isActive = location.pathname === to;
 
   return (
-    <Link 
-      to={to} 
+    <Link
+      to={to}
       className={`text-gray-800 font-medium hover:text-befoundOrange transition-colors duration-200 ${
         isActive ? 'text-befoundOrange' : ''
       }`}
@@ -117,6 +136,50 @@ const NavLink = ({ to, label, onClick }: NavLinkProps) => {
     >
       {label}
     </Link>
+  );
+};
+
+interface DropdownMenuProps {
+  label: string;
+  items: { to: string; label: string }[];
+}
+
+const DropdownMenu = ({ label, items }: DropdownMenuProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isActive = items.some(item => location.pathname.startsWith(item.to));
+
+  return (
+    <div
+      className="relative group"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button
+        className={`flex items-center gap-1 text-gray-800 font-medium hover:text-befoundOrange transition-colors duration-200 ${
+          isActive ? 'text-befoundOrange' : ''
+        }`}
+      >
+        {label}
+        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      <div
+        className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 transition-all duration-200 ${
+          isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+        }`}
+      >
+        {items.map((item) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            className="block px-4 py-2 text-gray-800 hover:bg-befoundOrange/10 hover:text-befoundOrange transition-colors duration-200"
+          >
+            {item.label}
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 };
 

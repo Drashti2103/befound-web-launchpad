@@ -13,6 +13,13 @@ import ServiceDetails from "./components/services/ServiceDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Pricing from "./pages/Pricing";
+import { RealEstateIndustry } from "./pages/industries/RealEstateIndustry";
+import { DentalIndustry } from "./pages/industries/DentalIndustry";
+import { RestaurantIndustry } from "./pages/industries/RestaurantIndustry";
+import { BlogListing } from "./pages/blog/BlogListing";
+import { BlogPost } from "./pages/blog/BlogPost";
+import { CaseStudyListing } from "./pages/caseStudies/CaseStudyListing";
+import { CaseStudyDetail } from "./pages/caseStudies/CaseStudyDetail";
 import useScrollToTop from "./hooks/useScrollToTop";
 
 const queryClient = new QueryClient();
@@ -34,6 +41,20 @@ const AppContent = () => {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
+        {/* Industry Pages */}
+        <Route path="/industries/real-estate" element={<RealEstateIndustry />} />
+        <Route path="/industries/dental" element={<DentalIndustry />} />
+        <Route path="/industries/restaurant" element={<RestaurantIndustry />} />
+
+        {/* Blog Routes */}
+        <Route path="/blog" element={<BlogListing />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+
+        {/* Case Studies Routes */}
+        <Route path="/case-studies" element={<CaseStudyListing />} />
+        <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
+
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

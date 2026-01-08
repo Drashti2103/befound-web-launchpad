@@ -1,0 +1,421 @@
+import { SEO, getServiceSchema, getFAQSchema, getBreadcrumbSchema } from '../../components/common/SEO';
+import { Button } from '../../components/ui/button';
+import { Card, CardContent, CardHeader } from '../../components/ui/card';
+import { Badge } from '../../components/ui/badge';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../components/ui/accordion';
+import { BlogCard } from '../../components/blog/BlogCard';
+import { CaseStudyCard } from '../../components/caseStudies/CaseStudyCard';
+import { getPostsByCategory } from '../../data/blogPosts';
+import { getCaseStudiesByIndustry } from '../../data/caseStudies';
+import { Link } from 'react-router-dom';
+import {
+  Calendar,
+  Users,
+  Shield,
+  Search,
+  Database,
+  Video,
+  Clock,
+  TrendingUp,
+  CheckCircle2,
+  ArrowRight,
+  Star,
+  UserCheck,
+} from 'lucide-react';
+
+export const DentalIndustry = () => {
+  const blogPosts = getPostsByCategory('dental');
+  const caseStudies = getCaseStudiesByIndustry('dental');
+
+  const services = [
+    {
+      icon: <Calendar className="w-8 h-8" />,
+      title: 'Online Appointment Booking',
+      description:
+        'Seamless 24/7 online booking system that integrates with your practice management software. Reduce no-shows with automated reminders and confirmations.',
+      features: ['Real-time Availability', 'Automated Reminders', 'Calendar Sync', 'Mobile Booking'],
+    },
+    {
+      icon: <UserCheck className="w-8 h-8" />,
+      title: 'Patient Portals',
+      description:
+        'Secure patient portals for accessing records, treatment plans, and billing. Improve patient engagement and reduce administrative workload.',
+      features: ['Medical Records Access', 'Treatment History', 'Online Payments', 'Forms & Consent'],
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'HIPAA Compliance',
+      description:
+        'Enterprise-grade security with full HIPAA compliance. Protect sensitive patient data with encryption, secure messaging, and audit trails.',
+      features: ['Data Encryption', 'Secure Messaging', 'Audit Logs', 'Compliance Reporting'],
+    },
+    {
+      icon: <Search className="w-8 h-8" />,
+      title: 'Dental SEO',
+      description:
+        'Dominate local search results and attract new patients. Our dental SEO strategies put you on page 1 for high-intent keywords in your area.',
+      features: ['Local SEO', 'Google My Business', 'Content Marketing', 'Review Management'],
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: 'Practice Management Integration',
+      description:
+        'Seamless integration with leading dental practice management systems like Dentrix, Eaglesoft, and Open Dental. Streamline your workflow.',
+      features: ['PMS Integration', 'Data Synchronization', 'Automated Updates', 'API Connectivity'],
+    },
+    {
+      icon: <Video className="w-8 h-8" />,
+      title: 'Teledentistry Features',
+      description:
+        'Virtual consultation capabilities for initial assessments and follow-ups. Expand your reach and provide convenient care options.',
+      features: ['Video Consultations', 'Secure Chat', 'Digital Prescriptions', 'Insurance Verification'],
+    },
+  ];
+
+  const features = [
+    'HIPAA-compliant patient data management',
+    'Online appointment scheduling with SMS reminders',
+    'Secure patient portal with document sharing',
+    'Integration with practice management software',
+    'Before/after photo galleries',
+    'Insurance verification and claims processing',
+    'Teledentistry video consultation platform',
+    'Automated appointment reminders and follow-ups',
+    'Mobile-first responsive design',
+    'Local SEO optimization for patient acquisition',
+    'Online payment processing and billing',
+    'Performance optimization for fast loading',
+  ];
+
+  const stats = [
+    { value: '250%', label: 'Patient Inquiry Increase', icon: <TrendingUp /> },
+    { value: '<2s', label: 'Page Load Time', icon: <Clock /> },
+    { value: '40+', label: 'Dental Practices', icon: <Users /> },
+    { value: '100%', label: 'HIPAA Compliant', icon: <Shield /> },
+  ];
+
+  const faqs = [
+    {
+      question: 'How does online appointment booking benefit my dental practice?',
+      answer:
+        'Online booking provides 24/7 availability for patients to schedule appointments, reducing phone call volume and administrative burden. It integrates with your practice management system, shows real-time availability, sends automated reminders to reduce no-shows, and improves patient satisfaction by offering convenience. Studies show practices with online booking see 30-40% more appointments and significantly fewer no-shows.',
+    },
+    {
+      question: 'Is your dental website development HIPAA compliant?',
+      answer:
+        'Yes, absolutely. All our dental websites are built with HIPAA compliance at the core. We implement enterprise-grade encryption, secure data storage, encrypted messaging, secure patient portals, audit logging, and proper Business Associate Agreements (BAA). We ensure patient data is protected according to federal regulations and conduct regular security audits.',
+    },
+    {
+      question: 'Can you integrate with my existing practice management software?',
+      answer:
+        'Yes! We integrate with all major dental practice management systems including Dentrix, Eaglesoft, Open Dental, Curve, Denticon, and others. This ensures seamless data synchronization between your website, patient portal, online booking, and practice management system, eliminating duplicate data entry and keeping everything in sync.',
+    },
+    {
+      question: 'How does dental SEO help me attract more patients?',
+      answer:
+        'Dental SEO targets local patients actively searching for dental services in your area. We optimize for keywords like "dentist near me," "emergency dental care," and specific procedures. This includes Google My Business optimization, local citations, review management, content marketing, and technical SEO. Most practices see significant increases in organic traffic and new patient inquiries within 3-6 months.',
+    },
+    {
+      question: 'What is the cost of custom dental website development?',
+      answer:
+        'Dental website costs range from $6,000 for basic practice websites to $25,000+ for comprehensive solutions with patient portals, online booking, teledentistry, and advanced integrations. Investment depends on features, design complexity, integrations with practice management systems, and ongoing support needs. Most practices see ROI within 2-4 months through increased patient acquisition.',
+    },
+    {
+      question: 'How long does dental website development take?',
+      answer:
+        'A standard dental practice website typically takes 4-6 weeks, while more complex solutions with patient portals, online booking, and practice management integration can take 8-12 weeks. Timeline depends on features, content preparation, integration complexity, and customization requirements. We provide detailed project timelines during consultation and keep you updated throughout development.',
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        'beFound completely transformed our online presence. The patient portal and online booking have reduced our administrative workload by 40% while increasing new patient appointments.',
+      author: 'Dr. Sarah Johnson',
+      position: 'DDS',
+      company: 'Smile Bright Dental Care',
+      rating: 5,
+    },
+    {
+      quote:
+        'The HIPAA-compliant platform they built is exactly what we needed. Patient satisfaction is up, and we are ranking #1 for local dental searches.',
+      author: 'Dr. Michael Chen',
+      position: 'DMD, FAGD',
+      company: 'Pacific Coast Dentistry',
+      rating: 5,
+    },
+  ];
+
+  const seoKeywords = [
+    'dental website development USA',
+    'dentist website design company USA',
+    'dental clinic web development',
+    'dental digital solutions USA',
+    'dental practice website development',
+    'dental web design agency USA',
+    'custom dental website USA',
+    'dentist SEO friendly website',
+    'dental marketing website development',
+    'dentist online presence services',
+  ].join(', ');
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://befound.com/' },
+    { name: 'Industries', url: 'https://befound.com/industries' },
+    { name: 'Dental', url: 'https://befound.com/industries/dental' },
+  ]);
+
+  const serviceSchema = getServiceSchema({
+    name: 'Dental Website Development USA',
+    description:
+      'Professional dental website development, patient portal creation, and practice management solutions for dental practices in the USA. HIPAA-compliant websites with online booking and patient engagement features.',
+    url: 'https://befound.com/industries/dental',
+    price: '6000',
+  });
+
+  const faqSchema = getFAQSchema(faqs);
+
+  return (
+    <>
+      <SEO
+        title="Dental Website Development USA | Dentist Web Design Company"
+        description="Professional dental website development company specializing in HIPAA-compliant dental websites, patient portals, online booking, and dental practice management solutions. Drive 250% more patient inquiries with our proven dental digital solutions."
+        keywords={seoKeywords}
+        canonicalUrl="https://befound.com/industries/dental"
+        structuredData={[breadcrumbSchema, serviceSchema, faqSchema]}
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-befoundPurple via-befoundPurple/90 to-befoundOrange/80 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNjAgMTAgTSAxMCAwIEwgMTAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              Dental Website Development USA
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Transform Your Dental Practice with Custom Digital Solutions
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-white/90">
+              Drive 250% more patient inquiries with HIPAA-compliant dental websites, patient portals, and
+              online booking systems built for the US market
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link to="/contact">
+                <Button size="lg" className="bg-befoundOrange hover:bg-befoundOrange/90 text-white">
+                  Get Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to="/projects">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white/30"
+                >
+                  View Portfolio
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 bg-gray-50 border-y">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-2 text-befoundOrange">{stat.icon}</div>
+                <div className="text-3xl md:text-4xl font-bold text-befoundPurple mb-1">{stat.value}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Dental Technology Solutions That Drive Results
+            </h2>
+            <p className="text-xl text-gray-600">
+              From custom websites to comprehensive practice management integrations, we build digital solutions
+              that help dental practices succeed in competitive markets.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="hover:shadow-xl transition-shadow">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-to-br from-befoundOrange/20 to-befoundPurple/20 rounded-lg flex items-center justify-center text-befoundOrange mb-4">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm">
+                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+              Powerful Features for Dental Websites
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3 bg-white p-4 rounded-lg">
+                  <CheckCircle2 className="w-5 h-5 text-befoundOrange flex-shrink-0 mt-0.5" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      {caseStudies.length > 0 && (
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Dental Practice Success Stories</h2>
+              <p className="text-xl text-gray-600">
+                See how we've helped dental practices transform their digital presence
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {caseStudies.map((caseStudy) => (
+                <CaseStudyCard key={caseStudy.id} caseStudy={caseStudy} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-befoundPurple to-befoundPurple/90 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            What Dental Professionals Say
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-white/10 border-white/20 text-white">
+                <CardHeader>
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-befoundOrange text-befoundOrange" />
+                    ))}
+                  </div>
+                  <p className="text-lg italic">"{testimonial.quote}"</p>
+                </CardHeader>
+                <CardContent>
+                  <p className="font-semibold">{testimonial.author}</p>
+                  <p className="text-sm text-white/80">
+                    {testimonial.position}, {testimonial.company}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+              Frequently Asked Questions
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left font-semibold">{faq.question}</AccordionTrigger>
+                  <AccordionContent className="text-gray-600">{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      {blogPosts.length > 0 && (
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Dental Insights & Guides</h2>
+              <p className="text-xl text-gray-600">
+                Expert advice on dental website development and digital marketing
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {blogPosts.map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <Link to="/blog">
+                <Button variant="outline" size="lg">
+                  View All Articles <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-befoundOrange to-befoundOrange/90 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Ready to Transform Your Dental Practice?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+            Get a free consultation and discover how custom dental website development can attract more
+            patients, improve practice efficiency, and grow your business.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-white text-befoundOrange hover:bg-gray-100">
+                Schedule Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link to="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
+              >
+                View Pricing
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
