@@ -1,5 +1,4 @@
 import React from "react";
-import more from "../../public/more.png";
 import { useNavigate } from 'react-router-dom';
 
 const WhyChooseUsSection = () => {
@@ -12,7 +11,7 @@ const WhyChooseUsSection = () => {
         <div className="relative flex-shrink-0 flex items-center justify-center w-full md:w-1/2">
         <img
                 src="/images/more.png"
-                alt="Globally Available Services"
+                alt="beFound software solutions - trusted digital partner providing globally available web development and mobile app services"
                 className="w-[80%] h-[85%] object-cover"
               />
         </div>

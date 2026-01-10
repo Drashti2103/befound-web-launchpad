@@ -218,7 +218,7 @@ const Projects = () => {
                 <div className="relative h-48">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} - ${project.category} website development project by beFound`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -255,7 +255,7 @@ const Projects = () => {
                   <div className="relative h-48">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`${project.title} - ${project.category} website development project by beFound`}
                       className="w-full h-full object-cover"
                     />
                   </div>

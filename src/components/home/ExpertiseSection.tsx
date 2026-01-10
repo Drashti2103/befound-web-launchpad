@@ -81,7 +81,7 @@ export default function ExpertiseSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-befoundPurple/40 to-befoundOrange/10 z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80"
-              alt="Laptop with analytics dashboard"
+              alt="Modern team collaboration workspace with laptops displaying analytics dashboards and development tools"
               className="w-full h-full object-cover"
             />
 

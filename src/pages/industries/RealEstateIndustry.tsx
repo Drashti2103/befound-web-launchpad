@@ -1,4 +1,5 @@
 import { SEO, getServiceSchema, getFAQSchema, getBreadcrumbSchema } from '../../components/common/SEO';
+import DualCTA from '../../components/common/DualCTA';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent, CardHeader } from '../../components/ui/card';
 import { Badge } from '../../components/ui/badge';
@@ -207,17 +208,17 @@ export const RealEstateIndustry = () => {
       description: 'Dominate local search results and attract qualified buyers. Our SEO strategies put you on page 1 for high-intent keywords.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1568605117033-2066af9c465a?w=800&h=600&fit=crop&ixlib=rb-4.0.3&auto=format',
+      image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop&auto=format',
       title: 'Virtual Tour Integration',
       description: '360-degree virtual tours, video walkthroughs, and drone footage integration. Let buyers explore properties remotely.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format',
       title: 'Lead Generation Systems',
       description: 'Automated lead capture forms, chatbot integrations, and email marketing campaigns to convert visitors into qualified leads.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format',
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics dashboards to track property views, lead sources, conversion rates, and ROI metrics.',
     },
@@ -418,42 +419,10 @@ export const RealEstateIndustry = () => {
       )}
 
       {/* CTA Section */}
-      <section className="relative w-full py-16 md:py-24 bg-gradient-to-r from-befoundPurple via-[#1a0a2a] to-black overflow-hidden mt-8">
-        {/* Dotted SVGs for corners */}
-        <svg className="absolute left-0 top-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
-          <defs>
-            <pattern id="dots-re" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="#fff" />
-            </pattern>
-          </defs>
-          <rect width="200" height="200" fill="url(#dots-re)" />
-        </svg>
-        <svg className="absolute right-0 bottom-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
-          <defs>
-            <pattern id="dots2-re" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="#fff" />
-            </pattern>
-          </defs>
-          <rect width="200" height="200" fill="url(#dots2-re)" />
-        </svg>
-        
-        <div className="relative container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4 sm:mb-6 font-newsreader leading-tight">
-            Ready to Transform Your Real Estate Business?
-          </h2>
-          <p className="text-white text-base sm:text-lg md:text-xl mb-6 sm:mb-8 font-medium px-4 sm:px-8">
-            Get a free consultation and discover how custom real estate website development can drive more leads, close more deals, and grow your business.
-          </p>
-          <a 
-            href="https://calendly.com/thebefoundcompany/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-befoundPurple font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow hover:bg-befoundOrange hover:text-white transition-colors duration-300 text-sm sm:text-base md:text-lg"
-          >
-            Contact Us Today
-          </a>
-        </div>
-      </section>
+      <DualCTA
+        title="Ready to Transform Your Real Estate Business?"
+        description="Get a free consultation and discover how custom real estate website development can drive more leads, close more deals, and grow your business."
+      />
 
       <Footer />
       <ScrollToTop />

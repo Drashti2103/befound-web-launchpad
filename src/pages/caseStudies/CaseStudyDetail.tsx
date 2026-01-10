@@ -23,14 +23,85 @@ import {
   BarChart3,
   Code,
   ArrowLeft,
+  MessageSquare,
+  X,
 } from 'lucide-react';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import ScrollToTop from '../../components/layout/ScrollToTop';
+import { useState } from 'react';
+import { Input } from '../../components/ui/input';
+import { toast } from '../../components/ui/toast';
+
+interface ContactFormData {
+  fullName: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 export const CaseStudyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const caseStudy = slug ? getCaseStudyBySlug(slug) : null;
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [formData, setFormData] = useState<ContactFormData>({
+    fullName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.message || 'Something went wrong');
+        }
+
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+
+        toast.success("Message sent successfully! We will get back to you soon.");
+        setShowContactForm(false);
+      } else {
+        const text = await response.text();
+        console.error('Non-JSON response:', text);
+        toast.error("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (!caseStudy) {
     return <Navigate to="/case-studies" replace />;
@@ -450,10 +521,19 @@ export const CaseStudyDetail = () => {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://calendly.com/thebefoundcompany/30min" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-white text-befoundPurple hover:bg-befoundOrange hover:text-white transition-colors duration-300">
+              <Button size="lg" className="bg-befoundOrange text-white hover:bg-befoundOrange/90 transition-colors duration-300">
+                <Calendar className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Button>
             </a>
+            <Button
+              size="lg"
+              onClick={() => setShowContactForm(true)}
+              className="bg-white text-befoundPurple hover:bg-white/90 transition-colors duration-300"
+            >
+              <MessageSquare className="w-5 h-5 mr-2" />
+              Send Us a Message
+            </Button>
             <Link to="/case-studies">
               <Button
                 size="lg"
@@ -466,6 +546,108 @@ export const CaseStudyDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0 bg-white border-b border-gray-200 p-4 md:p-6 flex justify-between items-center rounded-t-2xl">
+              <h3 className="text-2xl font-bold text-befoundPurple">Get in Touch</h3>
+              <button
+                onClick={() => setShowContactForm(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="Close form"
+              >
+                <X className="w-6 h-6 text-gray-600" />
+              </button>
+            </div>
+
+            <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Full Name <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  placeholder="Enter your full name"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-befoundPurple focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-befoundPurple focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Enter your phone number"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-befoundPurple focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Tell us about your project or requirements"
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-befoundPurple focus:border-transparent resize-none"
+                ></textarea>
+              </div>
+
+              <div className="text-sm text-gray-600">
+                By submitting this form, you acknowledge our{' '}
+                <a href="/privacy-policy" className="text-befoundPurple hover:underline" target="_blank">Privacy Policy</a>
+              </div>
+
+              <div className="flex gap-4">
+                <Button
+                  type="button"
+                  onClick={() => setShowContactForm(false)}
+                  variant="outline"
+                  className="flex-1 py-3 text-base"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  className="flex-1 bg-befoundPurple hover:bg-befoundOrange text-white font-semibold py-3 text-base transition-colors duration-300"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
