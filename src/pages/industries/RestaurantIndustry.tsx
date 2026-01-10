@@ -1,4 +1,5 @@
 import { SEO, getServiceSchema, getFAQSchema, getBreadcrumbSchema } from '../../components/common/SEO';
+import DualCTA from '../../components/common/DualCTA';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent, CardHeader } from '../../components/ui/card';
 import { Badge } from '../../components/ui/badge';
@@ -181,42 +182,42 @@ export const RestaurantIndustry = () => {
 
   const serviceItems = [
     {
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
       title: 'Online Ordering Systems',
       description: 'Commission-free online ordering platform that integrates seamlessly with your website. Increase revenue by eliminating third-party fees and owning customer data.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop',
       title: 'Reservation Management',
       description: 'Smart table management system with online reservations, waitlist management, and automated confirmations. Reduce no-shows and optimize seating.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop',
       title: 'Menu Management',
       description: 'Dynamic digital menu system with easy updates, photo galleries, dietary filters, and real-time availability. Update prices and items instantly across all platforms.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=800&h=600&fit=crop',
       title: 'POS Integration',
       description: 'Seamless integration with leading restaurant POS systems like Square, Toast, Clover, and Lightspeed. Sync orders, inventory, and sales data automatically.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?w=800&h=600&fit=crop',
       title: 'Delivery Integration',
       description: 'Integrate with delivery platforms or build your own delivery system. Manage in-house delivery, third-party services, and pickup orders from one dashboard.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
       title: 'Restaurant Marketing',
       description: 'Complete digital marketing solutions including local SEO, social media management, email campaigns, and loyalty programs to drive repeat business.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop',
       title: 'Loyalty Programs',
       description: 'Build customer loyalty with points-based rewards, referral programs, and exclusive member benefits to drive repeat visits and increase lifetime value.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop',
       title: 'Event & Catering Management',
       description: 'Streamline event bookings, catering orders, and private dining reservations with dedicated management tools and automated workflows.',
     },
@@ -417,42 +418,10 @@ export const RestaurantIndustry = () => {
       )}
 
       {/* CTA Section */}
-      <section className="relative w-full py-16 md:py-24 bg-gradient-to-r from-befoundPurple via-[#1a0a2a] to-black overflow-hidden mt-8">
-        {/* Dotted SVGs for corners */}
-        <svg className="absolute left-0 top-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
-          <defs>
-            <pattern id="dots-restaurant" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="#fff" />
-            </pattern>
-          </defs>
-          <rect width="200" height="200" fill="url(#dots-restaurant)" />
-        </svg>
-        <svg className="absolute right-0 bottom-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
-          <defs>
-            <pattern id="dots2-restaurant" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="#fff" />
-            </pattern>
-          </defs>
-          <rect width="200" height="200" fill="url(#dots2-restaurant)" />
-        </svg>
-        
-        <div className="relative container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4 sm:mb-6 font-newsreader leading-tight">
-            Ready to Transform Your Restaurant Business?
-          </h2>
-          <p className="text-white text-base sm:text-lg md:text-xl mb-6 sm:mb-8 font-medium px-4 sm:px-8">
-            Get a free consultation and discover how custom restaurant website development can drive more orders, eliminate commission fees, and grow your business.
-          </p>
-          <a 
-            href="https://calendly.com/thebefoundcompany/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-befoundPurple font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow hover:bg-befoundOrange hover:text-white transition-colors duration-300 text-sm sm:text-base md:text-lg"
-          >
-            Contact Us Today
-          </a>
-        </div>
-      </section>
+      <DualCTA
+        title="Ready to Transform Your Restaurant Business?"
+        description="Get a free consultation and discover how custom restaurant website development can drive more orders, eliminate commission fees, and grow your business."
+      />
 
       <Footer />
       <ScrollToTop />

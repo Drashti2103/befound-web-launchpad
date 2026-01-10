@@ -294,9 +294,9 @@ const ServicesPage = () => {
                                before:absolute before:inset-0 before:bg-black/30 before:opacity-0 before:transition-opacity
                                hover:before:opacity-100 before:z-10 overflow-hidden">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <img 
-                      src={researchBg} 
-                      alt="Research and Ideation background" 
+                    <img
+                      src={researchBg}
+                      alt="beFound research and ideation process for software development projects"
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
@@ -322,9 +322,9 @@ const ServicesPage = () => {
                                before:absolute before:inset-0 before:bg-black/30 before:opacity-0 before:transition-opacity
                                hover:before:opacity-100 before:z-10 overflow-hidden">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <img 
-                      src={designBg} 
-                      alt="Design and Development background" 
+                    <img
+                      src={designBg}
+                      alt="beFound design and development workflow showcasing modern UX/UI design"
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
@@ -350,9 +350,9 @@ const ServicesPage = () => {
                                before:absolute before:inset-0 before:bg-black/30 before:opacity-0 before:transition-opacity
                                hover:before:opacity-100 before:z-10 overflow-hidden">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <img 
-                      src={testingBg} 
-                      alt="Testing and Deployment background" 
+                    <img
+                      src={testingBg}
+                      alt="beFound quality assurance testing and deployment process ensuring glitch-free products"
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />

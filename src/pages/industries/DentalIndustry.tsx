@@ -1,4 +1,5 @@
 import { SEO, getServiceSchema, getFAQSchema, getBreadcrumbSchema } from '../../components/common/SEO';
+import DualCTA from '../../components/common/DualCTA';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent, CardHeader } from '../../components/ui/card';
 import { Badge } from '../../components/ui/badge';
@@ -181,42 +182,42 @@ export const DentalIndustry = () => {
 
   const serviceItems = [
     {
-      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop',
       title: 'Online Appointment Booking',
       description: 'Seamless 24/7 online booking system that integrates with your practice management software. Reduce no-shows with automated reminders and confirmations.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
       title: 'Patient Portals',
       description: 'Secure patient portals for accessing records, treatment plans, and billing. Improve patient engagement and reduce administrative workload.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1609840114031-3c981b782dfe?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
       title: 'HIPAA Compliance',
       description: 'Enterprise-grade security with full HIPAA compliance. Protect sensitive patient data with encryption, secure messaging, and audit trails.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800&h=600&fit=crop',
       title: 'Dental SEO',
       description: 'Dominate local search results and attract new patients. Our dental SEO strategies put you on page 1 for high-intent keywords in your area.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
       title: 'Practice Management Integration',
       description: 'Seamless integration with leading dental practice management systems like Dentrix, Eaglesoft, and Open Dental. Streamline your workflow.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1609840114031-3c981b782dfe?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=800&h=600&fit=crop',
       title: 'Teledentistry Features',
       description: 'Virtual consultation capabilities for initial assessments and follow-ups. Expand your reach and provide convenient care options.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&h=600&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop',
       title: 'Treatment Plan Presentation',
       description: 'Interactive treatment plan tools with 3D imaging, cost estimates, and financing options to help patients understand and accept treatment.',
     },
     {
-      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop',
       title: 'Review Management System',
       description: 'Automated review collection, response management, and reputation monitoring to build trust and attract new patients through social proof.',
     },
@@ -417,42 +418,10 @@ export const DentalIndustry = () => {
       )}
 
       {/* CTA Section */}
-      <section className="relative w-full py-16 md:py-24 bg-gradient-to-r from-befoundPurple via-[#1a0a2a] to-black overflow-hidden mt-8">
-        {/* Dotted SVGs for corners */}
-        <svg className="absolute left-0 top-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
-          <defs>
-            <pattern id="dots-dental" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="#fff" />
-            </pattern>
-          </defs>
-          <rect width="200" height="200" fill="url(#dots-dental)" />
-        </svg>
-        <svg className="absolute right-0 bottom-0 w-32 md:w-64 h-32 md:h-64 opacity-30" viewBox="0 0 200 200" fill="none">
-          <defs>
-            <pattern id="dots2-dental" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="#fff" />
-            </pattern>
-          </defs>
-          <rect width="200" height="200" fill="url(#dots2-dental)" />
-        </svg>
-        
-        <div className="relative container mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4 sm:mb-6 font-newsreader leading-tight">
-            Ready to Transform Your Dental Practice?
-          </h2>
-          <p className="text-white text-base sm:text-lg md:text-xl mb-6 sm:mb-8 font-medium px-4 sm:px-8">
-            Get a free consultation and discover how custom dental website development can attract more patients, improve practice efficiency, and grow your business.
-          </p>
-          <a 
-            href="https://calendly.com/thebefoundcompany/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-befoundPurple font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow hover:bg-befoundOrange hover:text-white transition-colors duration-300 text-sm sm:text-base md:text-lg"
-          >
-            Contact Us Today
-          </a>
-        </div>
-      </section>
+      <DualCTA
+        title="Ready to Transform Your Dental Practice?"
+        description="Get a free consultation and discover how custom dental website development can attract more patients, improve practice efficiency, and grow your business."
+      />
 
       <Footer />
       <ScrollToTop />

@@ -8,7 +8,7 @@ import leftTopImg from '/public/images/about/leftTop.png';
 import teamCollaborationImg from '/public/images/about/team-collab.jpg';
 import designProcessImg from '/public/images/about/design-process.jpg';
 import creativeWorkImg from '/public/images/about/creative-work.jpg';
-import CTASection from '../components/home/CTASection';
+import DualCTA from '../components/common/DualCTA';
 import { SEO } from '../components/common/SEO';
 
 const AboutPage = () => {
@@ -70,9 +70,9 @@ const AboutPage = () => {
             {/* Top right image */}
             <div className="absolute -top-8 -right-6 z-10 hidden lg:block">
               <div className="relative w-40 sm:w-56 h-32 sm:h-44">
-                <img 
+                <img
                   src={designProcessImg}
-                  alt="Design process"
+                  alt="beFound team collaborating on user-centric design process and wireframing"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl shadow-lg transform rotate-12 hover:rotate-6 transition-transform duration-500"
                 />
@@ -82,9 +82,9 @@ const AboutPage = () => {
             {/* Middle right image */}
             <div className="absolute top-1/3 -right-24 sm:-right-48 z-20 hidden lg:block">
               <div className="relative w-40 sm:w-56 h-56 sm:h-72">
-                <img 
+                <img
                   src={creativeWorkImg}
-                  alt="Creative work"
+                  alt="Creative software development workspace with modern tools and technology"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl shadow-lg transform -rotate-6 hover:rotate-0 transition-transform duration-500"
                 />
@@ -94,9 +94,9 @@ const AboutPage = () => {
             {/* Bottom right image */}
             <div className="absolute -bottom-16 -right-20 sm:-right-36 z-30 hidden lg:block">
               <div className="relative w-36 sm:w-48 h-36 sm:h-48">
-                <img 
+                <img
                   src={teamCollaborationImg}
-                  alt="Workspace"
+                  alt="beFound software development team collaborating on innovative solutions"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl shadow-lg transform rotate-12 hover:rotate-6 transition-transform duration-500"
                 />
@@ -106,9 +106,9 @@ const AboutPage = () => {
             {/* Left side images */}
             <div className="absolute -top-16 -left-20 sm:-left-32 z-20 hidden lg:block">
               <div className="relative w-36 sm:w-48 h-48 sm:h-64">
-                <img 
+                <img
                   src={leftTopImg}
-                  alt="Design thinking"
+                  alt="Design thinking and strategic planning session at beFound"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl shadow-lg transform -rotate-12 hover:-rotate-6 transition-transform duration-500"
                 />
@@ -118,9 +118,9 @@ const AboutPage = () => {
             {/* Bottom left image */}
             <div className="absolute -bottom-12 -left-24 sm:-left-36 z-10 hidden lg:block">
               <div className="relative w-32 sm:w-44 h-32 sm:h-44">
-                <img 
+                <img
                   src={bottomLeftImg}
-                  alt="Creative process"
+                  alt="Creative software development process showcasing innovation and excellence"
                   loading="lazy"
                   className="w-full h-full object-cover rounded-xl shadow-lg transform rotate-6 hover:rotate-0 transition-transform duration-500"
                 />
@@ -269,9 +269,9 @@ const AboutPage = () => {
               <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 items-center p-8 md:p-12">
                 {/* Left side - Image */}
                 <div className="relative flex justify-center md:justify-start">
-                  <img 
+                  <img
                     src={moreImg}
-                    alt="Team collaboration"
+                    alt="beFound team collaboration bringing innovative software solutions to businesses worldwide"
                     className="w-3/4 h-3/4 object-cover rounded-2xl shadow-xl"
                   />
                 </div>
@@ -450,7 +450,10 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <CTASection/>
+      <DualCTA
+        title="Ready to Build Something Amazing Together?"
+        description="Let's discuss how beFound can help transform your vision into reality with cutting-edge software solutions."
+      />
       <Footer />
       <ScrollToTop />
     </div>

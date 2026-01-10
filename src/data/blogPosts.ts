@@ -1058,7 +1058,7 @@ Invest in professional restaurant website development that dominates local searc
 
 Get your free restaurant website + local SEO audit today.
     `,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=600&fit=crop',
     category: 'restaurant',
     tags: ['Restaurant', 'Website Design', 'Online Reservations', 'SEO'],
     author: 'beFound Team',

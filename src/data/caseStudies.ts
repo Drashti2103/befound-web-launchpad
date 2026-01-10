@@ -65,7 +65,7 @@ At the same time, there was strong competition from other local dental brands ta
 - Monitored search terms, bids, and ad extensions daily to pause irrelevant queries and double down on the keywords that generated calls and form leads.
 - Used early performance data (impressions, click-through rate, average position, and conversion events) to refine targeting and ad creatives for better cost-per-conversion over the month.`,
     results: [
-      '12 new patient conversions in first 30 days from paid campaigns',
+      '20+ new patient conversions in first 30 days from paid campaigns',
       'Growth in total search impressions with over 18K impressions',
       'Over 1,000 keywords the site was appearing for in search results',
       'Key treatment pages ranking on page one or significantly improved positions',
@@ -75,7 +75,7 @@ At the same time, there was strong competition from other local dental brands ta
     metrics: [
       {
         label: 'New Patients',
-        value: '12',
+        value: '20+',
         description: 'In first 30 days',
       },
       {
@@ -557,8 +557,7 @@ Their previous online presence did not fully express the experience of walking t
   image: '/case-studies/musemasterpiece5.png',
   galleryImages: [
     '/case-studies/musemasterpiece2.png',
-    '/case-studies/musemasterpiece3.png',
-    '/case-studies/musemasterpiece1.png'
+    '/case-studies/musemasterpiece3.png'
   ],
 
   testimonial: {

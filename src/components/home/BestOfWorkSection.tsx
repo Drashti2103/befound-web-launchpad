@@ -108,7 +108,7 @@ const BestOfWorkSection = () => {
                   <img
                     key={idx}
                     src={img}
-                    alt={prevProjectObj.title + ' screenshot ' + (idx + 1)}
+                    alt={`${prevProjectObj.title} website project screenshot ${idx + 1} - beFound portfolio`}
                     className="w-20 h-32 object-cover rounded-xl border border-gray-100 shadow"
                   />
                 ))}
@@ -133,7 +133,7 @@ const BestOfWorkSection = () => {
                   <img
                     key={idx}
                     src={img}
-                    alt={nextProjectObj.title + ' screenshot ' + (idx + 1)}
+                    alt={`${nextProjectObj.title} website project screenshot ${idx + 1} - beFound portfolio`}
                     className="w-20 h-32 object-cover rounded-xl border border-gray-100 shadow"
                   />
                 ))}
@@ -177,7 +177,7 @@ const BestOfWorkSection = () => {
                 <div className="w-full md:w-auto flex justify-center md:justify-end items-center">
                   <img
                     src={project.images[0]}
-                    alt={project.title + ' screenshot'}
+                    alt={`${project.title} - beFound web development project showcase featuring modern design and functionality`}
                     className="w-full md:w-64 h-40 object-cover rounded-xl border border-gray-100 shadow-lg"
                     style={{ maxWidth: '100%' }}
                   />

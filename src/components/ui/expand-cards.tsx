@@ -66,7 +66,7 @@ const ExpandCards = ({ services, defaultExpanded = 3, title, subtitle }: ExpandC
               <img
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 src={service.image}
-                alt={service.title}
+                alt={`${service.title} - ${service.description.substring(0, 80)}`}
                 onError={(e) => {
                   e.currentTarget.src = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop';
                 }}
@@ -104,7 +104,7 @@ const ExpandCards = ({ services, defaultExpanded = 3, title, subtitle }: ExpandC
                           <img
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             src={service.image}
-                            alt={service.title}
+                            alt={`${service.title} - ${service.description.substring(0, 80)}`}
                             onError={(e) => {
                               e.currentTarget.src = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop';
                             }}
